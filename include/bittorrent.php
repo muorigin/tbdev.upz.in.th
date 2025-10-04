@@ -22,7 +22,7 @@ define('SQL_DEBUG', 2);
 
 /* Compare php version for date/time stuff etc! */
 	if (version_compare(PHP_VERSION, "5.1.0RC1", ">="))
-		date_default_timezone_set('Asia/Bangkok'); // Please set to your own timezone!
+		date_default_timezone_set('Europe/London');
 
 
 define('TIME_NOW', time());
@@ -43,21 +43,6 @@ define('ROOT_PATH', $file_path);
 
 require_once(ROOT_PATH."/include/config.php");
 //require_once("cleanup.php");
-
-// Language selection via cookie
-if (isset($_GET['lang'])) {
-    $lang = $_GET['lang'];
-    if ($lang == 'en' || $lang == 'th') {
-        set_mycookie('language', $lang);
-        $url = $_SERVER['PHP_SELF'];
-        if ($_SERVER['QUERY_STRING']) {
-            $query = preg_replace('/&?lang=[^&]*/', '', $_SERVER['QUERY_STRING']);
-            if ($query) $url .= '?' . $query;
-        }
-        header("Location: $url");
-        exit;
-    }
-}
 
 if (ini_get('default_charset') != $TBDEV['char_set']) 
 {
@@ -808,24 +793,26 @@ function load_language($file='') {
 
     global $TBDEV;
 
-    $language = $TBDEV['language']; // default
-
-    if (get_mycookie('language')) {
-        $language = get_mycookie('language');
-    }
-
-    if( isset($GLOBALS["CURUSER"]) AND !empty($GLOBALS["CURUSER"]['language']) )
+    if( !isset($GLOBALS['CURUSER']) OR empty($GLOBALS['CURUSER']['language']) )
     {
-        $language = $GLOBALS["CURUSER"]['language'];
+      if( !file_exists(ROOT_PATH."/lang/{$TBDEV['language']}/lang_{$file}.php") )
+      {
+        stderr('SYSTEM ERROR', 'Can\'t find language files');
+      }
+
+      require_once ROOT_PATH."/lang/{$TBDEV['language']}/lang_{$file}.php";
+      return $lang;
     }
 
-    if( !file_exists(ROOT_PATH."/lang/{$language}/lang_{$file}.php") )
+    if( !file_exists(ROOT_PATH."/lang/{$GLOBALS['CURUSER']['language']}/lang_{$file}.php") )
     {
       stderr('SYSTEM ERROR', 'Can\'t find language files');
     }
-
-    require_once ROOT_PATH."/lang/{$language}/lang_{$file}.php";
-
+    else
+    {
+      require_once ROOT_PATH."/lang/{$GLOBALS['CURUSER']['language']}/lang_{$file}.php"; 
+    }
+    
     return $lang;
 }
 

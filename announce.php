@@ -17,16 +17,16 @@
 +------------------------------------------------
 */error_reporting(0);
 ////////////////// GLOBAL VARIABLES ////////////////////////////	
-$TBDEV['baseurl'] = 'http://localhost/tbdevtheme/';
+$TBDEV['baseurl'] = 'https://tbdev.upz.in.th';
 $TBDEV['announce_interval'] = 60 * 30;
 $TBDEV['user_ratios'] = 0;
 $TBDEV['connectable_check'] = 0;
 define ('UC_VIP', 2);
 // DB setup
 $TBDEV['mysql_host'] = "localhost";
-$TBDEV['mysql_user'] = "root";
-$TBDEV['mysql_pass'] = "blank";
-$TBDEV['mysql_db']   = "bobtest";
+$TBDEV['mysql_user'] = "upz_tbdev";
+$TBDEV['mysql_pass'] = "hesC5WNXUZ5MFGsgVusZ";
+$TBDEV['mysql_db']   = "upz_tbdev";
 ////////////////// GLOBAL VARIABLES ////////////////////////////
 
 // DO NOT EDIT BELOW UNLESS YOU KNOW WHAT YOU'RE DOING!!

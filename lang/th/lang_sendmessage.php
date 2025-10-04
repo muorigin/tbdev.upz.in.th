@@ -3,63 +3,62 @@
 $lang = array(
 
 #SENDMESSAGE
-'sendmessage_std_reply1' => "Read the bloody [url=%s/faq.php]FAQ[/url] and stop bothering me!",
-'sendmessage_std_reply2' => "Die! Die! Die!",
+'sendmessage_std_reply1' => "อ่าน bloody [url=%s/faq.php]FAQ[/url] และหยุดรบกวนฉัน!",
+'sendmessage_std_reply2' => "ตาย! ตาย! ตาย!",
 
-'sendmessage_template1_sub' => "Ratio warning",
-'sendmessage_template1_body' => "Hi,\n
-You may have noticed, if you have visited the forum, that %s is disabling the accounts of all users with low share ratios.\n
-I am sorry to say that your ratio is a little too low to be acceptable.\n
-If you would like your account to remain open, you must ensure that your ratio increases dramatically in the next day or two, to get as close to 1.0 as possible.\n
-I am sure that you will appreciate the importance of sharing your downloads.
-You may PM any Moderator, if you believe that you are being treated unfairly.\n
-Thank you for your cooperation.",
+'sendmessage_template1_sub' => "คำเตือนอัตราส่วน",
+'sendmessage_template1_body' => "สวัสดี,\n
+คุณอาจสังเกตเห็น หากคุณเยี่ยมชมฟอรัมว่า %s กำลังปิดใช้งานบัญชีของผู้ใช้ทั้งหมดที่มีอัตราส่วนแบ่งปันต่ำ\n
+ฉันเสียใจที่จะบอกว่าอัตราส่วนของคุณต่ำเกินไปที่จะยอมรับได้\n
+หากคุณต้องการให้บัญชีของคุณเปิดอยู่ คุณต้องทำให้แน่ใจว่าอัตราส่วนของคุณเพิ่มขึ้นอย่างมากในวันหรือสองวันข้างหน้า เพื่อเข้าใกล้ 1.0 มากที่สุด\n
+ฉันแน่ใจว่าคุณจะเข้าใจความสำคัญของการแบ่งปันการดาวน์โหลดของคุณ
+คุณอาจ PM ผู้ดูแลใดก็ได้ หากคุณเชื่อว่าคุณถูกปฏิบัติอย่างไม่ยุติธรรม\n
+ขอบคุณสำหรับความร่วมมือ",
 
-'sendmessage_template2_sub' => "Avatar warning", 
-'sendmessage_template2_body' => "Hi,\n
-You may not be aware that there are new guidelines on avatar sizes in the [url=%s/rules.php]rules[/url], in particular \"Resize
-your images to a width of 150 px and a size of [b]no more than 150 KB[/b].\"\n
-I'm sorry to say your avatar doesn't conform to them. Please change it as soon as possible.\n
-We understand this may be an inconvenience to some users but feel it is in the community's best interest.\n
-Thanks for the cooperation.",
+'sendmessage_template2_sub' => "คำเตือนอวตาร",
+'sendmessage_template2_body' => "สวัสดี,\n
+คุณอาจไม่รู้ว่ามีแนวทางใหม่เกี่ยวกับขนาดอวตารใน [url=%s/rules.php]กฎ[/url] โดยเฉพาะ \"ปรับขนาด
+รูปภาพของคุณให้กว้าง 150 px และขนาด [b]ไม่เกิน 150 KB[/b]\"\n
+ฉันเสียใจที่จะบอกว่าอวตารของคุณไม่สอดคล้องกับพวกเขา โปรดเปลี่ยนโดยเร็วที่สุด\n
+เราเข้าใจว่านี่อาจเป็นความไม่สะดวกสำหรับผู้ใช้บางคน แต่รู้สึกว่ามันเป็นประโยชน์สูงสุดของชุมชน\n
+ขอบคุณสำหรับความร่วมมือ",
 
-'sendmessage_mm_template1_sub' => "Ratio warning",
-'sendmessage_mm_template1_body' => "Hi,\n
-You may have noticed, if you have visited the forum, that %s is disabling the accounts of all users with low share ratios.\n
-I am sorry to say that your ratio is a little too low to be acceptable.\n
-If you would like your account to remain open, you must ensure that your ratio increases dramatically in the next day or two, to get as close to 1.0 as possible.\n
-I am sure that you will appreciate the importance of sharing your downloads.
-You may PM any Moderator, if you believe that you are being treated unfairly.\n
-Thank you for your cooperation.",
+'sendmessage_mm_template1_sub' => "คำเตือนอัตราส่วน",
+'sendmessage_mm_template1_body' => "สวัสดี,\n
+คุณอาจสังเกตเห็น หากคุณเยี่ยมชมฟอรัมว่า %s กำลังปิดใช้งานบัญชีของผู้ใช้ทั้งหมดที่มีอัตราส่วนแบ่งปันต่ำ\n
+ฉันเสียใจที่จะบอกว่าอัตราส่วนของคุณต่ำเกินไปที่จะยอมรับได้\n
+หากคุณต้องการให้บัญชีของคุณเปิดอยู่ คุณต้องทำให้แน่ใจว่าอัตราส่วนของคุณเพิ่มขึ้นอย่างมากในวันหรือสองวันข้างหน้า เพื่อเข้าใกล้ 1.0 มากที่สุด\n
+ฉันแน่ใจว่าคุณจะเข้าใจความสำคัญของการแบ่งปันการดาวน์โหลดของคุณ
+คุณอาจ PM ผู้ดูแลใดก็ได้ หากคุณเชื่อว่าคุณถูกปฏิบัติอย่างไม่ยุติธรรม\n
+ขอบคุณสำหรับความร่วมมือ",
 
-'sendmessage_mm_template2_sub' => "Downtime warning",
-'sendmessage_mm_template2_body' => "We'll be down for a few hours",
+'sendmessage_mm_template2_sub' => "คำเตือนการหยุดทำงาน",
+'sendmessage_mm_template2_body' => "เราจะหยุดทำงานเป็นเวลาสองสามชั่วโมง",
 
-'sendmessage_mm_template3_sub' => "Change warning",
-'sendmessage_mm_template3_body' => "The tracker has been updated. 
-Read the forums for details.",
+'sendmessage_mm_template3_sub' => "คำเตือนการเปลี่ยนแปลง",
+'sendmessage_mm_template3_body' => "tracker ได้รับการอัปเดต
+อ่านฟอรัมสำหรับรายละเอียด",
 
-'sendmessage_error' => "Error",
-'sendmessage_denied' => "Permission denied",
-'sendmessage_mass_msg_to' => "Mass Message to %d user%s!",
-'sendmessage_subject' => "Subject:&nbsp;&nbsp;",
-'sendmessage_comment' => "Comment:&nbsp;&nbsp;",
-'sendmessage_from' => "From:&nbsp;&nbsp;",
-'sendmessage_snapshot' => "Take snapshot:",
-'sendmessage_send_it' => "Send it!",
-'sendmessage_templates' => "Templates:",
-'sendmessage_use' => "Use",
-'sendmessage_system_error' => "SYSTEM ERROR",
-'sendmessage_it_broke' => "it broke",
-'sendmessage_user_error' => "USER ERROR",
-'sendmessage_denied' => "Permission denied.",
-'sendmessage_no_id' => "No user with that ID.",
-'sendmessage_user_wrote' => "\n\n\n-------- %s wrote: --------\n%s\n",
+'sendmessage_error' => "ข้อผิดพลาด",
+'sendmessage_denied' => "ไม่มีสิทธิ์",
+'sendmessage_mass_msg_to' => "ข้อความมวลถึง %d ผู้ใช้%s!",
+'sendmessage_subject' => "หัวข้อ:&nbsp;&nbsp;",
+'sendmessage_comment' => "ความคิดเห็น:&nbsp;&nbsp;",
+'sendmessage_from' => "จาก:&nbsp;&nbsp;",
+'sendmessage_snapshot' => "ถ่ายภาพ:",
+'sendmessage_send_it' => "ส่งเลย!",
+'sendmessage_templates' => "เทมเพลต:",
+'sendmessage_use' => "ใช้",
+'sendmessage_system_error' => "ข้อผิดพลาดระบบ",
+'sendmessage_it_broke' => "มันพัง",
+'sendmessage_user_error' => "ข้อผิดพลาดผู้ใช้",
+'sendmessage_denied' => "ไม่มีสิทธิ์",
+'sendmessage_no_id' => "ไม่มีผู้ใช้ที่มี ID นั้น",
+'sendmessage_user_wrote' => "\n\n\n-------- %s เขียน: --------\n%s\n",
 'sendmessage_re' => "Re: ",
-'sendmessage_delete' => "Delete message you are replying to",
-'sendmessage_save_sent' => "Save message to Sentbox",
-'sendmessage_pm_templates' => "PM Templates:",
-'sendmessage_send_msg' => "Send Message"
+'sendmessage_delete' => "ลบข้อความที่คุณกำลังตอบ",
+'sendmessage_save_sent' => "บันทึกข้อความไปยังกล่องส่ง",
+'sendmessage_pm_templates' => "เทมเพลต PM:",
+'sendmessage_send_msg' => "ส่งข้อความ"
 );
-
 ?>

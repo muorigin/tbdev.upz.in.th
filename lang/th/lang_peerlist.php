@@ -2,40 +2,39 @@
 
 $lang = array(
 
-#valid id 
-'peerslist_user_error' => "USER Error",
-'peerslist_invalid_id' => "You fool, ID don't exist",
+#valid id
+'peerslist_user_error' => "ข้อผิดพลาดผู้ใช้",
+'peerslist_invalid_id' => "ไอ้โง่ ID ไม่มีอยู่",
 
 #No Data
-'peerslist_no' => "No",
-'peerslist_yes' => "Yes",
-'peerslist_data_available' => "data available",
+'peerslist_no' => "ไม่",
+'peerslist_yes' => "ใช่",
+'peerslist_data_available' => "ข้อมูลที่มีอยู่",
 
 #dltable
-'peerslist_user_ip' => "User/IP",
-'peerslist_connectable' => "Connectable",
-'peerslist_uploaded' => "Uploaded",
-'peerslist_rate' => "Rate",
-'peerslist_downloaded' => "Downloaded",
-'peerslist_ratio' => "Ratio",
-'peerslist_complete' => "Complete",
-'peerslist_connected' => "Connected",
-'peerslist_idle' => "Idle",
-'peerslist_client' => "Client",
-'peerslist_inf' => "Inf.",
+'peerslist_user_ip' => "ผู้ใช้/IP",
+'peerslist_connectable' => "เชื่อมต่อได้",
+'peerslist_uploaded' => "อัปโหลดแล้ว",
+'peerslist_rate' => "อัตรา",
+'peerslist_downloaded' => "ดาวน์โหลดแล้ว",
+'peerslist_ratio' => "อัตราส่วน",
+'peerslist_complete' => "เสร็จสิ้น",
+'peerslist_connected' => "เชื่อมต่อ",
+'peerslist_idle' => "ว่าง",
+'peerslist_client' => "ไคลเอนต์",
+'peerslist_inf' => "ไม่จำกัด",
 
 #display
-'peerslist_error' => "Error",
-'peerslist_nothing' => "Nothing to see here, move along!",
-'peerslist_warning' => "Warning",
-'peerslist_no_data' => "No downloader/uploader data available!",
-'peerslist_for' => "Peerlist for",
-'peerslist_seeders' => "Seeder(s)",
-'peerslist_leechers' => "Leecher(s)",
-'peerslist_for' => "Peerlist for",
+'peerslist_error' => "ข้อผิดพลาด",
+'peerslist_nothing' => "ไม่มีอะไรที่นี่ เดินต่อไป!",
+'peerslist_warning' => "คำเตือน",
+'peerslist_no_data' => "ไม่มีข้อมูลผู้ดาวน์โหลด/ผู้อัปโหลด!",
+'peerslist_for' => "รายชื่อเพียร์สำหรับ",
+'peerslist_seeders' => "ซีดเดอร์",
+'peerslist_leechers' => "ลีชเชอร์",
+'peerslist_for' => "รายชื่อเพียร์สำหรับ",
 
 #stdhead
-'peerslist_stdhead' => "Details"
+'peerslist_stdhead' => "รายละเอียด"
 );
-
 ?>

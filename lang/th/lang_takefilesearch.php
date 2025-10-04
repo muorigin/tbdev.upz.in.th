@@ -2,17 +2,16 @@
 
 $lang = array(
 
-'tstdhead' => "Torrent internal file search",
+'tstdhead' => "การค้นหาไฟล์ภายในทอร์เรนต์",
 
 #takefilesearch errors
-'tfilesearch_oops' => "Oops",
-'tfilesearch_nuffin' => "Nuffin 'ere!",
-'tfilesearch_error' => "Error",
-'tfilesearch_nothing' => "Nothing Found.",
+'tfilesearch_oops' => "อุ๊ย",
+'tfilesearch_nuffin' => "ไม่มีอะไรที่นี่!",
+'tfilesearch_error' => "ข้อผิดพลาด",
+'tfilesearch_nothing' => "ไม่พบอะไร",
 #filesearch table
-'tID' => "ID",
-'tfilename' => "Filename",
-'tscore' => "Relevance",
+'tID' => "รหัส",
+'tfilename' => "ชื่อไฟล์",
+'tscore' => "ความเกี่ยวข้อง",
 );
-
 ?>

@@ -4,68 +4,63 @@ $lang = array(
 
 
 #stderr
-'stderr_errorhead' => "Error",
-'stderr_successhead' => "Success",
-'stderr_invalidemail' => "You must enter an email address",
-'stderr_notfound' => "The email address was not found in the database",
-'stderr_dberror' => "Database error. Please contact an administrator about this.",
-'stderr_confmailsent' => "A confirmation email has been mailed. Please allow a few minutes for the mail to arrive.",
-'stderr_nomail' => "Unable to send mail. Please contact an administrator about this error.",
-'stderr_noupdate' => "Unable to update user data. Please contact an administrator about this error.",
-'stderr_mailed' => "The new account details have been mailed to <b>(%s)</b>. Please allow a few minutes for the mail to arrive.",
+'stderr_errorhead' => "ข้อผิดพลาด",
+'stderr_successhead' => "สำเร็จ",
+'stderr_invalidemail' => "คุณต้องป้อนที่อยู่อีเมล",
+'stderr_notfound' => "ไม่พบที่อยู่อีเมลในฐานข้อมูล",
+'stderr_dberror' => "ข้อผิดพลาดฐานข้อมูล โปรดติดต่อผู้ดูแลระบบ",
+'stderr_confmailsent' => "ส่งอีเมลยืนยันแล้ว โปรดรอสองสามนาทีให้เมลมาถึง",
+'stderr_nomail' => "ไม่สามารถส่งเมลได้ โปรดติดต่อผู้ดูแลระบบ",
+'stderr_noupdate' => "ไม่สามารถอัปเดตข้อมูลผู้ใช้ได้ โปรดติดต่อผู้ดูแลระบบ",
+'stderr_mailed' => "ส่งรายละเอียดบัญชีใหม่ไปยัง <b>(%s)</b> แล้ว โปรดรอสองสามนาทีให้เมลมาถึง",
 
 
 #head
-'head_recover' => "Recover",
+'head_recover' => "กู้คืน",
 
 
 #email
-'email_head' => "Error",
-'email_subjdetails' => "account details",
-'email_subjreset' => "password reset confirmation",
+'email_head' => "ข้อผิดพลาด",
+'email_subjdetails' => "รายละเอียดบัญชี",
+'email_subjreset' => "การยืนยันการรีเซ็ตรหัสผ่าน",
 
-'email_request' =>"Someone, hopefully you, requested that the password for the account
-associated with this email address (%s) be reset.
+'email_request' =>"ใครบางคน หวังว่าคุณ ขอให้รีเซ็ตรหัสผ่านสำหรับบัญชี
+ที่เกี่ยวข้องกับที่อยู่อีเมลนี้ (%s)
+คำขอมาจาก %s
+หากคุณไม่ได้ทำเช่นนี้ ละเว้นอีเมลนี้ โปรดอย่าตอบกลับ
 
-The request originated from %s.
-
-If you did not do this ignore this email. Please do not reply.
-
-
-Should you wish to confirm this request, please follow this link:
+หากคุณต้องการยืนยันคำขอนี้ โปรดตามลิงก์นี้:
 
 %s/members.php?action=recover&id=%u&secret=%s
 
-
-After you do this, your password will be reset and emailed back
-to you.
+หลังจากทำเช่นนี้ รหัสผ่านของคุณจะถูกรีเซ็ตและส่งกลับ
+ไปยังคุณ
 
 --",
 
-'email_newpass' =>"As per your request we have generated a new password for your account.
+'email_newpass' =>"ตามคำขอของคุณ เราได้สร้างรหัสผ่านใหม่สำหรับบัญชีของคุณ
 
-Here is the information we now have on file for this account:
+นี่คือข้อมูลที่เรามีในไฟล์สำหรับบัญชีนี้:
 
-    User name: %s
-    Password:  %s
+    ชื่อผู้ใช้: %s
+    รหัสผ่าน:  %s
 
-You may login at %s/members.php?action=login
+คุณสามารถเข้าสู่ระบบได้ที่ %s/members.php?action=login
 
 --",
 
 #captcha
-'captcha_spam' => "NO SPAM! Wait 10 seconds and then refresh page",
-'captcha_refresh' => "Click to refresh image",
-'captcha_imagealt' => "Captcha image",
+'captcha_spam' => "ไม่สแปม! รอ 10 วินาทีแล้วรีเฟรชหน้า",
+'captcha_refresh' => "คลิกเพื่อรีเฟรชภาพ",
+'captcha_imagealt' => "ภาพ captcha",
 'captcha_pin' => "PIN:",
 
 #recover
-'recover_unamepass' => "Recover lost user name or password",
-'recover_form' => "Use the form below to have your password reset and your account details mailed back to you.",
-'recover_regdemail' => "Registered email",
-'recover_btn' => "Do it!" 
+'recover_unamepass' => "กู้คืนชื่อผู้ใช้หรือรหัสผ่านที่หาย",
+'recover_form' => "ใช้ฟอร์มด้านล่างเพื่อรีเซ็ตรหัสผ่านและส่งรายละเอียดบัญชีกลับไปยังคุณ",
+'recover_regdemail' => "อีเมลที่ลงทะเบียน",
+'recover_btn' => "ทำเลย!"
 
 
 );
-
 ?>

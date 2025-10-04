@@ -12,8 +12,6 @@ define( 'REQ_PHP_VER' , '5.2.1' );
 
 define( 'TBDEV_REV' , 'TBDev 2025' );
 
-function unix_timestamp() { return time(); }
-
 $installer = new installer;
 
 class installer
@@ -30,7 +28,7 @@ function installer() {
     if ( file_exists( INSTALLER_ROOT_PATH.'install.lock') )
     {
       $this->install_error("ตัวติดตั้งนี้ถูกล็อค!
-      <br /> คุณไม่สามารถติดตั้งได้เว้นแต่คุณจะลบไฟล์'install/install.lock' ไฟล์");
+      <br /> คุณไม่สามารถติดตั้งได้เว้นแต่คุณจะลบไฟล์'install/install.lock' ไฟล์นี้ออก");
       exit();
     }
 
@@ -78,29 +76,29 @@ function installer() {
 function do_start() {
 
 
-    $this->stdhead('Welcome');
+    $this->stdhead('ยินดีต้อนรับ');
 	
 	$this->htmlout .= "
-                 <div class='box_wrapper'>
-                     <div class='box_header'><h2>Welcome to the TBDev Tracker Installer</h2></div>
-                     <div class='box_subhead'><div class='box_img'></div></div>
-                         <div class='box_content'>
-                             <p>Before we go any further, please ensure that all the files have been uploaded, and that the file 'config.php' has suitable permissions to allow this script to write to it ( 0666 should be sufficient ).</p>
-                             <br /><br />
-                             <h3>".TBDEV_REV." requires PHP ".REQ_PHP_VER." or better and an MYSQL database.</h3>
-                             <br /><br />
-                             <p>You will also need the following information:</p>
-							 <ul>
-							    <li>Your mySQL database name</li>
-							    <li>Your mySQL username</li>
-							    <li>Your mySQL password</li>
-							    <li>Your mySQL host address (usually localhost)</li>
-							 </ul>
-							 <br />
-                             <p>Once you have clicked on proceed, you will be taken to a form to enter information the installer needs to set up your tracker.</p>
+					<div class='box_wrapper'>
+						<div class='box_header'><h2>ยินดีต้อนรับสู่ตัวติดตั้งตัวติดตาม TBDEV</h2></div>
+						<div class='box_subhead'><div class='box_img'></div></div>
+							<div class='box_content'>
+								<p>ก่อนที่เราจะไปเพิ่มเติมโปรดตรวจสอบให้แน่ใจว่าไฟล์ทั้งหมดได้รับการอัปโหลดและไฟล์ 'config.php' มีสิทธิ์ที่เหมาะสมเพื่อให้สคริปต์นี้เขียนลงไป (0666 ควรเพียงพอ).</p>
+								<br /><br />
+								<h3>".TBDEV_REV." ต้องใช้ PHP ".REQ_PHP_VER." หรือดีกว่าและฐานข้อมูล MYSQL.</h3>
+								<br /><br />
+								<p>คุณจะต้องมีข้อมูลต่อไปนี้:</p>
+								<ul>
+									<li>ชื่อฐานข้อมูล mySQL ของคุณ</li>
+									<li>ชื่อผู้ใช้ mySQL ของคุณ</li>
+									<li>รหัสผ่าน mySQL ของคุณ</li>
+									<li>ที่อยู่โฮสต์ mySQL ของคุณ (โดยปกติคือ localhost)</li>
+								</ul>
+								<br />
+								<p>เมื่อคุณคลิกที่ดำเนินการ คุณจะถูกนำไปยังแบบฟอร์มเพื่อป้อนข้อมูลที่ตัวติดตั้งต้องการในการตั้งค่าติดตามของคุณ</p>
 
-                             <p><strong>PLEASE NOTE: USING THIS INSTALLER WILL DELETE ANY CURRENT TBDEV DATABASE AND OVERWRITE ANY CONFIG.PHP FILE</strong></p>";
-	
+								<p><strong>โปรดทราบ: การใช้ตัวติดตั้งนี้จะลบฐานข้อมูล TBDEV ปัจจุบันและเขียนทับไฟล์ CONFIG.PHP ใดๆ</strong></p>";
+		
 	$warnings   = array();
 	
 	$checkfiles = array( 
@@ -117,7 +115,7 @@ function do_start() {
 	{
 		if ( ! file_exists($cf) )
 		{
-			$warnings[] = "Cannot locate the file '$cf'.";
+			$warnings[] = "ไม่สามารถค้นหาไฟล์ได้ '$cf'.";
 		}
 	}
 	
@@ -125,7 +123,7 @@ function do_start() {
 	{
 		if ( ! is_writeable($cf) )
 		{
-			$warnings[] = "Cannot write to the file '$cf'. Please CHMOD to 0777.";
+			$warnings[] = "ไม่สามารถเขียนลงไฟล์ '$cf' ได้ กรุณา CHMOD เป็น 0777.";
 		}
 	}
 	
@@ -133,17 +131,17 @@ function do_start() {
 	
 	if ($phpversion < REQ_PHP_VER)
 	{
-		$warnings[] = "<strong>TBDev Tracker requires PHP Version ".REQ_PHP_VER." or better.</strong>";
+		$warnings[] = "<strong>TBDev Tracker ต้องใช้ PHP Version ".REQ_PHP_VER." หรือดีกว่า.</strong>";
 	}
 	
 	if ( ! function_exists('get_cfg_var') )
 	{
-		$warnings[] = "<strong>Your PHP installation isn't sufficient to run TBDev Tracker.</strong>";
+		$warnings[] = "<strong>การติดตั้ง PHP ของคุณไม่เพียงพอในการรัน TBDev Tracker.</strong>";
 	}
 	
 	if ( function_exists('ini_get') AND @ini_get("safe_mode") )
 	{
-		$warnings[] = "<strong>TBDev Tracker won't run when safe_mode is on.</strong>";
+		$warnings[] = "<strong>TBDev Tracker จะไม่ทำงานเมื่อ safe_mode เปิดอยู่.</strong>";
 	}
 	
 	if( function_exists( 'gd_info' ) )
@@ -166,19 +164,19 @@ function do_start() {
       }
     }
 
-    !$fail ? $warnings[] = "TBDev.net requires GD library version 2. The version on your server is'{$gd['GD Version']}'.  Find the upgrade here <a href='http://us.php.net/manual/en/image.setup.php'>libgd library</a>." : false;
+    !$fail ? $warnings[] = "tbdev.net ต้องการ GD Library เวอร์ชัน 2 เวอร์ชันบนเซิร์ฟเวอร์ของคุณคือ '{$gd['GD Version']}'  ค้นหาการอัพเกรดที่นี่ <a href = 'http: //us.php.net/manual/en/image.setup.php'> libgd ไลบรารี</a>." : false;
   }
 	
 	$ext = get_loaded_extensions();
 	
 	if( ! in_array('mysql', $ext) )
 	{
-    $warnings[] = "<strong>Your server doesn't appear to have a MySQL library, you will need this before you can continue.</strong>";
+    $warnings[] = "<strong>เซิร์ฟเวอร์ของคุณดูเหมือนจะไม่มีไลบรารี MySQL คุณจะต้องมีสิ่งนี้ก่อนที่คุณจะสามารถดำเนินการต่อได้.</strong>";
 	}
 	
 	if( get_magic_quotes_gpc() ) 
 	{
-    $warnings[] = "<strong>This feature has been DEPRECATED as of PHP 5.3.0. Relying on this feature is highly discouraged.</strong> <a href='http://php.net/manual/en/security.magicquotes.php'>About Magic Quotes</a>";
+    $warnings[] = "<strong>ฟีเจอร์นี้ถูกเลิกใช้ตั้งแต่ PHP 5.3.0 การพึ่งพาฟีเจอร์นี้จึงไม่แนะนำอย่างยิ่ง.</strong> <a href='http://php.net/manual/en/security.magicquotes.php'>เกี่ยวกับ Magic Quotes</a>";
   }
 	
 	
@@ -193,15 +191,15 @@ function do_start() {
 	
 		$this->htmlout .= "<br /><br />
 							    <div class='error-box' style='width: 500px;'>
-							     <strong>Warning!
-							     The following errors must be rectified before continuing!</strong>
+							     <strong> คำเตือน!
+							     ข้อผิดพลาดต่อไปนี้จะต้องแก้ไขก่อนดำเนินการต่อ!</strong>
 								 <br /><br />
 								 $err_string
 							    </div>";
 	}
 	else
 	{
-		$this->htmlout .= "<br /><br /><div class='proceed-btn-div'><a href='index.php?progress=1'><span class='btn'>PROCEED</span></a></div>";
+		$this->htmlout .= "<br /><br /><div class='proceed-btn-div'><a href='index.php?progress=1'><span class='btn'>ดำเนินการต่อ</span></a></div>";
 	}
 
 
@@ -223,29 +221,34 @@ function do_step_one() {
                          <div class='box_content'>
           	                 <form action='index.php' method='post'>
                                   <div><input type='hidden' name='progress' value='2' /></div>
-                                  <h2>Your Server Environment</h2>";
+                                  <h2>Yสภาพแวดล้อมเซิร์ฟเวอร์ของเรา</h2>";
 
 	$this->htmlout .= "
-                                  <p>This section requires you to enter your SQL information. If in doubt, please check with your webhost before asking for support. You may choose to enter an existing database name,if not - you must create a new database before continuing.</p>
+                                  <p>ส่วนนี้ต้องการให้คุณป้อนข้อมูล SQL ของคุณ หากคุณไม่แน่ใจโปรดตรวจสอบกับผู้ให้บริการเว็บของคุณก่อนที่จะขอความช่วยเหลือ คุณสามารถเลือกที่จะป้อนชื่อฐานข้อมูลที่มีอยู่ หากไม่เช่นนั้นคุณต้องสร้างฐานข้อมูลใหม่ก่อนดำเนินการต่อ</p>
        	                          <fieldset>
                                            <legend><strong>MySQL Host</strong></legend>
                                            <input type='text' name='mysql_host' value='localhost' />
-                                           (localhost is usually sufficient)
+                                           (localhost มักจะเพียงพอ)
                                   </fieldset>
                                   <fieldset>
-                                           <legend><strong>MySQL Database Name</strong></legend>
-                                           <input type='text' name='mysql_db' value='' />
+                                           <legend><strong>ชื่อฐานข้อมูล MySQL</strong></legend>
+                                           <input type='text' name='mysql_db' value='upz_tbdev' />
                                   </fieldset>
    	                              <fieldset>
-                                           <legend><strong>SQL Username</strong></legend>
-                                           <input type='text' name='mysql_user' value='' />
+                                           <legend><strong>ชื่อผู้ใช้ SQL</strong></legend>
+                                           <input type='text' name='mysql_user' value='upz_tbdev' />
                                   </fieldset>
                                   <fieldset>
-                                           <legend><strong>SQL Password</strong></legend>
-                                           <input type='text' name='mysql_pass' value='' />
+                                           <legend><strong>รหัสผ่าน SQL</strong></legend>
+                                           <input type='text' name='mysql_pass' value='hesC5WNXUZ5MFGsgVusZ' />
                                   </fieldset>
-
-                                  <div class='proceed-btn-div'><input class='btn' type='submit' value='PROCEED' /></div>
+   	                          <fieldset>
+									   <legend><strong>ข้อมูลเพิ่มเติม</strong></legend>
+									   <div class='form-field'>
+									       <label for='mysql_port'>MySQL Port</label>
+									       <input type='text' name='mysql_port' value='3306' />
+									   </div>
+                                  <div class='proceed-btn-div'><input class='btn' type='submit' value='ดำเนินการต่อ' /></div>
                              </form>
                          </div>
                  </div>";
@@ -264,13 +267,13 @@ function do_step_two() {
 	{
 		if ($this->VARS[ $out ] == "")
 		{
-			$this->install_error("You must complete all of the form");
+			$this->install_error("<strong>คุณต้องกรอกข้อมูลในฟอร์มทั้งหมด</strong>");
 		}
 	}
 	
 	if (!@mysql_connect($this->VARS['mysql_host'], $this->VARS['mysql_user'], $this->VARS['mysql_pass']))
     {
-      $this->install_error( "Connection error:<br /><br />[" . mysql_errno() . "] dbconn: mysql_connect: " . mysql_error());
+      $this->install_error( "<strong>เกิดข้อผิดพลาดในการเชื่อมต่อ:</strong><br /><br />[" . mysql_errno() . "] dbconn: mysql_connect: " . mysql_error());
     }
     //mysql_select_db($TBDEV['mysql_db']) or die('dbconn: mysql_select_db: ' . mysql_error());
     //mysql_set_charset('utf8');
@@ -279,7 +282,7 @@ function do_step_two() {
   {
     if(!mysql_query("CREATE DATABASE {$this->VARS['mysql_db']} DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci"))
     {
-      $this->install_error( "Unable to create database" );
+      $this->install_error( "<strong>ไม่สามารถสร้างฐานข้อมูลได้</strong>" );
       exit();
     }
     
@@ -318,33 +321,33 @@ function do_step_two() {
     }
 	}
 
-	
-	$this->stdhead('Database Success!');
+
+	$this->stdhead('<strong>ฐานข้อมูลสำเร็จ!</strong>');
 
 	$this->htmlout .= "
 	<div class='box_content'>
 	
-	<h2>Database Success</h2>
-	
-	<strong>Your database has been installed!</strong>
+	<h2>ฐานข้อมูลสำเร็จ</h2>
+
+	<strong>ฐานข้อมูลของคุณได้ถูกติดตั้งเรียบร้อยแล้ว!</strong>
 	<br /><br />
-	The installation process is almost complete.
+	ขั้นตอนการติดตั้งเกือบเสร็จสมบูรณ์แล้ว
 	<br />
-	The next step will configure the tracker settings.
-	If you already have a config.php file, you should go no further.
+	ขั้นตอนถัดไปจะกำหนดค่าการตั้งค่าติดตาม
+	หากคุณมีไฟล์ config.php อยู่แล้ว คุณไม่ควรดำเนินการต่อ
 	Any existing config.php will be overwritten!
 	<br /><br />
 	
 	<form action='index.php' method='post'>
 	<div>
 	<input type='hidden' name='progress' value='3' />
-	<input type='hidden' name='mysql_host' value='localhost' />
-	<input type='hidden' name='mysql_db' value='upz_tbdev' />
-	<input type='hidden' name='mysql_user' value='upz_tbdev' />
-	<input type='hidden' name='mysql_pass' value='hesC5WNXUZ5MFGsgVusZ' />
+	<input type='hidden' name='mysql_host' value='{$this->VARS['mysql_host']}' />
+	<input type='hidden' name='mysql_db' value='{$this->VARS['mysql_db']}' />
+	<input type='hidden' name='mysql_user' value='{$this->VARS['mysql_user']}' />
+	<input type='hidden' name='mysql_pass' value='{$this->VARS['mysql_pass']}' />
 	</div>
 	<div class='proceed-btn-div'>
-	<input class='btn' type='submit' value='PROCEED' /></div>
+	<input class='btn' type='submit' value='ดำเนินการต่อ' /></div>
 	</form>
 	</div>";
 						 
@@ -451,7 +454,7 @@ function do_step_three() {
                                        </div>
                               </fieldset>
 
-                              <div class='proceed-btn-div'><input class='btn' type='submit' value='PROCEED' /></div>
+                              <div class='proceed-btn-div'><input class='btn' type='submit' value='ดำเนินการต่อ' /></div>
                          </form>
 	                 </div>
                  </div>";
@@ -514,11 +517,11 @@ function do_step_four() {
 	
 	$this->htmlout .= "
 	<div class='box_content'>
-	    <h2>Success! Your configuration file and Announce file was written successfully!</h2>
+	    <h2>สำเร็จ! ไฟล์การกำหนดค่าของคุณและไฟล์ประกาศถูกเขียนเรียบร้อยแล้ว!</h2>
 	    <br /><br />
-	    The next step will create your Sysop account.
+	    ขั้นตอนถัดไปจะสร้างบัญชี Sysop ของคุณ
 	    <br /><br />
-	    <div class='proceed-btn-div'><a href='index.php?progress=5'><span class='btn'>CREATE ACCOUNT</span></a></div>
+	    <div class='proceed-btn-div'><a href='index.php?progress=5'><span class='btn'>สร้างบัญชี</span></a></div>
 	</div>";
 						 
 	$this->htmlout();
@@ -561,7 +564,7 @@ function do_step_five() {
 	                                       <input type='text' name='email' value='' /><br />
 	                                   </div>
 	                          </fieldset>
-                              <div class='proceed-btn-div'><input class='btn' type='submit' value='PROCEED' /></div>
+                              <div class='proceed-btn-div'><input class='btn' type='submit' value='ดำเนินการต่อ' /></div>
 	                     </form>
 	                 </div>
                  </div>";
@@ -608,8 +611,8 @@ function do_step_six() {
 	$secret = $this->mksecret();
   $wantpasshash = $this->make_passhash( $secret, md5($this->VARS['pass']) );
 	
-	$user = array (
-	                'id'				=>	1,
+	$user = array (	
+                'id'				=>	1,
 								'username'				=>	"{$this->VARS['username']}",
 								'passhash'			=>	"$wantpasshash",
 								'secret'				=>	"$secret",
@@ -617,8 +620,6 @@ function do_step_six() {
 								'status'				=>	"confirmed",
 								'class'				=>	6,
 								'added'		=>	TIME_NOW,
-								'last_login'		=>	0,
-								'last_access'		=>	time(),
 								'time_offset'		=>	0,
 								'dst_in_use'	=>	1
 							);
@@ -666,8 +667,8 @@ function do_end() {
 		
 		$this->stdhead('Install Complete!');
 	
-		$txt = "Although the installer is now locked (to re-install, remove the file 'install.lock'), for added security, please remove the index.php file before continuing.
-			 <br /><br />
+		$txt = "แม้ว่าขณะนี้ตัวติดตั้งจะถูกล็อค (เพื่อติดตั้งใหม่ให้ลบไฟล์ 'install.lock') เพื่อเพิ่มความปลอดภัยโปรดลบไฟล์ index.php ก่อนดำเนินการต่อ
+			 <br /> <br />
 			 <div style='text-align: center;'><a href='../members.php?action=login'>Log into tracker</a></div>";
 	}
 	else
@@ -675,28 +676,28 @@ function do_end() {
 		$this->stdhead('Install Complete!');
 		
 		$txt = "PLEASE REMOVE THE INSTALLER ('index.php') BEFORE CONTINUING!<br />
-		Not doing this will open you up to a situation where anyone could delete your tracker &amp; data!
+		การไม่ทำเช่นนี้จะเปิดคุณถึงสถานการณ์ที่ทุกคนสามารถลบตัวติดตามและข้อมูลของคุณได้!
 				<br /><br />
-				<div style='text-align: center;'><a href='../members.php?action=login'>Log into tracker</a></div>";
+				<div style='text-align: center;'><a href='../members.php?action=login'>เข้าสู่ระบบติดตาม</a></div>";
 	}
 	
 	$warn = '';
 	
 	if( !@chmod( TBDEV_ROOT_PATH.'include/config.php', 0644) )
 	{
-    $warn .= "<br />Warning, please chmod include/config.php to 0644 via ftp or shell.";
+    $warn .= "<br />คำเตือนโปรด chmod รวม/config.php ถึง 0644 ผ่าน FTP หรือเชลล์";
 	}
 	
 	if( !@chmod( TBDEV_ROOT_PATH.'announce.php', 0644) )
 	{
-    $warn .= "<br />Warning, please chmod announce.php to 0644 via ftp or shell.";
+    $warn .= "<br />คำเตือนโปรด chmod ประกาศ pphp ถึง 0644 ผ่าน FTP หรือเชลล์";
 	}
 	
 	$this->htmlout .= "
 	<div class='box_content'>
-	<h2>Installation Successfully Completed!</h2>
+	<h2>การติดตั้งเสร็จสมบูรณ์สำเร็จ!</h2>
 	<br />
-	<strong>The installation is now complete!</strong>
+	<strong>การติดตั้งเสร็จสมบูรณ์แล้ว!</strong>
 	{$warn}
 	<br /><br />
 	{$txt}
@@ -717,10 +718,10 @@ function install_error($msg="") {
 	$this->stdhead('Warning!');
 	
 	$this->htmlout .= "<div class='error-box'>
-	                       <h2>Warning!</h2>
+	                       <h2>คำเตือน!</h2>
 						   <br /><br />
-						   <h3>The following errors must be rectified before continuing!</h3>
-						   <br />Please <a href='javascript:history.back()'><span class='btn'>go back</span></a> and try again!
+						   <h3>ข้อผิดพลาดต่อไปนี้จะต้องแก้ไขก่อนดำเนินการต่อ!</h3>
+						   <br />Please <a href='javascript:history.back()'><span class='btn'>ผัด</span></a> และลองอีกครั้ง!
 						   <br /><br />
 						   $msg
 	                   </div>";
@@ -741,8 +742,8 @@ function htmlout() {
 
              <div id='siteInfo'>
                  <p class='center'>
-                   <a href='http://www.tbdev.net'><img src='./img/tbdev_btn_red.png' alt='Powered By TBDev &copy;2010' title='Powered By TBDev &copy;2010' /></a>
-                   <a href='http://www.tbdev.net'><img src='./img/dorks_btn_red.png' alt='Powered By TBDev &copy;2010' title='Powered By TBDev &copy;2010' /></a>
+                   <a href='http://www.tbdev.net'><img src='./img/tbdev_btn_red.png' alt='Powered By TBDev &copy;2010' title='ขับเคลื่อนโดย TBDEV © 2010' /></a>
+                   <a href='http://www.tbdev.net'><img src='./img/dorks_btn_red.png' alt='Powered By TBDev &copy;2010' title='ขับเคลื่อนโดย TBDEV © 2010' /></a>
                  </p>
              </div>
          </div>
@@ -770,7 +771,7 @@ function stdhead($title="") {
              <div id='header'>
                  <div id='logostrip'>
                      <div class='text-header'>
-                         <img src='img/install-icon.png' width='38' height='38' alt='' /><p>TBDev.net Installer</p>
+                         <img src='img/install-icon.png' width='38' height='38' alt='' /><p>ตัวติดตั้ง tbdev.net</p>
                      </div>
                      <div class='steps_box'>
                          <div class='active'><span>Start</span></div>

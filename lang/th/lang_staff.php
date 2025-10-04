@@ -3,19 +3,18 @@
 $lang = array(
 
 #Misc
-'stdhead_staff' => "Staff",
+'stdhead_staff' => "เจ้าหน้าที่",
 
 #Texts
-'text_none' => "None defined yet...",
-'text_staff' => "Staff page",
-'alt_pm' => "Personal Message",
-'alt_sm' => "Send Mail",
+'text_none' => "ยังไม่ได้กำหนด...",
+'text_staff' => "หน้าเจ้าหน้าที่",
+'alt_pm' => "ข้อความส่วนตัว",
+'alt_sm' => "ส่งเมล",
 
 #The table
-'header_sysops' => "Sysops",
-'header_admins' => "Administrators",
-'header_mods' => "Moderators",
-'header_vips' => "VIP's"
+'header_sysops' => "ผู้ดูแลระบบระดับสูง",
+'header_admins' => "ผู้ดูแลระบบ",
+'header_mods' => "ผู้ดูแล",
+'header_vips' => "VIP"
 );
-
 ?>

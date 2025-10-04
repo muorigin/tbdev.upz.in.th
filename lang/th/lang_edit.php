@@ -3,38 +3,37 @@
 $lang = array(
 
 #edit errors
-'edit_user_error' => "USER ERROR",
-'edit_no_torrent' => "No torrent found",
-'edit_no_permission' => "<h1>Can't edit this torrent</h1><p>You're not the rightful owner, or you're not <a href='members.php?action=login&amp;returnto=%s&amp;nowarn=1'>logged in</a> properly.</p>",
+'edit_user_error' => "ข้อผิดพลาดผู้ใช้",
+'edit_no_torrent' => "ไม่พบทอร์เรนต์",
+'edit_no_permission' => "<h1>ไม่สามารถแก้ไขทอร์เรนต์นี้</h1><p>คุณไม่ใช่เจ้าของที่ถูกต้อง หรือคุณไม่ได้ <a href='members.php?action=login&returnto=%s&nowarn=1'>เข้าสู่ระบบ</a> อย่างถูกต้อง</p>",
 
 #edit options
-'edit_torrent_name' => "Torrent name",
-'edit_nfo' => "NFO file",
-'edit_keep_current' => "Keep current",
-'edit_update' => "Update:",
-'edit_description' => "Description",
-'edit_tags' => "HTML is not allowed. <a href='tags.php'>Click here</a> for information on available tags.",
-'edit_type' => "Type",
-'edit_visible' => "Visible",
-'edit_visible_mainpage' => "Visible on main page",
-'edit_visible_info' => "Note that the torrent will automatically become visible when there's a seeder, and will become automatically invisible (dead) when there has been no seeder for a while. Use this switch to speed the process up manually. Also note that invisible (dead) torrents can still be viewed or searched for, it's just not the default.",
-'edit_banned' => "Banned",
-'edit_revert' => "Revert changes",
-'edit_submit' => "Edit it!",
-'edit_delete_torrent' => "Delete torrent",
-'edit_reason' => "Reason:",
-'edit_dead' => "Dead",
-'edit_peers' => "0 seeders, 0 leechers = 0 peers total",
-'edit_dupe' => "Dupe",
-'edit_nuked' => "Nuked",
-'edit_rules' => "TB Rules",
+'edit_torrent_name' => "ชื่อทอร์เรนต์",
+'edit_nfo' => "ไฟล์ NFO",
+'edit_keep_current' => "เก็บปัจจุบัน",
+'edit_update' => "อัปเดต:",
+'edit_description' => "คำอธิบาย",
+'edit_tags' => "ไม่อนุญาต HTML <a href='tags.php'>คลิกที่นี่</a> สำหรับข้อมูลเกี่ยวกับแท็กที่มีอยู่",
+'edit_type' => "ประเภท",
+'edit_visible' => "มองเห็น",
+'edit_visible_mainpage' => "มองเห็นในหน้าแรก",
+'edit_visible_info' => "หมายเหตุว่าทอร์เรนต์จะปรากฏโดยอัตโนมัติเมื่อมีซีดเดอร์ และจะหายไปโดยอัตโนมัติ (ตาย) เมื่อไม่มีซีดเดอร์เป็นเวลานาน ใช้สวิตช์นี้เพื่อเร่งกระบวนการด้วยตนเอง นอกจากนี้ โปรดทราบว่าทอร์เรนต์ที่มองไม่เห็น (ตาย) ยังสามารถดูหรือค้นหาได้ มันแค่ไม่ใช่ค่าเริ่มต้น",
+'edit_banned' => "ถูกแบน",
+'edit_revert' => "กลับการเปลี่ยนแปลง",
+'edit_submit' => "แก้ไขเลย!",
+'edit_delete_torrent' => "ลบทอร์เรนต์",
+'edit_reason' => "เหตุผล:",
+'edit_dead' => "ตาย",
+'edit_peers' => "0 ซีดเดอร์, 0 ลีชเชอร์ = 0 เพียร์ทั้งหมด",
+'edit_dupe' => "ซ้ำ",
+'edit_nuked' => "ถูกนุก",
+'edit_rules' => "กฎ TB",
 'edit_req' => "req",
-'edit_other' => "Other:",
-'edit_delete' => "Delete it!",
+'edit_other' => "อื่นๆ:",
+'edit_delete' => "ลบเลย!",
 
 #edit stdhead
-'edit_stdhead' => "Edit torrent"
+'edit_stdhead' => "แก้ไขทอร์เรนต์"
 
 );
-
 ?>

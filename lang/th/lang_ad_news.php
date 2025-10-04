@@ -1,27 +1,27 @@
 <?php
 $lang = array( 
 #errs
-'news_error' => 'Error',
-'news_gen_error' => 'Invalid news item ID - Code %d .',
-'news_delete_notice' => 'Delete news item',
-'news_delete_text' => "Do you really want to delete a news item?<br/>Click <a href='admin.php?action=news&amp;mode=delete&amp;newsid=%d&amp;returnto=news&amp;sure=1'>here</a> if you are sure.",
+'news_error' => 'ข้อผิดพลาด',
+'news_gen_error' => 'รหัสข่าวไม่ถูกต้อง - รหัส %d .',
+'news_delete_notice' => 'ลบข่าว',
+'news_delete_text' => "คุณต้องการลบข่าวจริงหรือ?<br/>คลิก <a href='admin.php?action=news&mode=delete&newsid=%d&returnto=news&sure=1'>ที่นี่</a> ถ้าคุณแน่ใจ.",
 
 #delete
-'news_delete_ok' => 'News item was deleted successfully.',
-'news_act_delete' => 'Delete',
+'news_delete_ok' => 'ลบข่าวเรียบร้อยแล้ว',
+'news_act_delete' => 'ลบ',
 #add
-'news_add_ok' => 'News item was added successfully.',
-'news_add_body' => 'News body can\'t be empty.',
-'news_add_err' => 'Something weird just happened.',
+'news_add_ok' => 'เพิ่มข่าวเรียบร้อยแล้ว',
+'news_add_body' => 'เนื้อข่าวไม่สามารถว่างเปล่าได้',
+'news_add_err' => 'เกิดข้อผิดพลาดบางอย่าง',
 #edit
-'news_edit_ok' => 'News item was edited successfully.',
-'news_act_edit' => 'Edit',
-'news_edit_nonewsid' => 'No news item with ID.',
+'news_edit_ok' => 'แก้ไขข่าวเรียบร้อยแล้ว',
+'news_act_edit' => 'แก้ไข',
+'news_edit_nonewsid' => 'ไม่มีข่าวที่มีรหัส',
 
-'news_edit_title' => 'Edit News Item',
-'news_submit_title' => 'Submit News Item',
-'news_nonews' => 'No news',
-'news_sorry' => 'Sorry',
-'news_window_title' => 'Site news'
+'news_edit_title' => 'แก้ไขข่าว',
+'news_submit_title' => 'ส่งข่าว',
+'news_nonews' => 'ไม่มีข่าว',
+'news_sorry' => 'ขอโทษ',
+'news_window_title' => 'ข่าวของไซต์'
 );
 ?>

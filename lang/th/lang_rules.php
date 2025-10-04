@@ -3,128 +3,124 @@
 $lang = array(
 
 #RULES
-'rules_general_header' => "General rules - <font color='#004E98'>Breaking these rules can and will get you banned!</font>",
+'rules_general_header' => "กฎทั่วไป - <font color='#004E98'>การละเมิดกฎเหล่านี้จะนำไปสู่การแบน!</font>",
 'rules_general_body' => "<ul>
-    <li>Do not defy the moderators expressed wishes!</li>
-    <li>Do not upload our torrents to other trackers! (See the <a href='faq.php#up3' class='altlink'><b>FAQ</b></a> for details.)</li>
-    <li><a name='warning'></a>Disruptive behaviour in the forums or on the game server will result in a warning (<img src='{$TBDEV['pic_base_url']}warned.gif' alt='' /> ).<br />
-    You will only get <b>one</b> warning! After that it's bye bye Kansas!</li>
+    <li>อย่าท้าทายความประสงค์ที่แสดงออกมาของผู้ดูแล!</li>
+    <li>อย่าอัปโหลดทอร์เรนต์ของเราไปยัง tracker อื่น! (ดู <a href='faq.php#up3' class='altlink'><b>FAQ</b></a> สำหรับรายละเอียด.)</li>
+    <li><a name='warning'></a>พฤติกรรมที่รบกวนในฟอรัมหรือบนเซิร์ฟเวอร์เกมจะนำไปสู่คำเตือน (<img src='{$TBDEV['pic_base_url']}warned.gif' alt='' /> ).<br />
+    คุณจะได้รับคำเตือนเพียง <b>หนึ่ง</b> ครั้ง! หลังจากนั้นก็ลาก่อนแคนซัส!</li>
     </ul>",
-'rules_downloading_header' => "Downloading rules - <font color='#004E98'>By not following these rules you will lose download privileges!</font>",
+'rules_downloading_header' => "กฎการดาวน์โหลด - <font color='#004E98'>การไม่ปฏิบัติตามกฎเหล่านี้จะทำให้คุณสูญเสียสิทธิ์การดาวน์โหลด!</font>",
 'rules_downloading_body' => "<ul>
-    <li>Access to the newest torrents is conditional on a good ratio! (See the <a href='faq.php#dl8' class='altlink'><b>FAQ</b></a> for details.)</li>
-    <li>Low ratios may result in severe consequences, including banning in extreme cases.</li>
+    <li>การเข้าถึงทอร์เรนต์ใหม่ล่าสุดขึ้นอยู่กับอัตราที่ดี! (ดู <a href='faq.php#dl8' class='altlink'><b>FAQ</b></a> สำหรับรายละเอียด.)</li>
+    <li>อัตราต่ำอาจนำไปสู่ผลที่รุนแรง รวมถึงการแบนในกรณีที่รุนแรง.</li>
     </ul>",
-'rules_forum_header' => "General Forum Guidelines - <font color='#004E98'>Please follow these guidelines or else you might end up with a warning!</font>",
+'rules_forum_header' => "แนวทางฟอรัมทั่วไป - <font color='#004E98'>กรุณาปฏิบัติตามแนวทางเหล่านี้มิฉะนั้นคุณอาจได้รับคำเตือน!</font>",
 'rules_forum_body' => "<ul>
-    <li>No aggressive behaviour or flaming in the forums.</li>
-    <li>No trashing of other peoples topics (i.e. SPAM).</li>
-    <li>No language other than English in the forums.</li>
-    <li>No systematic foul language (and none at all on  titles).</li>
-    <li>No links to warez or crack sites in the forums.</li>
-    <li>No requesting or posting of serials, CD keys, passwords or cracks in the forums.</li>
-    <li>No requesting if there has been no '<a href='http://www.nforce.nl/'>scene</a>' release in the last 7 days.</li>
-    <li>No bumping... (All bumped threads will be deleted.)</li>
-    <li>No images larger than 800x600, and preferably web-optimised.</li>
-    <li>No double posting. If you wish to post again, and yours is the last post
-    in the thread please use the EDIT function, instead of posting a double.</li>
-    <li>Please ensure all questions are posted in the correct section!<br />
-    (Game questions in the Games section, Apps questions in the Apps section, etc.)</li>
-    <li>Last, please read the <a href='faq.php' class='altlink'><b>FAQ</b></a> before asking any questions!</li>
+    <li>ไม่มีพฤติกรรมก้าวร้าวหรือการต่อสู้ในฟอรัม.</li>
+    <li>อย่าทำลายหัวข้อของผู้อื่น (เช่น SPAM).</li>
+    <li>ไม่มีภาษาอื่นนอกจากภาษาอังกฤษในฟอรัม.</li>
+    <li>ไม่มีคำหยาบอย่างเป็นระบบ (และไม่มีเลยในหัวข้อ).</li>
+    <li>ไม่มีลิงก์ไปยังไซต์ warez หรือ crack ในฟอรัม.</li>
+    <li>อย่าขอหรือโพสต์ซีเรียล, คีย์ซีดี, รหัสผ่าน หรือ cracks ในฟอรัม.</li>
+    <li>อย่าขอหากยังไม่มีรุ่น '<a href='http://www.nforce.nl/'>scene</a>' ในช่วง 7 วันที่ผ่านมา.</li>
+    <li>อย่าทำ bumping... (หัวข้อที่ bumped ทั้งหมดจะถูกลบ.)</li>
+    <li>ไม่มีรูปภาพขนาดใหญ่กว่า 800x600 และควรปรับให้เหมาะกับเว็บ.</li>
+    <li>อย่าทำ double posting. หากคุณต้องการโพสต์อีกครั้ง และของคุณเป็นโพสต์ล่าสุดในหัวข้อ กรุณาใช้ฟังก์ชัน EDIT แทนที่จะโพสต์ซ้ำ.</li>
+    <li>กรุณาแน่ใจว่าคำถามทั้งหมดถูกโพสต์ในส่วนที่ถูกต้อง!<br />
+    (คำถามเกมในส่วนเกม, คำถามแอปในส่วนแอป, ฯลฯ)</li>
+    <li>สุดท้าย กรุณาอ่าน <a href='faq.php' class='altlink'><b>FAQ</b></a> ก่อนถามคำถามใดๆ!</li>
     </ul>",
-'rules_avatar_header' => "Avatar Guidelines - <font color='#004E98'>Please try to follow these guidelines</font>",
+'rules_avatar_header' => "แนวทางอวตาร - <font color='#004E98'>กรุณาพยายามปฏิบัติตามแนวทางเหล่านี้</font>",
 'rules_avatar_body' => "<ul>
-    <li>The allowed formats are .gif, .jpg and .png.</li>
-    <li>Be considerate. Resize your images to a width of 150 px and a size of no more than 150 KB.
-    (Browsers will rescale them anyway: smaller images will be expanded and will not look good;
-    larger images will just waste bandwidth and CPU cycles.) For now this is just a guideline but
-    it will be automatically enforced in the near future.</li>
-    <li>Do not use potentially offensive material involving porn, religious material, animal / human
-    cruelty or ideologically charged images. Mods have wide discretion on what is acceptable.
-    If in doubt PM one.</li>
+    <li>รูปแบบที่อนุญาตคือ .gif, .jpg และ .png.</li>
+    <li>กรุณาพิจารณา ปรับขนาดรูปภาพของคุณให้กว้าง 150 px และขนาดไม่เกิน 150 KB.
+    (เบราว์เซอร์จะปรับขนาดพวกมันอยู่แล้ว: รูปภาพขนาดเล็กจะถูกขยายและจะไม่ดูดี;
+    รูปภาพขนาดใหญ่จะเสียแบนด์วิดท์และรอบ CPU.) ตอนนี้เป็นเพียงแนวทาง แต่จะถูกบังคับใช้โดยอัตโนมัติในอนาคต.</li>
+    <li>อย่าใช้เนื้อหาที่อาจก่อให้เกิดการขัดแย้ง เช่น โป๊, เนื้อหาทางศาสนา, ความโหดร้ายต่อสัตว์ / มนุษย์ หรือรูปภาพที่มีอุดมการณ์. ผู้ดูแลมีดุลยพินิจกว้างขวางในสิ่งที่ยอมรับได้.
+    หากสงสัย PM หนึ่งคน.</li>
     </ul>",
-'rules_uploading_header' => "Uploading rules - <font color='#004E98'>Torrents violating these rules may be deleted without notice</font>",
+'rules_uploading_header' => "กฎการอัปโหลด - <font color='#004E98'>ทอร์เรนต์ที่ละเมิดกฎเหล่านี้จะถูกลบโดยไม่แจ้งให้ทราบ</font>",
 'rules_uploading_body' => "<ul>
-      <li>All uploads must include a proper NFO.</li>
-      <li>Only scene releases. If it's not on <a href='redir.php?url=http://www.nforce.nl' class='altlink'>NFOrce</a> or <a href='http://www.grokmusiq.com/' class='altlink'>grokMusiQ</a> then forget it!</li>
-      <li>The stuff must not be older than seven (7) days.</li>
-      <li>All files must be in original format (usually 14.3 MB RARs).</li>
-      <li>Pre-release stuff should be labeled with an *ALPHA* or *BETA* tag.</li>
-      <li>Make sure not to include any serial numbers, CD keys or similar in the description (you do <b>not</b> need to edit the NFO!).</li>
-      <li>Make sure your torrents are well-seeded for at least 24 hours.</li>
-      <li>Do not include the release date in the torrent name.</li>
-      <li>Stay active! You risk being demoted if you have no active torrents.</li>
+      <li>การอัปโหลดทั้งหมดต้องรวม NFO ที่เหมาะสม.</li>
+      <li>เฉพาะรุ่น scene เท่านั้น. หากไม่ได้อยู่ใน <a href='redir.php?url=http://www.nforce.nl' class='altlink'>NFOrce</a> หรือ <a href='http://www.grokmusiq.com/' class='altlink'>grokMusiQ</a> ก็ลืมมันไป!</li>
+      <li>เนื้อหาต้องไม่เก่ากว่าเจ็ด (7) วัน.</li>
+      <li>ไฟล์ทั้งหมดต้องอยู่ในรูปแบบต้นฉบับ (โดยปกติ 14.3 MB RARs).</li>
+      <li>เนื้อหา pre-release ควรติดป้าย *ALPHA* หรือ *BETA*.</li>
+      <li>แน่ใจว่าไม่รวมซีเรียล, คีย์ซีดี หรือคล้ายกันในคำอธิบาย (คุณ <b>ไม่</b> ต้องแก้ไข NFO!).</li>
+      <li>แน่ใจว่าทอร์เรนต์ของคุณถูก seed อย่างดีเป็นอย่างน้อย 24 ชั่วโมง.</li>
+      <li>อย่าลงวันที่เผยแพร่ในชื่อทอร์เรนต์.</li>
+      <li>คงความกระตือรือร้น! คุณเสี่ยงถูก demote หากไม่มีทอร์เรนต์ที่ใช้งานอยู่.</li>
       </ul>
       <br />
 
-      If you have something interesting that somehow violate these rules (e.g. not ISO format), ask a mod and we might make an exception.",
-'rules_moderating_header' => "Moderating rules - <font color='#004E98'>Whom to promote and why</font>",
+      หากคุณมีสิ่งที่น่าสนใจที่ละเมิดกฎเหล่านี้ (เช่น ไม่ใช่รูปแบบ ISO), ถามผู้ดูแลและเราอาจทำข้อยกเว้น.",
+'rules_moderating_header' => "กฎการดูแล - <font color='#004E98'>ใครที่จะเลื่อนขั้นและทำไม</font>",
 'rules_moderating_body' => "<tr>
         <td class='embedded' bgcolor='#F5F4EA' valign='top' width='80'>&nbsp; <b>Power User</b></td>
         <td class='embedded' width='5'>&nbsp;</td>
-        <td class='embedded'>Automatically given to (and revoked from) users who have been members for at least 4 weeks, have uploaded at least
-        25 GB and have a share ratio above 1.05. Moderator changes of status last only until the next execution of the script.</td>
+        <td class='embedded'>มอบให้โดยอัตโนมัติ (และถอน) จากผู้ใช้ที่เป็นสมาชิกอย่างน้อย 4 สัปดาห์ มีอัปโหลดอย่างน้อย
+        25 GB และมีอัตราส่วนสูงกว่า 1.05. การเปลี่ยนแปลงสถานะของผู้ดูแลคงอยู่จนกว่าการดำเนินการครั้งต่อไปของสคริปต์.</td>
       </tr>
       <tr>
         <td class='embedded' bgcolor='#F5F4EA' valign='top'>&nbsp; <b><img src='{$TBDEV['pic_base_url']}star.gif' alt='' /></b></td>
         <td class='embedded' width='5'>&nbsp;</td>
-        <td class='embedded'>This status is given ONLY by Redbeard since he is the only one who can verify that they actually donated something.</td>
+        <td class='embedded'>สถานะนี้มอบโดย Redbeard เท่านั้น เนื่องจากเขาเป็นคนเดียวที่สามารถตรวจสอบได้ว่าพวกเขาบริจาคอะไรจริงๆ.</td>
       </tr>
       <tr>
         <td class='embedded' bgcolor='#F5F4EA' valign='top'>&nbsp; <b>VIP</b></td>
         <td class='embedded' width='5'>&nbsp;</td>
-        <td class='embedded'>Conferred to users you feel contribute something special to the site. (Anyone begging for VIP status will be automatically disqualified)</td>
+        <td class='embedded'>มอบให้ผู้ใช้ที่คุณรู้สึกว่าพวกเขามีส่วนช่วยอะไรพิเศษให้กับไซต์. (ทุกคนที่ขอสถานะ VIP จะถูกปฏิเสธโดยอัตโนมัติ)</td>
       </tr>
       <tr>
-        <td class='embedded' bgcolor='#F5F4EA' valign='top'>&nbsp; <b>Other</b></td>
+        <td class='embedded' bgcolor='#F5F4EA' valign='top'>&nbsp; <b>อื่นๆ</b></td>
         <td class='embedded' width='5'>&nbsp;</td>
-        <td class='embedded'>Customised title given to special users only (Not available to Users or Power Users).</td>
+        <td class='embedded'>ชื่อที่กำหนดเองมอบให้ผู้ใช้พิเศษเท่านั้น (ไม่พร้อมสำหรับผู้ใช้หรือ Power Users).</td>
       </tr>
       <tr>
         <td class='embedded' bgcolor='#F5F4EA' valign='top'>&nbsp; <b><font color='#4040c0'>Uploader</font></b></td>
         <td class='embedded' width='5'>&nbsp;</td>
-        <td class='embedded'>Appointed by Admins/SysOp. Send a PM to <a class='altlink' href='sendmessage.php?receiver=2'>RB</a> / <a class='altlink' href='sendmessage.php?receiver=277'>HS</a> / <a class='altlink' href='sendmessage.php?receiver=2253'>H</a> if you think you've got a good candidate.</td>
+        <td class='embedded'>แต่งตั้งโดย Admins/SysOp. ส่ง PM ไปยัง <a class='altlink' href='sendmessage.php?receiver=2'>RB</a> / <a class='altlink' href='sendmessage.php?receiver=277'>HS</a> / <a class='altlink' href='sendmessage.php?receiver=2253'>H</a> หากคุณคิดว่าคุณมีผู้สมัครที่ดี.</td>
       </tr>
       <tr>
         <td class='embedded' bgcolor='#F5F4EA' valign='top'>&nbsp; <b><font color='#A83838'>Moderator</font></b></td>
         <td class='embedded' width='5'>&nbsp;</td>
-        <td class='embedded'>Appointed by Redbeard only. If you think you've got a good candidate,
-        send him a <a class='altlink' href='sendmessage.php?receiver=2'>PM</a>.</td>
+        <td class='embedded'>แต่งตั้งโดย Redbeard เท่านั้น. หากคุณคิดว่าคุณมีผู้สมัครที่ดี,
+        ส่ง <a class='altlink' href='sendmessage.php?receiver=2'>PM</a> ไปยังเขา.</td>
       </tr>",
-'rules_mod_rules_header' => "Moderating Rules - <font color='#004E98'>Use your better judgement!</font>",
+'rules_mod_rules_header' => "กฎการดูแล - <font color='#004E98'>ใช้ดุลยพินิจที่ดีกว่า!</font>",
 'rules_mod_rules_body' => "<ul>
-      <li>The most important rule: Use your better judgment!</li>
-      <li>Don't be afraid to say <b>NO</b>! (a.k.a. 'Helshad's rule'.)</li>
-      <li>Don't defy another mod in public, instead send a PM or through IM.</li>
-      <li>Be tolerant! Give the user(s) a chance to reform.</li>
-      <li>Don't act prematurely, let the users make their mistakes and THEN correct them.</li>
-      <li>Try correcting any 'off topics' rather then closing a thread.</li>
-      <li>Move topics rather than locking them.</li>
-      <li>Be tolerant when moderating the Chit-chat section (give them some slack).</li>
-      <li>If you lock a topic, give a brief explanation as to why you're locking it.</li>
-      <li>Before you disable a user account, send him/her a PM and if they reply, put them on a 2 week trial.</li>
-      <li>Don't disable a user account until he or she has been a member for at least 4 weeks.</li>
-      <li><b>Always</b> state a reason (in the user comment box) as to why the user is being banned / warned.</li>
+      <li>กฎที่สำคัญที่สุด: ใช้ดุลยพินิจที่ดีกว่า!</li>
+      <li>อย่ากลัวที่จะพูด <b>ไม่</b>! (a.k.a. 'กฎของ Helshad'.)</li>
+      <li>อย่าท้าทายผู้ดูแลคนอื่นต่อหน้าสาธารณะ แทนที่จะส่ง PM หรือผ่าน IM.</li>
+      <li>อดทน! ให้ผู้ใช้โอกาสในการปรับปรุง.</li>
+      <li>อย่าดำเนินการก่อนเวลา ให้ผู้ใช้ทำผิดพลาดของพวกเขาและจากนั้นแก้ไข.</li>
+      <li>พยายามแก้ไข 'off topics' แทนที่จะปิดหัวข้อ.</li>
+      <li>ย้ายหัวข้อแทนที่จะล็อก.</li>
+      <li>อดทนเมื่อดูแลส่วน Chit-chat (ให้พวกเขาพักผ่อน).</li>
+      <li>หากคุณล็อกหัวข้อ ให้คำอธิบายสั้นๆ ว่าทำไมคุณถึงล็อกมัน.</li>
+      <li>ก่อนที่คุณจะปิดใช้งานบัญชีผู้ใช้ ส่ง PM ไปยังเขา/เธอ และหากพวกเขาตอบ ให้พวกเขาอยู่ในช่วงทดลอง 2 สัปดาห์.</li>
+      <li>อย่าปิดใช้งานบัญชีผู้ใช้จนกว่าพวกเขาจะเป็นสมาชิกอย่างน้อย 4 สัปดาห์.</li>
+      <li><b>เสมอ</b> ระบุเหตุผล (ในกล่องความคิดเห็นผู้ใช้) ว่าทำไมผู้ใช้ถึงถูกแบน / เตือน.</li>
       </ul>
       <br />",
-'rules_mod_options_header' => "Moderating options - <font color='#004E98'>What are my privileges as a mod?</font>",
+'rules_mod_options_header' => "ตัวเลือกการดูแล - <font color='#004E98'>สิทธิพิเศษของฉันในฐานะผู้ดูแลคืออะไร?</font>",
 'rules_mod_options_body' => "<ul>
-      <li>You can delete and edit forum posts.</li>
-      <li>You can delete and edit torrents.</li>
-      <li>You can delete and change users avatars.</li>
-      <li>You can disable user accounts.</li>
-      <li>You can edit the title of VIP's.</li>
-      <li>You can see the complete info of all users.</li>
-      <li>You can add comments to users (for other mods and admins to read).</li>
-      <li>You can stop reading now 'cuz you already knew about these options. ;)</li>
-      <li>Lastly, check out the <a href='staff.php' class='altlink'>Staff</a> page (top right corner).</li>
+      <li>คุณสามารถลบและแก้ไขโพสต์ฟอรัม.</li>
+      <li>คุณสามารถลบและแก้ไขทอร์เรนต์.</li>
+      <li>คุณสามารถลบและเปลี่ยนอวตารของผู้ใช้.</li>
+      <li>คุณสามารถปิดใช้งานบัญชีผู้ใช้.</li>
+      <li>คุณสามารถแก้ไขชื่อของ VIP.</li>
+      <li>คุณสามารถดูข้อมูลทั้งหมดของผู้ใช้ทั้งหมด.</li>
+      <li>คุณสามารถเพิ่มความคิดเห็นให้ผู้ใช้ (สำหรับผู้ดูแลและแอดมินคนอื่นๆ อ่าน).</li>
+      <li>คุณสามารถหยุดอ่านตอนนี้ 'เพราะคุณรู้เกี่ยวกับตัวเลือกเหล่านี้อยู่แล้ว. ;)</li>
+      <li>สุดท้าย ตรวจสอบหน้า <a href='staff.php' class='altlink'>Staff</a> (มุมขวาบน).</li>
       </ul>",
-'rules_rules' => "Rules",
+'rules_rules' => "กฎ",
 'rules_' => "",
 'rules_' => "",
 'rules_' => "",
 'rules_' => "",
 
 );
-
 ?>

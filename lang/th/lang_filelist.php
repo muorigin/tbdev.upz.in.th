@@ -3,14 +3,15 @@
 $lang = array (
 
 
+
 #header
 
-'filelist_header' 			=> 'Filelist', 
+'filelist_header' 			=> 'รายชื่อไฟล์', 
 
 #table headers
 
-'filelist_path' 			=> 'Path', 
-'filelist_size' 			=> 'Size'
+'filelist_path' 			=> 'เส้นทาง', 
+'filelist_size' 			=> 'ขนาด'
 
 );
 ?>

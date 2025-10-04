@@ -4,47 +4,46 @@ $lang = array (
 
 #info
 
-'info_reputation_offline' 	=> 'Reputation system offline, sorry', 
-'info_reputation_added' 	=> 'Reputation added!', 
-'info_incorrect_access' 	=> 'Incorrect access!', 
-'info_invalid_post' 		=> 'Post Does Not Exist - Incorrect Access', 
-'info_wrong_permissions' 	=> 'Wrong Permissions', 
-'info_already_added' 		=> 'You have already added Rep to this entry!',  
-'info_cannot_rate_own' 		=> 'You cannot rep your own stuffs!',  
-'info_daily_rep_limit_expired' 	=> 'The game is up, you rep spammer!',  
-'info_reason_too_short' 	=> 'Reputation reasion is too short!', 
-'info_reason_too_long' 		=> 'Reputation reasion is too long!', 
-'info_your_rep_on' 		=> 'Your reputation on', 
-'info_this_post' 		=> 'this post', 
-'info_is' 			=> 'is', 
-'info_you_have' 		=> 'You have', 
-'info_is' 			=> 'is', 
-'info_reputation_points' 	=> 'Reputation Point(s).', 
-'info_add_rep' 			=> 'Add To Reputation', 
-'info_close_rep'		=> 'Close Rep', 
-	
+'info_reputation_offline' 	=> 'ระบบชื่อเสียงออฟไลน์ ขอโทษ',
+'info_reputation_added' 	=> 'เพิ่มชื่อเสียงแล้ว!',
+'info_incorrect_access' 	=> 'การเข้าถึงไม่ถูกต้อง!',
+'info_invalid_post' 		=> 'โพสต์ไม่มีอยู่ - การเข้าถึงไม่ถูกต้อง',
+'info_wrong_permissions' 	=> 'สิทธิ์ผิด',
+'info_already_added' 		=> 'คุณได้เพิ่ม Rep ให้รายการนี้แล้ว!',
+'info_cannot_rate_own' 		=> 'คุณไม่สามารถ rep สิ่งของตัวเอง!',
+'info_daily_rep_limit_expired' 	=> 'เกมจบแล้ว คุณ rep spammer!',
+'info_reason_too_short' 	=> 'เหตุผลชื่อเสียงสั้นเกินไป!',
+'info_reason_too_long' 		=> 'เหตุผลชื่อเสียงยาวเกินไป!',
+'info_your_rep_on' 		=> 'ชื่อเสียงของคุณบน',
+'info_this_post' 		=> 'โพสต์นี้',
+'info_is' 			=> 'คือ',
+'info_you_have' 		=> 'คุณมี',
+'info_is' 			=> 'คือ',
+'info_reputation_points' 	=> 'คะแนนชื่อเสียง',
+'info_add_rep' 			=> 'เพิ่มไปยังชื่อเสียง',
+'info_close_rep'		=> 'ปิด Rep',
 
 
 
 #main
 
-'rep_let_by' 			=> 'Let by', 
-'rep_comments' 			=> 'Reputation Comments', 
-'rep_i_approve' 			=> 'I Approve', 
-'rep_i_disapprove' 		=> 'I Disapprove', 
-'rep_your_comm_on_this_post'	=> 'Your comments on this post:', 
+'rep_let_by' 			=> 'ปล่อยโดย',
+'rep_comments' 			=> 'ความคิดเห็นชื่อเสียง',
+'rep_i_approve' 			=> 'ฉันอนุมัติ',
+'rep_i_disapprove' 		=> 'ฉันไม่เห็นด้วย',
+'rep_your_comm_on_this_post'	=> 'ความคิดเห็นของคุณบนโพสต์นี้:',
 
 #reputation levels
 
-'rep_even'			=> 'Even', 
-'rep_somewhat_positive'		=> 'Somewhat Positive', 
-'rep_positive'			=> 'Positive', 
-'rep_very_positive'		=> 'Very Positive', 
-'rep_extremely_positive'	=> 'Extremely Positive', 
-'rep_somewhat_negative'		=> 'Somewhat Negative', 
-'rep_negative'			=> 'Negative', 
-'rep_very_negative'		=> 'Very Negative', 
-'rep_extremely_negative'	=> 'Extremely Negative', 
+'rep_even'			=> 'เท่ากัน',
+'rep_somewhat_positive'		=> 'ค่อนข้างบวก',
+'rep_positive'			=> 'บวก',
+'rep_very_positive'		=> 'บวกมาก',
+'rep_extremely_positive'	=> 'บวกอย่างมาก',
+'rep_somewhat_negative'		=> 'ค่อนข้างลบ',
+'rep_negative'			=> 'ลบ',
+'rep_very_negative'		=> 'ลบมาก',
+'rep_extremely_negative'	=> 'ลบอย่างมาก',
 
 );
 ?>

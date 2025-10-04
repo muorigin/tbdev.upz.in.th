@@ -3,7 +3,7 @@
 $lang = array(
 
 #Logout
-'logout_' => "",
+'logout_' => "ออกจากระบบแล้ว!",
 
 
 );

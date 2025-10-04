@@ -3,11 +3,10 @@
 $lang = array(
 
 #Texts
-'text_puke' => "Puke",
-'text_nfofor' => "NFO for ",
-'text_forbest' => "For best visual result, install the ",
+'text_puke' => "แสดง",
+'text_nfofor' => "NFO สำหรับ ",
+'text_forbest' => "สำหรับผลลัพธ์ภาพที่ดีที่สุด ติดตั้ง ",
 'text_linedraw' => "MS Linedraw",
-'text_font' => " font"
+'text_font' => " ฟอนต์"
 );
-
 ?>

@@ -4,30 +4,30 @@ $lang = array (
 
 #takeprofedit
 
-'takeprofedit_no_data' 	=> "missing form data",
-'takeprofedit_pass_long' 	=> "Sorry, password is too long (max is 40 chars)",
-'takeprofedit_pass_not_match' 	=> "The passwords didn't match. Try again.",
-'takeprofedit_not_valid_email' 	=> "That doesn't look like a valid email address.",
-'takeprofedit_address_taken' 	=> "Could not change email, address already taken or password mismatch.",
-'takeprofedit_user_error' 	=> "USER ERROR",
-'takeprofedit_image_error' 	=> "Not an image or unsupported image!",
-'takeprofedit_small_image' 	=> "Image is too small",
-'takeprofedit_confirm' => "profile change confirmation"
+'takeprofedit_no_data' 	=> "ข้อมูลฟอร์มหายไป",
+'takeprofedit_pass_long' 	=> "ขอโทษ รหัสผ่านยาวเกินไป (สูงสุด 40 ตัวอักษร)",
+'takeprofedit_pass_not_match' 	=> "รหัสผ่านไม่ตรงกัน ลองอีกครั้ง",
+'takeprofedit_not_valid_email' 	=> "นั่นไม่เหมือนที่อยู่อีเมลที่ถูกต้อง",
+'takeprofedit_address_taken' 	=> "ไม่สามารถเปลี่ยนอีเมล ที่อยู่ถูกใช้แล้วหรือรหัสผ่านไม่ตรง",
+'takeprofedit_user_error' 	=> "ข้อผิดพลาดผู้ใช้",
+'takeprofedit_image_error' 	=> "ไม่ใช่รูปภาพหรือรูปภาพที่ไม่รองรับ!",
+'takeprofedit_small_image' 	=> "รูปภาพเล็กเกินไป",
+'takeprofedit_confirm' => "การยืนยันการเปลี่ยนโปรไฟล์"
 );
 
 $lang['takeprofedit_email_body'] = <<<EOD
-You have requested that your user profile (username <#USERNAME#>)
-on <#SITENAME#> should be updated with this email address (<#USEREMAIL#>) as
-user contact.
+คุณได้ขอให้โปรไฟล์ผู้ใช้ของคุณ (ชื่อผู้ใช้ <#USERNAME#>)
+บน <#SITENAME#> ถูกอัปเดตด้วยที่อยู่อีเมลนี้ (<#USEREMAIL#>) เป็น
+ผู้ติดต่อผู้ใช้
 
-If you did not do this, please ignore this email. The person who entered your
-email address had the IP address <#IP_ADDRESS#>. Please do not reply.
+หากคุณไม่ได้ทำเช่นนี้ โปรดละเว้นอีเมลนี้ ผู้ที่ป้อนที่อยู่
+อีเมลของคุณมีที่อยู่ IP <#IP_ADDRESS#> โปรดอย่าตอบกลับ
 
-To complete the update of your user profile, please follow this link:
+เพื่อเสร็จสิ้นการอัปเดตโปรไฟล์ผู้ใช้ของคุณ โปรดตามลิงก์นี้:
 
 <#CHANGE_LINK#>
 
-Your new email address will appear in your profile after you do this. Otherwise
-your profile will remain unchanged.
+ที่อยู่อีเมลใหม่ของคุณจะปรากฏในโปรไฟล์หลังจากคุณทำเช่นนี้ มิฉะนั้น
+โปรไฟล์ของคุณจะยังคงไม่เปลี่ยนแปลง
 EOD;
 ?>

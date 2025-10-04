@@ -4,26 +4,25 @@ $lang = array(
 
 
 #head
-'head_users' => "Users",
+'head_users' => "ผู้ใช้",
 
 
 #form
-'form_search' => "Search:",
-'form_btn' => "Okay",
+'form_search' => "ค้นหา:",
+'form_btn' => "ตกลง",
 
 
 #pager
-'pager_first' => "First",
-'pager_last' => "Last",
+'pager_first' => "แรก",
+'pager_last' => "สุดท้าย",
 
 
 #users
-'users_regd' => "Registered",
-'users_la' => "Last access",
-'users_class' => "Class",
-'users_country' => "Country",
+'users_regd' => "ลงทะเบียน",
+'users_la' => "เข้าถึงล่าสุด",
+'users_class' => "คลาส",
+'users_country' => "ประเทศ",
 
 
 );
-
 ?>

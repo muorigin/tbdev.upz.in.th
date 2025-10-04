@@ -3,27 +3,23 @@
 $lang = array(
 
 #News
-'news_title'	=> "Recent News",
-'news_link' => "News Page",
-'news_edit' 		    => "Edit",
-'news_delete' 			=> "Delete",
+'news_title'	=> "ข่าวล่าสุด",
+'news_link' => "หน้าข่าว",
+'news_edit' 		    => "แก้ไข",
+'news_delete' 			=> "ลบ",
 
 #Stats
-'stats_title' 			=> "Stats",
-'stats_regusers' 			=> "Registered Users",
-'stats_unverified' 				=> "Unconfirmed Users",
-'stats_torrents' 			=> "Torrents",
-'stats_peers' => "Peers",
-'stats_seed' 			=> "Seeders",
-'stats_leech' 			=> "Leechers",
-'stats_sl_ratio' 				=> "Seeder/leecher ratio (%)",
+'stats_title' 			=> "สถิติ",
+'stats_regusers' 			=> "ผู้ใช้ที่ลงทะเบียน",
+'stats_unverified' 				=> "ผู้ใช้ที่ยังไม่ยืนยัน",
+'stats_torrents' 			=> "ทอร์เรนต์",
+'stats_peers' => "เพียร์",
+'stats_seed' 			=> "ซีดเดอร์",
+'stats_leech' 			=> "ลีชเชอร์",
+'stats_sl_ratio' 				=> "อัตราส่วนซีดเดอร์/ลีชเชอร์ (%)",
 
 #disclaimer
-'foot_disclaimer' 			=> "Disclaimer: None of the files shown here are actually hosted on this server. The links are provided solely by this site's users.
-The administrator of this site (%s) cannot be held responsible for what its users post, or any other actions of its users.
-You may not use this site to distribute or download any material when you do not have the legal rights to do so.
-It is your own responsibility to adhere to these terms."
+'foot_disclaimer' 			=> "คำปฏิเสธ: ไม่มีไฟล์ใดที่แสดงที่นี่ถูกโฮสต์จริงบนเซิร์ฟเวอร์นี้ ลิงก์เหล่านี้ถูกจัดเตรียมโดยผู้ใช้ของไซต์นี้เท่านั้น ผู้ดูแลไซต์นี้ (%s) ไม่สามารถรับผิดชอบต่อสิ่งที่ผู้ใช้โพสต์ หรือการกระทำอื่นของผู้ใช้ คุณอาจไม่ใช้ไซต์นี้เพื่อแจกจ่ายหรือดาวน์โหลดวัสดุใดๆ เมื่อคุณไม่มีสิทธิ์ทางกฎหมายในการทำเช่นนั้น เป็นความรับผิดชอบของคุณเองที่จะปฏิบัติตามเงื่อนไขเหล่านี้"
 
 );
-
 ?>

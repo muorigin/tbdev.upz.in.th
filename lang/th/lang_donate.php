@@ -3,19 +3,18 @@
 $lang = array(
 
 #Donate
-'donate_click' => "Click the PayPal button below if you wish to make a donation!",
-'donate_make' => "Make payments with PayPal - it's fast, free and secure!",
-'donate_donating' => "If you make use of this software, please consider donating to {$TBDEV['site_name']}. We don't ask for much, just a nominal payment to show your support.",
-'donate_thanks' => "Thank You For Using Our Software!",
-'donate_other' => "Other ways to donate",
-'donate_no_other' => "No other ways at the moment...",
-'donate_after' => "After you have donated -- make sure to ",
-'donate_send' => "send us",
-'donate_the' => " the",
-'donate_transaction' => "transaction id",
-'donate_credit' => " so we can credit your account!",
+'donate_click' => "คลิกปุ่ม PayPal ด้านล่างหากคุณต้องการบริจาค!",
+'donate_make' => "ชำระเงินด้วย PayPal - มันรวดเร็ว ฟรี และปลอดภัย!",
+'donate_donating' => "หากคุณใช้ซอฟต์แวร์นี้ โปรดพิจารณาบริจาคให้ {$TBDEV['site_name']} เราไม่ได้ขอมาก เพียงการชำระเงินเล็กน้อยเพื่อแสดงการสนับสนุนของคุณ",
+'donate_thanks' => "ขอบคุณสำหรับการใช้ซอฟต์แวร์ของเรา!",
+'donate_other' => "วิธีอื่นในการบริจาค",
+'donate_no_other' => "ไม่มีวิธีอื่นในขณะนี้...",
+'donate_after' => "หลังจากที่คุณบริจาคแล้ว -- ตรวจสอบให้แน่ใจที่จะ ",
+'donate_send' => "ส่งให้เรา",
+'donate_the' => " ",
+'donate_transaction' => "รหัสธุรกรรม",
+'donate_credit' => " เพื่อให้เราสามารถเครดิตบัญชีของคุณ!",
 
 
 );
-
 ?>

@@ -4,36 +4,34 @@ $lang = array(
 
 
 #head
-'head_signup' => "Signup",
+'head_signup' => "สมัครสมาชิก",
 
 
 #captcha
-'captcha_spam' => "NO SPAM! Wait 10 seconds and then refresh page",
-'captcha_refresh' => "Click to refresh image",
-'captcha_image_alt' => "Captcha image",
+'captcha_spam' => "ไม่สแปม! รอ 10 วินาทีแล้วรีเฟรชหน้า",
+'captcha_refresh' => "คลิกเพื่อรีเฟรชภาพ",
+'captcha_image_alt' => "ภาพ captcha",
 'captcha_pin' => "PIN:",
 
 
 #stderr
-'stderr_errorhead' => "Sorry",
-'stderr_ulimit' => "The current user account limit (%u) has been reached. Inactive accounts are pruned all the time, please check back again later...",
+'stderr_errorhead' => "ขอโทษ",
+'stderr_ulimit' => "ขีดจำกัดบัญชีผู้ใช้ปัจจุบัน (%u) ได้ถึงแล้ว บัญชีที่ไม่ใช้งานจะถูกตัดออกตลอดเวลา โปรดกลับมาดูอีกครั้งในภายหลัง...",
 
 
 #signup
-'signup_cookies' => "Note: You need cookies enabled to sign up or log in.",
-'signup_uname' => "Desired username:",
-'signup_pass' => "Pick a password:",
-'signup_passa' => "Enter password again:",
-'signup_email' => "Email address:",
-'signup_valemail' => "The email address must be valid.You will receive a confirmation email which you need to respond to. The email address won't be publicly shown anywhere.",
-'signup_timez' => "Timezone",
-'signup_rules' => "I have read the site rules page.",
-'signup_faq' => "I agree to read the FAQ before asking questions.",
-'signup_age' => "I am at least 13 years old.",
-'signup_btn' => "Sign up! (PRESS ONLY ONCE)",
+'signup_cookies' => "หมายเหตุ: คุณต้องเปิดใช้งานคุกกี้เพื่อสมัครหรือเข้าสู่ระบบ",
+'signup_uname' => "ชื่อผู้ใช้ที่ต้องการ:",
+'signup_pass' => "เลือกรหัสผ่าน:",
+'signup_passa' => "ป้อนรหัสผ่านอีกครั้ง:",
+'signup_email' => "ที่อยู่อีเมล:",
+'signup_valemail' => "ที่อยู่อีเมลต้องถูกต้อง คุณจะได้รับอีเมลยืนยันซึ่งคุณต้องตอบกลับ ที่อยู่อีเมลจะไม่แสดงต่อสาธารณะ",
+'signup_timez' => "เขตเวลา",
+'signup_rules' => "ฉันได้อ่านหน้ากฎของไซต์",
+'signup_faq' => "ฉันตกลงที่จะอ่าน FAQ ก่อนถามคำถาม",
+'signup_age' => "ฉันอายุอย่างน้อย 13 ปี",
+'signup_btn' => "สมัครสมาชิก! (กดเพียงครั้งเดียว)",
 
 
 );
-
-
 ?>

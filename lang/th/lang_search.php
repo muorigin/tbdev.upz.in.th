@@ -3,12 +3,11 @@
 $lang = array(
 
 #SEARCH
-'search_search' => "Search",
-'search_in' => "in",
-'search_all_types' => "(all types)",
-'search_inc_dead' => "including dead torrents\n",
-'search_search_btn' => "Search!"
+'search_search' => "ค้นหา",
+'search_in' => "ใน",
+'search_all_types' => "(ทุกประเภท)",
+'search_inc_dead' => "รวมทอร์เรนต์ที่ตาย\n",
+'search_search_btn' => "ค้นหา!"
 
 );
-
 ?>

@@ -3,25 +3,24 @@
 $lang = array(
 
 #OK
-'ok_success' => "Signup successful!",
-'ok_email' => "A confirmation email has been sent to the address you specified (%s). You need to read and respond to this email before you can use your account. If you don't do this, the new account will be deleted automatically after a few days.",
-'ok_sysop_account' => "Sysop Account activation",
-'ok_sysop_activated' => "<h1>Sysop Account successfully activated!</h1>\n",
-'ok_account_activated' => "<p>Your account has been activated! You have been automatically logged in. You can now continue to the <a href='index.php'><b>main page</b></a> and start using your account.</p>\n",
-'ok_account_login' => "<p>Your account has been activated! However, it appears that you could not be logged in automatically. A possible reason is that you disabled cookies in your browser. You have to enable cookies to use your account. Please do that and then <a href='members.php?action=login'>log in</a> and try again.</p>\n",
-'ok_confirmed' => "Already confirmed",
-'ok_user_confirmed' => "<p>This user account has already been confirmed. You can proceed to <a href='members.php?action=login'>log in</a> with it.</p>\n",
-'ok_signup_confirm' => "Signup confirmation",
-'ok_success_confirmed' => "Account successfully confirmed!",
-'ok_account_active_login_link' => "main page",
-'ok_account_active_login' => "Your account has been activated! You have been automatically logged in. You can now continue to the %s and start using your account.",
+'ok_success' => "การสมัครสำเร็จ!",
+'ok_email' => "ส่งอีเมลยืนยันไปยังที่อยู่ที่คุณระบุ (%s) แล้ว คุณต้องอ่านและตอบอีเมลนี้ก่อนที่คุณจะใช้บัญชีได้ หากคุณไม่ทำเช่นนี้ บัญชีใหม่จะถูกลบโดยอัตโนมัติหลังจากสองสามวัน",
+'ok_sysop_account' => "การเปิดใช้งานบัญชี Sysop",
+'ok_sysop_activated' => "<h1>เปิดใช้งานบัญชี Sysop สำเร็จ!</h1>\n",
+'ok_account_activated' => "<p>บัญชีของคุณถูกเปิดใช้งานแล้ว! คุณได้เข้าสู่ระบบโดยอัตโนมัติ คุณสามารถดำเนินการต่อไปยัง <a href='index.php'><b>หน้าแรก</b></a> และเริ่มใช้บัญชีของคุณ</p>\n",
+'ok_account_login' => "<p>บัญชีของคุณถูกเปิดใช้งานแล้ว! อย่างไรก็ตาม ดูเหมือนว่าคุณไม่สามารถเข้าสู่ระบบโดยอัตโนมัติได้ สาเหตุที่เป็นไปได้คือคุณปิดใช้งานคุกกี้ในเบราว์เซอร์ของคุณ คุณต้องเปิดใช้งานคุกกี้เพื่อใช้บัญชีของคุณ โปรดทำเช่นนั้นแล้ว <a href='members.php?action=login'>เข้าสู่ระบบ</a> และลองอีกครั้ง</p>\n",
+'ok_confirmed' => "ยืนยันแล้ว",
+'ok_user_confirmed' => "<p>บัญชีผู้ใช้คนนี้ได้รับการยืนยันแล้ว คุณสามารถดำเนินการ <a href='members.php?action=login'>เข้าสู่ระบบ</a> ด้วยมัน</p>\n",
+'ok_signup_confirm' => "การยืนยันการสมัคร",
+'ok_success_confirmed' => "ยืนยันบัญชีสำเร็จ!",
+'ok_account_active_login_link' => "หน้าแรก",
+'ok_account_active_login' => "บัญชีของคุณถูกเปิดใช้งานแล้ว! คุณได้เข้าสู่ระบบโดยอัตโนมัติ คุณสามารถดำเนินการต่อไปยัง %s และเริ่มใช้บัญชีของคุณ",
 
-'ok_read_rules' => "<p>Before you start using %s we urge you to read the <a href='rules.php'><b>RULES</b></a> and the <a href='faq.php'><b>FAQ</b></a>.</p>\n",
-'ok_account_cookies' => "<p>Your account has been activated! However, it appears that you could not be logged in automatically. A possible reason is that you disabled cookies in your browser. You have to enable cookies to use your account. Please do that and then <a href='members.php?action=login'>log in</a> and try again.</p>\n",
-'ok_user_error' => "USER ERROR",
-'ok_no_action' => "no action to take",
+'ok_read_rules' => "<p>ก่อนที่คุณจะเริ่มใช้ %s เราขอร้องให้คุณอ่าน <a href='rules.php'><b>กฎ</b></a> และ <a href='faq.php'><b>FAQ</b></a></p>\n",
+'ok_account_cookies' => "<p>บัญชีของคุณถูกเปิดใช้งานแล้ว! อย่างไรก็ตาม ดูเหมือนว่าคุณไม่สามารถเข้าสู่ระบบโดยอัตโนมัติได้ สาเหตุที่เป็นไปได้คือคุณปิดใช้งานคุกกี้ในเบราว์เซอร์ของคุณ คุณต้องเปิดใช้งานคุกกี้เพื่อใช้บัญชีของคุณ โปรดทำเช่นนั้นแล้ว <a href='members.php?action=login'>เข้าสู่ระบบ</a> และลองอีกครั้ง</p>\n",
+'ok_user_error' => "ข้อผิดพลาดผู้ใช้",
+'ok_no_action' => "ไม่มีดำเนินการที่จะทำ",
 
 
 );
-
 ?>
