@@ -1,0 +1,25 @@
+# Database credentials
+include/config.php
+
+# Cache files
+cache/*.php
+
+# Logs
+logs/*.log
+
+# Sensitive files
+*.sql
+install/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.bak
