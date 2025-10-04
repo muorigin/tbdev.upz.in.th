@@ -1,0 +1,31 @@
+<?php
+//admin index lang file
+$lang = array(
+'index_bans' => 'แบน',
+'index_new_user' => 'เพิ่มผู้ใช้',
+'index_log' => 'บันทึก',
+'index_mcleanup' => 'การล้างข้อมูลด้วยตนเอง',
+'index_user_list' => 'รายชื่อผู้ใช้',
+'index_tags' => 'แท็ก',
+'index_emoticons' => 'อีโมติคอน',
+'index_delacct' => 'ลบบัญชี',
+'index_stats' => 'สถิติตัวติดตาม',
+'index_testip' => 'ทดสอบ IP',
+'index_user_search' => 'ค้นหาผู้ใช้',
+'index_mysql_overview' => 'ภาพรวม MySQL',
+'index_mysql_stats' => 'สถิติ MySQL',
+'index_stats_extra' => 'สถิติเพิ่มเติม',
+'index_forummanage' => 'จัดการฟอรัม',
+'index_categories' => 'แก้ไขหมวดหมู่',
+'index_newusers' => 'ผู้ใช้ใหม่',
+'index_resetpassword' => 'รีเซ็ตรหัสผ่าน',
+'index_rep_system' => 'ระบบชื่อเสียง',
+'index_rep_settings' => 'การตั้งค่าชื่อเสียง',
+'index_news' => 'เพิ่ม/ลบข่าว',
+'index_rules' => 'กฎ',
+'index_themes' => 'เทมเพลต',
+'index_forummanage' => 'จัดการฟอรัม',
+'index_moforums' => 'จัดการฟอรัมหลัก',
+'index_msubforums' => 'จัดการฟอรัมย่อย',
+);
+?>
