@@ -9,7 +9,7 @@ $lang = array(
 
 #nav
 'nav_torrents'       => "Torrents",
-'nav_countries'      => "Countries",
+'nav_provinces'      => "provinces",
 'nav_peers'          => "Peers",
 
 
@@ -59,11 +59,11 @@ $lang = array(
 #country function
 'country'            => "Country",
 
-'country_mostact'    => "<div class='small' style='float:left;'>Top %u Countries - (users)</div>",
-'country_totalul'    => "<div class='small' style='float:left;'>Top %u Countries - (total uploaded)</div>",
-'country_avperuser'  => "<div class='small' style='float:left;'>Top %u Countries - (average total uploaded per user, with minimum 1TB uploaded and 100 users)</div>",
+'country_mostact'    => "<div class='small' style='float:left;'>Top %u provinces - (users)</div>",
+'country_totalul'    => "<div class='small' style='float:left;'>Top %u provinces - (total uploaded)</div>",
+'country_avperuser'  => "<div class='small' style='float:left;'>Top %u provinces - (average total uploaded per user, with minimum 1TB uploaded and 100 users)</div>",
 'country_avg'        => "Average",
-'country_ratio'      => "<div class='small' style='float:left;'>Top %u Countries - (ratio, with minimum 1TB uploaded, 1TB downloaded and 100 users)</div>",
+'country_ratio'      => "<div class='small' style='float:left;'>Top %u provinces - (ratio, with minimum 1TB uploaded, 1TB downloaded and 100 users)</div>",
 
 
 #Peer function

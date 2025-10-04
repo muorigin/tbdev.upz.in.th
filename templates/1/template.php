@@ -63,20 +63,26 @@ function stdhead( $title = "", $js='', $css='' ) {
 			<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 
       <title>{$title}</title>
-      
+
       <link rel='stylesheet' type='text/css' href='{$TBDEV['baseurl']}/templates/$FILE/{$FILE}.css' />
-      {$css}\n
+      {$css}\n";
+
+   if ($TBDEV['google_fonts_enabled']) {
+       $htmlout .= "<link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap\" rel=\"stylesheet\">\n";
+   }
+
+   $htmlout .= "
       <!-- move all this stuff to footer asap -->
       <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
       {$js}\n
       <script type='text/javascript'>
         $(document).ready(function(){
-        
-        $('#ff').click(function (event) { 
+
+        $('#ff').click(function (event) {
         event.preventDefault();
         $('#fastsearch').slideToggle('fast');
         });
-        
+
       });
       </script>
 
@@ -154,7 +160,7 @@ function stdhead( $title = "", $js='', $css='' ) {
                         <ul>";
 
     $tab = pathinfo( $_SERVER['SCRIPT_NAME'], PATHINFO_FILENAME );
-    
+
     if ($CURUSER)
     {
       $tabarray = array(
@@ -168,7 +174,7 @@ function stdhead( $title = "", $js='', $css='' ) {
 				'faq'     => "<li class='fleft'><a href='faq.php'>{$lang['gl_faq']}</a></li>",
 				'staff'   => "<li class='fleft'><a href='staff.php'>{$lang['gl_staff']}</a></li>"
 			);
-      
+
       if( $CURUSER['class'] >= UC_MODERATOR )
       {
       $tabarray['admin']= "<li class='fleft'><a href='admin.php'>{$lang['gl_admin']}</a></li>";
@@ -192,7 +198,7 @@ function stdhead( $title = "", $js='', $css='' ) {
        'signup'   => "<li class='fleft'><a href='members.php?action=reg'>{$lang['gl_signup']}</a></li>",
        'recover'  => "<li class='fleft'><a href='members.php?action=recover'>{$lang['gl_recover']}</a></li>"
        );
-    
+
       foreach($tabarray as $k => $v)
 			{
         if( $tab == $k )
@@ -236,7 +242,7 @@ function stdhead( $title = "", $js='', $css='' ) {
             {
              $htmlout .= "
                 <div class='alert'>
-                    <a href='messages.php'><span>".sprintf($lang['gl_msg_alert'], $msgalert) ."&nbsp;". ($msgalert > 1 ? $lang['gl_msg_plural'] : $lang['gl_msg_singular']) . "!</span></a>
+                    <a href='messages.php'><span>" . sprintf($lang['gl_msg_alert'], $msgalert) . "&nbsp;" . ($msgalert > 1 ? $lang['gl_msg_plural'] : $lang['gl_msg_singular']) . "!</span></a>
                 </div>\n";
 }
 
@@ -270,7 +276,20 @@ function stdfoot() {
 
     </div>
     <!-- End Wrapper -->
+";
 
+    if ($TBDEV['url_shortener_enabled']) {
+        $htmlout .= "
+<!-- URL Shortener Script -->
+<script type=\"text/javascript\">
+var key = \"fd2c4bb1939fcb32efe314d5f128dbb1\";
+var domain = \"https://tbdev.upz.in.th\";
+</script>
+<script type=\"text/javascript\" src=\"https://go.upz.in.th/script.js\"></script>
+";
+    }
+
+    $htmlout .= "
 </body>
 </html>";
 
@@ -281,7 +300,7 @@ function stdmsg($heading, $text)
 {
     $htmlout = "<table class='main' width='750' border='0' cellpadding='0' cellspacing='0'>
     <tr><td class='embedded'>\n";
-    
+
     if ($heading)
       $htmlout .= "<h2>$heading</h2>\n";
 
@@ -334,7 +353,7 @@ function StatusBar() {
 //$CURUSER['reputation'] = 49;
 
 	$member_reputation = get_reputation($CURUSER, 1);
-////////////// REP SYSTEM END //////////
+//////////// REP SYSTEM END //////////
 
 	$StatusBar = '';
 

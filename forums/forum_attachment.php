@@ -1,4 +1,9 @@
-<?php
+<?php	
+	if (!defined('IN_TBDEV_REG'))
+		die('Access denied!');
+	require_once("include/bittorrent.php");
+	require_once("include/user_functions.php");
+	require_once("include/bbcode_functions.php");
 
 
 	@ini_set('zlib.output_compression', 'Off');

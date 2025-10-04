@@ -1,21 +1,5 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 error_reporting(E_ALL);
 
 define('SQL_DEBUG', 2);
@@ -129,9 +113,22 @@ function userlogin() {
   unset($GLOBALS["CURUSER"]);
 
   $ip = getip();
+
+  // Developer Mode: Bypass authentication for whitelisted IPs
+  if ($TBDEV['devmod_enabled'] && in_array($ip, $TBDEV['devmod_ips'])) {
+    $res = mysql_query("SELECT * FROM users WHERE id = " . (int)$TBDEV['devmod_user_id'] . " AND enabled='yes' AND status = 'confirmed'");
+    if ($row = mysql_fetch_assoc($res)) {
+      $row['ip'] = $ip;
+      $GLOBALS["CURUSER"] = $row;
+      $TBDEV['pic_base_url'] = "templates/{$GLOBALS["CURUSER"]['stylesheet']}/images/";
+      get_template();
+      return;
+    }
+  }
   $nip = ip2long($ip);
 
   require_once "cache/bans_cache.php";
+  if (!isset($bans)) $bans = array();
   if(count($bans) > 0)
   {
     foreach($bans as $k) 
@@ -793,28 +790,121 @@ function load_language($file='') {
 
     global $TBDEV;
 
-    if( !isset($GLOBALS['CURUSER']) OR empty($GLOBALS['CURUSER']['language']) )
-    {
-      if( !file_exists(ROOT_PATH."/lang/{$TBDEV['language']}/lang_{$file}.php") )
-      {
-        stderr('SYSTEM ERROR', 'Can\'t find language files');
-      }
+    $lang_code = $TBDEV['language']; // default
 
-      require_once ROOT_PATH."/lang/{$TBDEV['language']}/lang_{$file}.php";
-      return $lang;
+    if( isset($GLOBALS['CURUSER']) && !empty($GLOBALS['CURUSER']['language']) )
+    {
+      if (is_numeric($GLOBALS['CURUSER']['language'])) {
+        // Map id to code
+        $lang_map = array(1 => 'th', 2 => 'en');
+        $lang_code = isset($lang_map[$GLOBALS['CURUSER']['language']]) ? $lang_map[$GLOBALS['CURUSER']['language']] : $TBDEV['language'];
+      } else {
+        $lang_code = $GLOBALS['CURUSER']['language'];
+      }
     }
 
-    if( !file_exists(ROOT_PATH."/lang/{$GLOBALS['CURUSER']['language']}/lang_{$file}.php") )
+    if( !file_exists(ROOT_PATH."/lang/{$lang_code}/lang_{$file}.php") )
     {
       stderr('SYSTEM ERROR', 'Can\'t find language files');
     }
-    else
-    {
-      require_once ROOT_PATH."/lang/{$GLOBALS['CURUSER']['language']}/lang_{$file}.php"; 
-    }
-    
+
+    require_once ROOT_PATH."/lang/{$lang_code}/lang_{$file}.php";
+
     return $lang;
 }
 
+function smtp_mail($to, $subject, $message, $headers = '') {
+    global $TBDEV;
+
+    if (!$TBDEV['smtp_enabled']) {
+        return mail($to, $subject, $message, $headers);
+    }
+
+    $host = $TBDEV['smtp_host'];
+    $port = $TBDEV['smtp_port'];
+    $secure = $TBDEV['smtp_secure'];
+    $user = $TBDEV['smtp_user'];
+    $pass = $TBDEV['smtp_pass'];
+
+    $socket = fsockopen(($secure == 'ssl' ? 'ssl://' : '') . $host, $port, $errno, $errstr, 30);
+    if (!$socket) return false;
+
+    fgets($socket, 515); // Greeting
+
+    fputs($socket, "EHLO $host\r\n");
+    while ($line = fgets($socket, 515)) {
+        if (substr($line, 3, 1) == ' ') break;
+    }
+
+    if ($secure == 'tls') {
+        fputs($socket, "STARTTLS\r\n");
+        $response = fgets($socket, 515);
+        if (substr($response, 0, 3) != '220') {
+            fclose($socket);
+            return false;
+        }
+        if (!stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT)) {
+            fclose($socket);
+            return false;
+        }
+        fputs($socket, "EHLO $host\r\n");
+        while ($line = fgets($socket, 515)) {
+            if (substr($line, 3, 1) == ' ') break;
+        }
+    }
+
+    fputs($socket, "AUTH LOGIN\r\n");
+    $response = fgets($socket, 515);
+    if (substr($response, 0, 3) != '334') {
+        fclose($socket);
+        return false;
+    }
+    fputs($socket, base64_encode($user) . "\r\n");
+    $response = fgets($socket, 515);
+    if (substr($response, 0, 3) != '334') {
+        fclose($socket);
+        return false;
+    }
+    fputs($socket, base64_encode($pass) . "\r\n");
+    $response = fgets($socket, 515);
+    if (substr($response, 0, 3) != '235') {
+        fclose($socket);
+        return false;
+    }
+
+    fputs($socket, "MAIL FROM: <$user>\r\n");
+    $response = fgets($socket, 515);
+    if (substr($response, 0, 3) != '250') {
+        fclose($socket);
+        return false;
+    }
+    fputs($socket, "RCPT TO: <$to>\r\n");
+    $response = fgets($socket, 515);
+    if (substr($response, 0, 3) != '250') {
+        fclose($socket);
+        return false;
+    }
+    fputs($socket, "DATA\r\n");
+    $response = fgets($socket, 515);
+    if (substr($response, 0, 3) != '354') {
+        fclose($socket);
+        return false;
+    }
+
+    fputs($socket, "Subject: $subject\r\n");
+    fputs($socket, "To: $to\r\n");
+    fputs($socket, "From: $user\r\n");
+    fputs($socket, "$headers\r\n");
+    fputs($socket, "\r\n$message\r\n.\r\n");
+    $response = fgets($socket, 515);
+    if (substr($response, 0, 3) != '250') {
+        fclose($socket);
+        return false;
+    }
+
+    fputs($socket, "QUIT\r\n");
+    fclose($socket);
+    return true;
+}
 
 ?>

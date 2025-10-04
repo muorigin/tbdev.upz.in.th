@@ -1,21 +1,5 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 require_once "include/bittorrent.php";
 require_once "include/html_functions.php";
 require_once "include/user_functions.php";
@@ -29,7 +13,7 @@ loggedinorreturn();
 
     $HTMLOUT = '';
 
-    $query = mysql_query("SELECT users.id, username, added, last_access, class, avatar, av_w, av_h, country, status, countries.flagpic, countries.name FROM users LEFT  JOIN countries ON countries.id = users.country WHERE class >=4 AND status='confirmed' ORDER BY username") or sqlerr();
+    $query = mysql_query("SELECT users.id, username, added, last_access, class, avatar, av_w, av_h, country, status, provinces.flagpic, provinces.name FROM users LEFT  JOIN provinces ON provinces.id = users.country WHERE class >=4 AND status='confirmed' ORDER BY username") or sqlerr();
 
     while($arr2 = mysql_fetch_assoc($query)) {
 

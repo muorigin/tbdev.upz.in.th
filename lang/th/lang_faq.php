@@ -459,142 +459,132 @@ $lang = array(
     (อย่างไรก็ตาม ไฟล์ที่คุณดาวน์โหลดจากเรานั้นเป็นของคุณ คุณสามารถทำอะไรก็ได้. คุณสามารถสร้างทอร์เรนต์อื่น
     ชี้ไปยัง tracker อื่น และอัปโหลดไปยังไซต์ที่คุณเลือกเสมอ.)<br />",
 'faq_downloading_body' => "<br />
-    <b>How do I use the files I've downloaded?</b><a name='dl1'></a><br />
+    <b>ฉันจะใช้ไฟล์ที่ฉันดาวน์โหลดได้อย่างไร?</b><a name='dl1'></a><br />
     <br />
-    Check out <a class='altlink' href='formats.php'>this guide</a>.<br />
-    <br />
-    <br />
-    <b>Downloaded a movie and don't know what CAM/TS/TC/SCR means?</b><a name='dl2'></a><br />
-    <br />
-    Check out <a class='altlink' href='videoformats.php'>this guide</a>.<br />
+    ตรวจสอบ <a class='altlink' href='formats.php'>คู่มือนี้</a>.<br />
     <br />
     <br />
-    <b>Why did an active torrent suddenly disappear?</b><a name='dl3' id='dl3'></a><br />
+    <b>ดาวน์โหลดภาพยนตร์และไม่รู้ว่า CAM/TS/TC/SCR หมายถึงอะไร?</b><a name='dl2'></a><br />
     <br />
-    There may be three reasons for this:<br />
-    (<b>1</b>) The torrent may have been out-of-sync with the site
-    <a class='altlink' href='rules.php'>rules</a>.<br />
-    (<b>2</b>) The uploader may have deleted it because it was a bad release.
-    A replacement will probably be uploaded to take its place.<br />
-    (<b>3</b>) Torrents are automatically deleted after 28 days.<br />
+    ตรวจสอบ <a class='altlink' href='videoformats.php'>คู่มือนี้</a>.<br />
     <br />
     <br />
-    <b>How do I resume a broken download or reseed something?</b><a name='dl4' id='dl4'></a><br />
+    <b>ทำไมทอร์เรนต์ที่ใช้งานอยู่ถึงหายไปกะทันหัน?</b><a name='dl3' id='dl3'></a><br />
     <br />
-    Open the .torrent file. When your client asks you for a location, choose the location of
-    the existing file(s) and it will resume/reseed the torrent.<br />
-    <br />
-    <br />
-    <b>Why do my downloads sometimes stall at 99%?</b><a name='dl5'></a><br />
-    <br />
-    The more pieces you have, the harder it becomes to find peers who have pieces you are missing.
-    That is why downloads sometimes slow down or even stall when there are just a few percent remaining.
-    Just be patient and you will, sooner or later, get the remaining pieces.<br />
+    อาจมีสามสาเหตุสำหรับเรื่องนี้:<br />
+    (<b>1</b>) ทอร์เรนต์อาจไม่ตรงกับ <a class='altlink' href='rules.php'>กฎ</a> ของไซต์.<br />
+    (<b>2</b>) ผู้อัปโหลดอาจลบมันเพราะเป็นปล่อยที่ไม่ดี.
+    การแทนที่จะถูกอัปโหลดขึ้นมาแทนที่.<br />
+    (<b>3</b>) ทอร์เรนต์จะถูกลบโดยอัตโนมัติหลังจาก 28 วัน.<br />
     <br />
     <br />
-    <b>What are these &quot;a piece has failed an hash check&quot; messages?</b><a name='dl6'></a>
+    <b>ฉันจะดำเนินการดาวน์โหลดที่เสียหายหรือ reseed สิ่งใดต่อ?</b><a name='dl4' id='dl4'></a><br />
+    <br />
+    เปิดไฟล์ .torrent เมื่อไคลเอนต์ของคุณถามตำแหน่ง เลือกตำแหน่งของไฟล์ที่มีอยู่ และมันจะ resume/reseed ทอร์เรนต์.<br />
     <br />
     <br />
-    Bittorrent clients check the data they receive for integrity. When a piece fails this check it is
-    automatically re-downloaded. Occasional hash fails are a common occurrence, and you shouldn't worry.<br />
+    <b>ทำไมการดาวน์โหลดของฉันถึงหยุดที่ 99%?</b><a name='dl5'></a><br />
     <br />
-    Some clients have an (advanced) option/preference to 'kick/ban clients that send you bad data' or
-    similar. It should be turned on, since it makes sure that if a peer repeatedly sends you pieces that
-    fail the hash check it will be ignored in the future.<br />
-    <br />
-    <br />
-    <b>The torrent is supposed to be 100MB. How come I downloaded 120MB?</b><a name='dl7'></a>
+    ยิ่งคุณมีชิ้นส่วนมากเท่าไร ก็ยิ่งยากที่จะหา peers ที่มีชิ้นส่วนที่คุณขาด.
+    นั่นคือเหตุผลที่การดาวน์โหลดบางครั้งช้าลงหรือแม้แต่หยุดเมื่อเหลือเพียงไม่กี่เปอร์เซ็นต์.
+    เพียงอดทน และคุณจะได้ชิ้นส่วนที่เหลือเร็วกว่านี้.<br />
     <br />
     <br />
-    See the hash fails topic. If your client receives bad data it will have to redownload it, therefore
-    the total downloaded may be larger than the torrent size. Make sure the &quot;kick/ban&quot; option is turned on
-    to minimize the extra downloads.<br />
+    <b>สิ่งเหล่านี้คืออะไร 'a piece has failed an hash check' messages?</b><a name='dl6'></a>
     <br />
     <br />
-    <b>Why do I get a &quot;Not authorized (xx h) - READ THE FAQ!&quot; error?</b><a name='dl8' id='dl8'></a><br />
+    ไคลเอนต์ Bittorrent ตรวจสอบความสมบูรณ์ของข้อมูลที่ได้รับ เมื่อชิ้นส่วนล้มเหลวในการตรวจสอบ มันจะถูกดาวน์โหลดใหม่โดยอัตโนมัติ.
+    การล้มเหลวของ hash เป็นเรื่องปกติ และคุณไม่ควรวิตก.<br />
     <br />
-    From the time that each <b>new</b> torrent is uploaded to the tracker, there is a period of time that
-    some users must wait before they can download it.<br />
-    This delay in downloading will only affect users with a low ratio, and users with low upload amounts.<br />
+    ไคลเอนต์บางตัวมีตัวเลือก (ขั้นสูง) เพื่อ 'kick/ban clients that send you bad data' หรือคล้ายกัน.
+    ควรเปิดใช้งาน เพราะมันทำให้แน่ใจว่าหาก peer ส่งชิ้นส่วนที่ล้มเหลวในการตรวจสอบ hash ซ้ำๆ มันจะถูกเพิกเฉยในอนาคต.<br />
+    <br />
+    <br />
+    <b>ทอร์เรนต์ควรเป็น 100MB ทำไมฉันถึงดาวน์โหลด 120MB?</b><a name='dl7'></a>
+    <br />
+    <br />
+    ดูหัวข้อ hash fails หากไคลเอนต์ของคุณได้รับข้อมูลที่ไม่ดี มันจะต้องดาวน์โหลดใหม่ ดังนั้นจำนวนที่ดาวน์โหลดทั้งหมดอาจมากกว่าขนาดทอร์เรนต์.
+    ตรวจสอบให้แน่ใจว่าตัวเลือก \"kick/ban\" เปิดใช้งานเพื่อลดการดาวน์โหลดเพิ่มเติม.<br />
+    <br />
+    <br />
+    <b>ทำไมฉันถึงได้ 'Not authorized (xx h) - READ THE FAQ!' error?</b><a name='dl8' id='dl8'></a><br />
+    <br />
+    ตั้งแต่วันที่ทอร์เรนต์ <b>ใหม่</b> แต่ละรายการถูกอัปโหลดไปยัง tracker มีช่วงเวลาที่ผู้ใช้บางคนต้องรอก่อนที่จะดาวน์โหลดได้.
+    การหน่วงนี้ในการดาวน์โหลดจะส่งผลต่อผู้ใช้ที่มีอัตราต่ำ และผู้ใช้ที่มีจำนวนอัปโหลดต่ำ.<br />
     <br />
     <table cellspacing='3' cellpadding='0'>
      <tr>
-      <td class='embedded' style='width:70px;'>Ratio below</td>
+      <td class='embedded' style='width:70px;'>อัตราต่ำกว่า</td>
       <td class='embedded' style='width:40px; background:#F5F4EA;'><div style='color:#bb0000; text-align:center;'>0.50</div></td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded' style='width:110px;'>and/or upload below</td>
+      <td class='embedded' style='width:110px;'>และ/หรืออัปโหลดต่ำกว่า</td>
       <td class='embedded' style='width:40px; background:#f5f4ea;'><div style='text-align:center;'>5.0GB</div></td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded' style='width:50px;'>delay of</td>
+      <td class='embedded' style='width:50px;'>หน่วง</td>
       <td class='embedded' style='width:40px; background:#f5f4ea;'><div style='text-align:center;'>48h</div></td>
      </tr>
      <tr>
-      <td class='embedded'>Ratio below</td>
+      <td class='embedded'>อัตราต่ำกว่า</td>
       <td class='embedded' style='background:#f5f4ea;'><div style='color:#a10000; text-align:center;'>0.65</div></td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded'>and/or upload below</td>
+      <td class='embedded'>และ/หรืออัปโหลดต่ำกว่า</td>
       <td class='embedded' style='background:#f5f4ea;'><div style='text-align:center;'>6.5GB</div></td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded'>delay of</td>
+      <td class='embedded'>หน่วง</td>
       <td class='embedded' style='background:#f5f4ea;'><div style='text-align:center;'>24h</div></td>
      </tr>
      <tr>
-      <td class='embedded'>Ratio below</td>
+      <td class='embedded'>อัตราต่ำกว่า</td>
       <td class='embedded' style='background:#f5f4ea;'><div style='color:#880000; text-align:center;'>0.80</div></td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded'>and/or upload below</td>
+      <td class='embedded'>และ/หรืออัปโหลดต่ำกว่า</td>
       <td class='embedded' style='background:#f5f4ea;'><div style='text-align:center;'>8.0GB</div></td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded'>delay of</td>
+      <td class='embedded'>หน่วง</td>
       <td class='embedded' style='background:#f5f4ea;'><div style='text-align:center;'>12h</div></td>
      </tr>
      <tr>
-      <td class='embedded'>Ratio below</td>
+      <td class='embedded'>อัตราต่ำกว่า</td>
       <td class='embedded' style='background:#f5f4ea;'><div style='color:#6e0000; text-align:center;'>0.95</div></td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded'>and/or upload below</td>
+      <td class='embedded'>และ/หรืออัปโหลดต่ำกว่า</td>
       <td class='embedded' style='background:#f5f4ea;'><div style='text-align:center;'>9.5GB</div></td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded'>delay of</td>
+      <td class='embedded'>หน่วง</td>
       <td class='embedded' style='background:#f5f4ea;'><div style='text-align:center;'>06h</div></td>
      </tr>
     </table>
     <br />
-    '<b>And/or</b>' means any or both. Your delay will be the <b>largest</b> one for which you meet <b>at least</b> one condition.<br />
+    '<b>และ/หรือ</b>' หมายถึงอย่างใดอย่างหนึ่งหรือทั้งสอง.
+    การหน่วงของคุณจะเป็น <b>ใหญ่ที่สุด</b> สำหรับเงื่อนไขที่คุณตรงตาม <b>อย่างน้อยหนึ่ง</b>.<br />
     <br />",
-'faq_in' => "In ",
-'faq_your' => "your",
-'faq_case' => " particular case, ",
-'faq_both' => "both ",
-'faq_ratio' => "your ratio of ",
-'faq_and' => " and ",
-'faq_totalup' => "your total uploaded of ",
-'faq_delay' => " a delay of ",
-'faq_hours' => " hours",
-'faq_even' => "Even if your ",
-'faq_totup' => "total uploaded is ",
-'faq_ratiois' => "ratio is ",
-'faq_nodelay' => "you will experience no delay.",
-'faq_downloading_body1' => "This applies to new users as well, so opening a new account will not help. Note also that this
-    works at tracker level, you will be able to grab the .torrent file itself at any time.<br />
+'faq_in' => "ใน ",
+'faq_your' => "ของคุณ",
+'faq_case' => " กรณีเฉพาะของคุณ, ",
+'faq_both' => "ทั้งสอง ",
+'faq_ratio' => "อัตราส่วนของคุณคือ ",
+'faq_and' => " และ ",
+'faq_totalup' => "จำนวนอัปโหลดทั้งหมดของคุณคือ ",
+'faq_delay' => " การหน่วง ",
+'faq_hours' => " ชั่วโมง",
+'faq_even' => "แม้ว่าของคุณ ",
+'faq_totup' => "จำนวนอัปโหลดทั้งหมดคือ ",
+'faq_ratiois' => "อัตราส่วนคือ ",
+'faq_nodelay' => "คุณจะไม่พบการหน่วงใดๆ.",
+'faq_downloading_body1' => "กฎนี้ใช้กับผู้ใช้ใหม่เช่นกัน ดังนั้น การเปิดบัญชีใหม่จะไม่ช่วยอะไร โปรดทราบว่าการทำงานนี้เกิดขึ้นในระดับ Tracker คุณจะยังสามารถดาวน์โหลดไฟล์ .torrent ได้ตลอดเวลา<br />
     <br />
     <!--The delay applies only to leeching, not to seeding. If you got the files from any other source and
     wish to seed them you may do so at any time irrespectively of your ratio or total uploaded.<br />-->
-    N.B. Due to some users exploiting the 'no-delay-for-seeders' policy we had to change it. The delay
-    now applies to both seeding and leeching. So if you are subject to a delay and get the files from
-    some other source you will not be able to seed them until the delay has elapsed.<br />
+    หมายเหตุ: เนื่องจากมีผู้ใช้บางส่วนใช้ประโยชน์จากนโยบาย 'ไม่มีการดีเลย์สำหรับผู้ทำการ seed' เราจึงจำเป็นต้องเปลี่ยนนโยบายนี้ ตอนนี้การดีเลย์ใช้กับทั้งการ seed และ leech ดังนั้น หากคุณตกอยู่ภายใต้การดีเลย์และได้รับไฟล์จากแหล่งอื่น คุณจะไม่สามารถ seed ไฟล์เหล่านั้นได้จนกว่าช่วงเวลาดีเลย์จะสิ้นสุดลง<br />
     <br />
     <br />
-    <b>Why do I get a &quot;rejected by tracker - Port xxxx is blacklisted&quot; error?</b><a name='dl9'></a><br />
+    <b>ทำไมฉันถึงได้รับข้อผิดพลาด &quot;rejected by tracker - Port xxxx is blacklisted&quot;?</b><a name='dl9'></a><br />
     <br />
-    Your client is reporting to the tracker that it uses one of the default bittorrent ports
-    (6881-6889) or any other common p2p port for incoming connections.<br />
+    ไคลเอนต์ของคุณกำลังรายงานไปยัง Tracker ว่ามันใช้พอร์ตเริ่มต้นของ BitTorrent (พอร์ต 6881-6889) หรือพอร์ต P2P ทั่วไปอื่นๆ สำหรับการเชื่อมต่อขาเข้า<br />
     <br />
-    {$TBDEV['site_name']} does not allow clients to use ports commonly associated with p2p protocols.
-    The reason for this is that it is a common practice for ISPs to throttle those ports
-    (that is, limit the bandwidth, hence the speed). <br />
+    {$TBDEV['site_name']} ไม่อนุญาตให้ไคลเอนต์ใช้พอร์ตที่เกี่ยวข้องกับโปรโตคอล P2P โดยทั่วไป สาเหตุเป็นเพราะว่าเป็นเรื่องปกติที่ผู้ให้บริการอินเทอร์เน็ต (ISP) จะลดความเร็ว (Throttle) บนพอร์ตเหล่านั้น (นั่นคือ จำกัดแบนด์วิธ ซึ่งส่งผลต่อความเร็ว)<br />
     <br />
-    The blocked ports list include, but is not neccessarily limited to, the following:<br />
+    รายการพอร์ตที่ถูกบล็อก ได้แก่ แต่ไม่จำกัดเฉพาะเพียงพอร์ตต่อไปนี้:<br />
     <br />
     <table cellspacing='3' cellpadding='0'>
       <tr>
@@ -619,299 +609,210 @@ $lang = array(
      </tr>
     </table>
     <br />
-    In order to use use our tracker you must  configure your client to use
-    any port range that does not contain those ports (a range within the region 49152 through 65535 is preferable,
-    cf. <a class='altlink' href='http://www.iana.org/assignments/port-numbers'>IANA</a>). Notice that some clients,
-    like Azureus 2.0.7.0 or higher, use a single port for all torrents, while most others use one port per open torrent. The size
-    of the range you choose should take this into account (typically less than 10 ports wide. There
-    is no benefit whatsoever in choosing a wide range, and there are possible security implications). <br />
+    เพื่อใช้ Tracker ของเรา คุณต้องกำหนดค่าไคลเอนต์ของคุณให้ใช้ช่วงพอร์ตใดๆ ที่ไม่มีพอร์ตเหล่านั้น (แนะนำให้ใช้ช่วงพอร์ตระหว่าง 49152 ถึง 65535, ดูข้อมูลเพิ่มเติมได้ที่ <a class='altlink' href='http://www.iana.org/assignments/port-numbers'>IANA</a>) โปรดทราบว่าไคลเอนต์บางตัว (เช่น Azureus 2.0.7.0 หรือใหม่กว่า) ใช้พอร์ตเดียวสำหรับทอร์เรนต์ทั้งหมด ในขณะที่ไคลเอนต์อื่นๆ ส่วนใหญ่ใช้พอร์ตหนึ่งพอร์ตต่อทอร์เรนต์ที่เปิดอยู่ ขนาดของช่วงพอร์ตที่คุณเลือกควรคำนึงถึงเรื่องนี้ (โดยทั่วไปควรกว้างน้อยกว่า 10 พอร์ต การเลือกช่วงที่กว้างเกินไปไม่มีประโยชน์ใดๆ และอาจมีผลกระทบด้านความปลอดภัยได้)<br />
     <br />
-    These ports are used for connections between peers, not client to tracker.
-    Therefore this change will not interfere with your ability to use other trackers (in fact it
-    should <i>increase</i> your speed with torrents from any tracker, not just ours). Your client
-    will also still be able to connect to peers that are using the standard ports.
-    If your client does not allow custom ports to be used, you will have to switch to one that does.<br />
+    พอร์ตเหล่านี้ใช้สำหรับการเชื่อมต่อระหว่าง Peer ด้วยกัน ไม่ใช่การเชื่อมต่อจากไคลเอนต์ไปยัง Tracker ดังนั้นการเปลี่ยนแปลงนี้จะไม่รบกวนความสามารถในการใช้ Tracker อื่นๆ ของคุณ (ที่จริงแล้ว มันน่าจะช่วย<i>เพิ่ม</i>ความเร็วของคุณกับทอร์เรนต์จาก Tracker ใดๆ ไม่ใช่แค่ของเรา) ไคลเอนต์ของคุณก็ยังสามารถเชื่อมต่อกับ Peer อื่นๆ ที่ใช้พอร์ตมาตรฐานได้ หากไคลเอนต์ของคุณไม่อนุญาตให้ใช้พอร์ตที่กำหนดเอง คุณจะต้องเปลี่ยนไปใช้ไคลเอนต์ที่ยอมให้ทำได้<br />
     <br />
-    Do not ask us, or in the forums, which ports you should choose. The more random the choice is the harder
-    it will be for ISPs to catch on to us and start limiting speeds on the ports we use.
-    If we simply define another range ISPs will start throttling that range also. <br />
+    อย่าถามเราหรือถามในฟอรัมว่าคุณควรเลือกพอร์ตใด การเลือกพอร์ตแบบสุ่มยิ่งมากขึ้น ยากที่ ISP จะจับได้และเริ่มจำกัดความเร็วบนพอร์ตที่เราใช้ หากเราเพียงกำหนดช่วงพอร์ตอื่นขึ้นมา ISP ก็จะเริ่มลดความเร็วบนช่วงพอร์ตนั้นเช่นกัน<br />
     <br />
-    Finally, remember to forward the chosen ports in your router and/or open them in your
-    firewall, should you have them. See the
-    <i><a href='#user8' class='altlink'>Why am I listed as not connectable?</a></i> &nbsp;section
-    and links therein for more information on this.<br />
+    สุดท้าย อย่าลืมทำการ Forward พอร์ตที่คุณเลือกในเราเตอร์ของคุณ และ/หรือ เปิดพอร์ตเหล่านั้นในไฟร์วอลล์ของคุณ (หากมี) ดูข้อมูลเพิ่มเติมในส่วน <i><a href='#user8' class='altlink'>ทำไมฉันถึงถูกระบุว่าเชื่อมต่อไม่ได้? (Not connectable)</a></i> &nbsp;และลิงก์ในส่วนนั้น<br />
     <br />
     <br />",
-'faq_downloading_body2' => "<b>What's this 'IOError - [Errno13] Permission denied' error?</b><a name='dla'></a><br />
+'faq_downloading_body2' => "<b>ข้อผิดพลาด 'IOError - [Errno13] Permission denied' นี้คืออะไร?</b><a name='dla'></a><br />
     <br />
-    If you just want to fix it reboot your computer, it should solve the problem.
-    Otherwise read on.<br />
+    หากคุณเพียงต้องการแก้ปัญหา ให้รีสตาร์ทคอมพิวเตอร์ของคุณ น่าจะแก้ปัญหาได้ ไม่เช่นนั้นก็อ่านต่อ<br />
     <br />
-    IOError means Input-Output Error, and that is a file system error, not a tracker one.
-    It shows up when your client is for some reason unable to open the partially downloaded
-    torrent files. The most common cause is two instances of the client to be running
-    simultaneously:
-    the last time the client was closed it somehow didn't really close but kept running in the
-    background, and is therefore still
-    locking the files, making it impossible for the new instance to open them.<br />
+    IOError หมายถึง ข้อผิดพลาดอินพุต-เอาต์พุต (Input-Output Error) และนั่นคือข้อผิดพลาดของระบบไฟล์ ไม่ใช่ข้อผิดพลาดของ Tracker มันจะแสดงขึ้นเมื่อไคลเอนต์ของคุณไม่สามารถเปิดไฟล์ทอร์เรนต์ที่ดาวน์โหลดไปบางส่วนได้ด้วยเหตุผลบางประการ สาเหตุที่พบบ่อยที่สุดคือ มีการเปิดไคลเอนต์พร้อมกันสองอินสแตนซ์: ครั้งล่าสุดที่ปิดไคลเอนต์ มันปิดไม่สนิทในบางทาง แต่ยังคงทำงานอยู่เบื้องหลัง และจึงยังล็อกไฟล์อยู่ ทำให้อินสแตนซ์ใหม่ไม่สามารถเปิดไฟล์เหล่านั้นได้<br />
     <br />
-    A more uncommon occurrence is a corrupted FAT. A crash may result in corruption
-    that makes the partially downloaded files unreadable, and the error ensues. Running
-    scandisk should solve the problem. (Note that this may happen only if you're running
-    Windows 9x - which only support FAT - or NT/2000/XP with FAT formatted hard drives.
-    NTFS is much more robust and should never permit this problem.)<br />
+    สาเหตุที่พบได้น้อยกว่าคือ FAT เสียหาย การ Crash ของระบบอาจทำให้เกิดความเสียหายซึ่งทำให้ไฟล์ที่ดาวน์โหลดไปบางส่วนไม่สามารถอ่านได้ และทำให้เกิดข้อผิดพลาดนี้ การรัน scandisk น่าจะแก้ปัญหาได้ (โปรดทราบว่าปัญหานี้อาจเกิดขึ้นได้เฉพาะถ้าคุณใช้ Windows 9x - ซึ่งรองรับเฉพาะ FAT - หรือ NT/2000/XP ที่มีฮาร์ดดิสก์ฟอร์แมตเป็น FAT เท่านั้น NTFS แข็งแกร่งกว่ามากและไม่ควรยอมให้เกิดปัญหานี้)<br />
     <br />
     <br />
-    <b>What's this &quot;TTL&quot; in the browse page?</b><a name='dlb'></a><br />
+    <b>'TTL' ในหน้าดูทอร์เรนต์ (Browse) นี้คืออะไร?</b><a name='dlb'></a><br />
     <br />
-    The torrent's Time To Live, in hours. It means the torrent will be deleted
-    from the tracker after that many hours have elapsed (yes, even if it is still active).
-    Note that this a maximum value, the torrent may be deleted at any time if it's inactive.<br />",
-'faq_improve_speed_title' => "How can I improve my download speed?",
-'faq_improve_speed_body' => "The download speed mostly depends on the seeder-to-leecher ratio (SLR). Poor download speed is
-    mainly a problem with new and very popular torrents where the SLR is low.<br />
+    เวลาเหลืออยู่ (Time To Live) ของทอร์เรนต์ เป็นหน่วยชั่วโมง หมายความว่าทอร์เรนต์จะถูกลบออกจาก Tracker หลังจากผ่านเวลานั้นมาแล้ว (ใช่ แม้ว่ามันจะยังคงใช้งานอยู่ก็ตาม) โปรดทราบว่านี่เป็นค่าสูงสุด ทอร์เรนต์อาจถูกลบเมื่อใดก็ได้หากมันไม่มีการใช้งาน<br />",
+'faq_improve_speed_title' => "ฉันจะปรับปรุงความเร็วในการดาวน์โหลดได้อย่างไร?",
+'faq_improve_speed_body' => "ความเร็วในการดาวน์โหลดส่วนใหญ่ขึ้นอยู่กับอัตราส่วนผู้ seed ต่อผู้ leech (Seeder-to-Leecher Ratio - SLR) ความเร็วในการดาวน์โหลดที่ต่ำเป็นปัญหาหลักกับทอร์เรนต์ใหม่และทอร์เรนต์ยอดนิยมซึ่งมี SLR ต่ำ<br />
     <br />
-    (Proselytising sidenote: make sure you remember that you did not enjoy the low speed.
-    <b>Seed</b> so that others will not endure the same.)<br />
+    (หมายเหตุประกอบ: อย่าลืมว่าคุณเองก็ไม่ชอบความเร็วต่ำ <b>ช่วย seed</b> เพื่อที่คนอื่นจะได้ไม่ต้องทนกับสิ่งเดียวกัน)<br />
     <br />
-    There are a couple of things that you can try on your end to improve your speed:<br />
+    มีหลายสิ่งที่คุณสามารถลองทำได้ที่ฝั่งคุณเพื่อปรับปรุงความเร็ว:<br />
     <br />
     <br />
-    <b>Do not immediately jump on new torrents</b><a name='dlsp1'></a><br />
+    <b>อย่าเพิ่งรีบดาวน์โหลดทอร์เรนต์ใหม่ๆ ทันที</b><a name='dlsp1'></a><br />
     <br />
-    In particular, do not do it if you have a slow connection. The best speeds will be found around the
-    half-life of a torrent, when the SLR will be at its highest. (The downside is that you will not be able to seed
-    so much. It's up to you to balance the pros and cons of this.)<br />
+    โดยเฉพาะอย่างยิ่ง อย่าทำเช่นนั้นหากคุณมีการเชื่อมต่อที่ช้า ความเร็วที่ดีที่สุดมักจะอยู่ที่ช่วงครึ่งอายุของทอร์เรนต์ (Half-life) เมื่อ SLR อยู่ที่ระดับสูงสุด (ข้อเสียคือคุณจะไม่สามารถ seed ได้มากนัก ขึ้นอยู่กับคุณที่จะปรับสมดุลระหว่างข้อดีและข้อเสียของวิธีนี้)<br />
     <br />
     <br />
-    <b>Make yourself connectable</b> <a name='dlsp2'></a><br />
+    <b>ทำให้ตัวเองสามารถเชื่อมต่อได้ (Connectable)</b> <a name='dlsp2'></a><br />
     <br />
-    See the <i><a href='#user8' class='altlink'>Why am I listed as not connectable?</a></i> &nbsp;section.<br />
+    ดูที่ส่วน <i><a href='#user8' class='altlink'>ทำไมฉันถึงถูกระบุว่าเชื่อมต่อไม่ได้? (Not connectable)</a></i><br />
     <br />
     <br />
-    <b>Limit your upload speed</b><a name='dlsp3'></a><br />
+    <b>จำกัดความเร็วในการอัปโหลดของคุณ</b><a name='dlsp3'></a><br />
     <br />
-    The upload speed affects the download speed in essentially two ways:<br />
+    ความเร็วอัปโหลดส่งผลต่อความเร็วดาวน์โหลดหลักๆ ในสองวิธี:<br />
     <ul>
-        <li>Bittorrent peers tend to favour those other peers that upload to them. This means that if A and B
-      are leeching the same torrent and A is sending data to B at high speed then B will try to reciprocate.
-      So due to this effect high upload speeds lead to high download speeds.</li>
+        <li>Peer ของ BitTorrent มีแนวโน้มที่จะเลือก Peer อื่นที่อัปโหลดให้พวกเขา นั่นหมายความว่าถ้า A และ B กำลัง leech ทอร์เรนต์เดียวกันและ A กำลังส่งข้อมูลให้ B ด้วยความเร็วสูง B ก็จะพยายามตอบแทน ดังนั้น เนื่องจากผลนี้ ความเร็วอัปโหลดที่สูงจึงนำไปสู่ความเร็วดาวน์โหลดที่สูง</li>
 
-        <li>Due to the way TCP works, when A is downloading something from B it has to keep telling B that
-            it received the data sent to him. (These are called acknowledgements - ACKs -, a sort of &quot;got it!&quot; messages).
-            If A fails to do this then B will stop sending data and wait. If A is uploading at full speed there may be no
-            bandwidth left for the ACKs and they will be delayed. So due to this effect excessively high upload speeds lead
-            to low download speeds.</li>
+        <li>เนื่องจากลักษณะการทำงานของ TCP เมื่อ A กำลังดาวน์โหลดบางอย่างจาก B มันต้องบอก B อย่างต่อเนื่องว่ามันได้รับข้อมูลที่ส่งมาแล้ว (สิ่งเหล่านี้เรียกว่า การยืนยันการรับ - ACKs - ซึ่งเป็นเหมือนข้อความ &quot;ได้รับแล้ว!&quot;) หาก A ล้มเหลวในการทำเช่นนั้น B จะหยุดส่งข้อมูลและรอ หาก A อัปโหลดด้วยความเร็วเต็มที่ อาจไม่มีแบนด์วิธเหลือพอสำหรับ ACKs และพวกมันจะถูกส่งล่าช้า ดังนั้น เนื่องจากผลนี้ ความเร็วอัปโหลดที่สูงเกินไปจึงนำไปสู่ความเร็วดาวน์โหลดที่ต่ำ</li>
     </ul>
 
-    The full effect is a combination of the two. The upload should be kept as high as possible while allowing the
-    ACKs to get through without delay. <b>A good thumb rule is keeping the upload at about 80% of the theoretical
-    upload speed.</b> You will have to fine tune yours to find out what works best for you. (Remember that keeping the
-    upload high has the additional benefit of helping with your ratio.) <br />
+    ผลรวมคือการรวมกันของทั้งสองอย่าง การอัปโหลดควรถูกเก็บไว้ในระดับสูงสุดเท่าที่จะเป็นไปได้ ในขณะที่ยังคงอนุญาตให้ ACKs ผ่านไปได้โดยไม่ล่าช้า <b>กฎง่ายๆ ที่ดีคือการรักษาการอัปโหลดไว้ที่ประมาณ 80% ของความเร็วอัปโหลดตามทฤษฎี</b> คุณจะต้องปรับแต่งค่าของคุณเพื่อหาสิ่งที่ดีที่สุดสำหรับคุณ (โปรดจำไว้ว่าการรักษาความเร็วอัปโหลดให้สูงมีประโยชน์เพิ่มเติมในการช่วยอัตราส่วน (Ratio) ของคุณ)<br />
     <br />
-    If you are running more than one instance of a client it is the overall upload speed that you must take into account.
-    Some clients (e.g. Azureus) limit global upload speed, others (e.g. Shad0w's) do it on a per torrent basis.
-    Know your client. The same applies if you are using your connection for anything else (e.g. browsing or ftp),
-    always think of the overall upload speed.<br />
+    หากคุณกำลังรันไคลเอนต์มากกว่าหนึ่งอินสแตนซ์พร้อมกัน คุณต้องคำนึงถึงความเร็วอัปโหลดโดยรวม ไคลเอนต์บางตัว (เช่น Azureus) จำกัดความเร็วอัปโหลดโดยรวม ในขณะที่บางตัว (เช่น Shad0w's) จำกัดความเร็วเป็นรายทอร์เรนต์ รู้จักไคลเอนต์ของคุณของคุณ เช่นเดียวกันหากคุณใช้การเชื่อมต่อของคุณสำหรับสิ่งอื่น (เช่น การท่องเว็บหรือ FTP) ให้คิดถึงความเร็วอัปโหลดโดยรวมเสมอ<br />
     <br />
     <br />
-    <b>Limit the number of simultaneous connections</b><a name='dlsp4'></a><br />
+    <b>จำกัดจำนวนการเชื่อมต่อพร้อมกัน</b><a name='dlsp4'></a><br />
     <br />
-    Some operating systems (like Windows 9x) do not deal well with a large number of connections, and may even crash.
-    Also some home routers (particularly when running NAT and/or firewall with stateful inspection services) tend to become
-    slow or crash when having to deal with too many connections. There are no fixed values for this, you may try 60 or 100
-    and experiment with the value. Note that these numbers are additive, if you have two instances of
-    a client running the numbers add up.<br />
+    ระบบปฏิบัติการบางระบบ (เช่น Windows 9x) ไม่สามารถจัดการกับการเชื่อมต่อจำนวนมากได้ดี และอาจถึงขั้น Crash ได้ นอกจากนี้เราเตอร์บางตัวสำหรับใช้ในบ้าน (โดยเฉพาะเมื่อรันบริการ NAT และ/หรือ ไฟร์วอลล์แบบตรวจสอบสถานะ - Stateful Inspection) มีแนวโน้มที่จะทำงานช้าลงหรือ Crash เมื่อต้องจัดการกับการเชื่อมต่อที่มากเกินไป ไม่มีค่าตายตัวสำหรับเรื่องนี้ คุณอาจลองใช้ค่า 60 หรือ 100 และทดลองกับค่านั้น โปรดทราบว่าตัวเลขเหล่านี้เป็นการรวมกัน หากคุณมีไคลเอนต์ทำงานอยู่สองอินสแตนซ์ ตัวเลขจะรวมกัน<br />
     <br />
     <br />
-    <b>Limit the number of simultaneous uploads</b><a name='dlsp5'></a><br />
+    <b>จำกัดจำนวนการอัปโหลดพร้อมกัน</b><a name='dlsp5'></a><br />
     <br />
-    Isn't this the same as above? No. Connections limit the number of peers your client is talking to and/or
-    downloading from. Uploads limit the number of peers your client is actually uploading to. The ideal number is
-    typically much lower than the number of connections, and highly dependent on your (physical) connection.<br />
+    นี่ไม่เหมือนกับข้างต้นหรือ? ไม่เหมือนกัน การจำกัดการเชื่อมต่อ (Connections) จำกัดจำนวน Peer ที่ไคลเอนต์ของคุณกำลังคุยด้วยและ/หรือกำลังดาวน์โหลดจาก การจำกัดการอัปโหลด (Uploads) จำกัดจำนวน Peer ที่ไคลเอนต์ของคุณกำลังอัปโหลดให้จริงๆ จำนวนที่เหมาะสมมักจะต่ำกว่าจำนวนการเชื่อมต่อมาก และขึ้นอยู่กับการเชื่อมต่อ (ทางกายภาพ) ของคุณเป็นอย่างสูง<br />
     <br />
     <br />
-    <b>Just give it some time</b><a name='dlsp6'></a><br />
+    <b>เพียงแค่ให้เวลามันสักหน่อย</b><a name='dlsp6'></a><br />
     <br />
-    As explained above peers favour other peers that upload to them. When you start leeching a new torrent you have
-    nothing to offer to other peers and they will tend to ignore you. This makes the starts slow, in particular if,
-    by change, the peers you are connected to include few or no seeders. The download speed should increase as soon
-    as you have some pieces to share.<br />
+    ดังที่อธิบายไปแล้วข้างต้น Peer มีแนวโน้มที่จะเลือก Peer อื่นที่อัปโหลดให้พวกเขา เมื่อคุณเริ่ม leech ทอร์เรนต์ใหม่ คุณไม่มีอะไรจะนำเสนอให้กับ Peer อื่น และพวกเขาก็มักจะเพิกเฉยคุณ สิ่งนี้ทำให้การเริ่มต้นช้า โดยเฉพาะอย่างยิ่งหาก โดยบังเอิญ Peer ที่คุณเชื่อมต่อด้วยมีผู้ seed น้อยหรือไม่มีเลย ความเร็วในการดาวน์โหลดควร会增加ขึ้นทันทีที่คุณมีข้อมูลบางส่วนให้แชร์<br />
     <br />
     <br />
-    <b>Why is my browsing so slow while leeching?</b><a name='dlsp7'></a><br />
+    <b>ทำไมการท่องเว็บของฉันถึงช้ามากในขณะที่กำลัง leech?</b><a name='dlsp7'></a><br />
     <br />
-    Your download speed is always finite. If you are a peer in a fast torrent it will almost certainly saturate your
-    download bandwidth, and your browsing will suffer. At the moment there is no client that allows you to limit the
-    download speed, only the upload. You will have to use a third-party solution,
-    such as <a class='altlink' href='redir.php?url=http://www.netlimiter.com/'>NetLimiter</a>.<br />
+    ความเร็วในการดาวน์โหลดของคุณมีจำกัดเสมอ หากคุณเป็น Peer ในทอร์เรนต์เร็ว มันเกือบจะทำให้แบนด์วิธในการดาวน์โหลดของคุณอิ่มตัว (Saturate) และการท่องเว็บของคุณจะได้รับผลกระทบ ปัจจุบันยังไม่มีไคลเอนต์ใดที่อนุญาตให้คุณจำกัดความเร็วในการดาวน์โหลดได้ มีแต่จำกัดความเร็วอัปโหลดเท่านั้น คุณจะต้องใช้โซลูชันจาก pihakที่สาม เช่น <a class='altlink' href='redir.php?url=http://www.netlimiter.com/'>NetLimiter</a><br />
     <br />
-    Browsing was used just as an example, the same would apply to gaming, IMing, etc...<br />",
-'faq_proxy_title' => "My ISP uses a transparent proxy. What should I do?",
+    การท่องเว็บเป็นเพียงตัวอย่าง เหมือนกันกับการเล่นเกม, การแชท (IM), ฯลฯ...<br />",
+'faq_proxy_title' => "ผู้ให้บริการอินเทอร์เน็ต (ISP) ของฉันใช้พร็อกซี่แบบโปร่งใส (Transparent Proxy) ฉันควรทำอย่างไร?",
 'faq_proxy_body' => "<br />
-    <i>Caveat: This is a large and complex topic. It is not possible to cover all variations here.</i><br />
+    <i>คำเตือน: นี่เป็นหัวข้อที่กว้างและซับซ้อน เป็นไปไม่ได้ที่จะครอบคลุมทุกกรณีในที่นี้</i><br />
     <br />
-    Short reply: change to an ISP that does not force a proxy upon you. If you cannot or do not want to then read on.<br />
+    คำตอบสั้นๆ: เปลี่ยนไปใช้ ISP ที่ไม่บังคับใช้พร็อกซี่กับคุณ หากคุณไม่สามารถหรือไม่ต้องการเปลี่ยน ให้อ่านต่อ<br />
     <br />
-    <b>What is a proxy?</b><a name='prox1'></a><br />
+    <b>พร็อกซี่ (Proxy) คืออะไร?</b><a name='prox1'></a><br />
     <br />
-    Basically a middleman. When you are browsing a site through a proxy your requests are sent to the proxy and the proxy
-    forwards them to the site instead of you connecting directly to the site. There are several classifications
-    (the terminology is far from standard):<br />
+    โดยพื้นฐานคือคนกลาง เมื่อคุณท่องเว็บผ่านพร็อกซี่ คำขอของคุณจะถูกส่งไปยังพร็อกซี่ และพร็อกซี่จะส่งต่อคำขอเหล่านั้นไปยังเว็บไซต์ แทนที่คุณจะเชื่อมต่อโดยตรงกับเว็บไซต์ มีการจำแนกประเภทหลายแบบ (คำศัพท์ยังไม่เป็นมาตรฐาน):<br />
     <br />",
 'faq_proxy_body2' => "<tr>
-      <td class='embedded' valign='top' style='background:#F5F4EA; width:100px;'>&nbsp;Transparent</td>
+      <td class='embedded' valign='top' style='background:#F5F4EA; width:100px;'>&nbsp;โปร่งใส (Transparent)</td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded' valign='top'>A transparent proxy is one that needs no configuration on the clients. It works by automatically redirecting all port 80 traffic to the proxy. (Sometimes used as synonymous for non-anonymous.)</td>
+      <td class='embedded' valign='top'>พร็อกซี่แบบโปร่งใสคือพร็อกซี่ที่ไม่ต้องการการกำหนดค่าใดๆ บนไคลเอนต์ มันทำงานโดยการเปลี่ยนเส้นทาง (Redirect) การรับส่งข้อมูลพอร์ต 80 ทั้งหมดไปยังพร็อกซี่โดยอัตโนมัติ (บางครั้งใช้ในความหมายเดียวกันกับแบบไม่นิรนาม - Non-anonymous)</td>
      </tr>
      <tr>
-      <td class='embedded' valign='top' style='background:#F5F4EA;'>&nbsp;Explicit/Voluntary</td>
+      <td class='embedded' valign='top' style='background:#F5F4EA;'>&nbsp;แบบกำหนดเอง/โดยสมัครใจ (Explicit/Voluntary)</td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded' valign='top'>Clients must configure their browsers to use them.</td>
+      <td class='embedded' valign='top'>ไคลเอนต์ต้องกำหนดค่าเบราว์เซอร์ของพวกเขาเพื่อใช้พร็อกซี่เหล่านี้</td>
      </tr>
      <tr>
-      <td class='embedded' valign='top' style='background:#F5F4EA;'>&nbsp;Anonymous</td>
+      <td class='embedded' valign='top' style='background:#F5F4EA;'>&nbsp;นิรนาม (Anonymous)</td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded' valign='top'>The proxy sends no client identification to the server. (HTTP_X_FORWARDED_FOR header is not sent; the server does not see your IP.)</td>
+      <td class='embedded' valign='top'>พร็อกซี่ไม่ส่งข้อมูลระบุตัวตนของไคลเอนต์ไปยังเซิร์ฟเวอร์ (ไม่ส่ง HTTP_X_FORWARDED_FOR header; เซิร์ฟเวอร์ไม่เห็น IP ของคุณ)</td>
      </tr>
      <tr>
-      <td class='embedded' valign='top' style='background:#F5F4EA;'>&nbsp;Highly Anonymous</td>
+      <td class='embedded' valign='top' style='background:#F5F4EA;'>&nbsp;นิรนามระดับสูง (Highly Anonymous)</td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded' valign='top'>The proxy sends no client nor proxy identification to the server. (HTTP_X_FORWARDED_FOR, HTTP_VIA and HTTP_PROXY_CONNECTION headers are not sent; the server doesn't see your IP and doesn't even know you're using a proxy.)</td>
+      <td class='embedded' valign='top'>พร็อกซี่ไม่ส่งข้อมูลระบุตัวตนของไคลเอนต์หรือของพร็อกซี่ไปยังเซิร์ฟเวอร์ (ไม่ส่ง HTTP_X_FORWARDED_FOR, HTTP_VIA และ HTTP_PROXY_CONNECTION headers; เซิร์ฟเวอร์ไม่เห็น IP ของคุณและไม่รู้ด้วยซ้ำว่าคุณกำลังใช้พร็อกซี่)</td>
      </tr>
      <tr>
-      <td class='embedded' valign='top' style='background:#F5F4EA;'>&nbsp;Public</td>
+      <td class='embedded' valign='top' style='background:#F5F4EA;'>&nbsp;สาธารณะ (Public)</td>
       <td class='embedded' style='width:10px;'>&nbsp;</td>
-      <td class='embedded' valign='top'>(Self explanatory)</td>
+      <td class='embedded' valign='top'>(ชัดเจนในตัวเอง)</td>
      </tr>
     </table>
     <br />
-    A transparent proxy may or may not be anonymous, and there are several levels of anonymity.<br />
+    พร็อกซี่แบบโปร่งใสอาจเป็นแบบนิรนามหรือไม่นิรนามก็ได้ และมีระดับของ anonymity หลายระดับ<br />
     <br />
     <br />
-    <b>How do I find out if I'm behind a (transparent/anonymous) proxy?</b><a name='prox2'></a><br />
+    <b>ฉันจะทราบได้อย่างไรว่าฉันอยู่หลังพร็อกซี่ (แบบโปร่งใส/แบบนิรนาม)?</b><a name='prox2'></a><br />
     <br />
-    Try <a href='redir.php?url=http://proxyjudge.org' class='altlink'>ProxyJudge</a>. It lists the HTTP headers that the server where it is running
-    received from you. The relevant ones are HTTP_CLIENT_IP, HTTP_X_FORWARDED_FOR and REMOTE_ADDR.<br />
-    <br />
-    <br />
-    <b>Why am I listed as not connectable even though I'm not NAT/Firewalled?</b><a name='prox3'></a><br />
-    <br />
-    The {$TBDEV['site_name']} tracker is quite smart at finding your real IP, but it does need the proxy to send the HTTP header
-    HTTP_X_FORWARDED_FOR. If your ISP's proxy does not then what happens is that the tracker will interpret the proxy's IP
-    address as the client's IP address. So when you login and the tracker tries to connect to your client to see if you are
-    NAT/firewalled it will actually try to connect to the proxy on the port your client reports to be using for
-    incoming connections. Naturally the proxy will not be listening on that port, the connection will fail and the
-    tracker will think you are NAT/firewalled.<br />
+    ลองใช้ <a href='redir.php?url=http://proxyjudge.org' class='altlink'>ProxyJudge</a> มันจะแสดงรายการ HTTP headers ที่เซิร์ฟเวอร์ที่มันทำงานอยู่ได้รับจากคุณ header ที่เกี่ยวข้องคือ HTTP_CLIENT_IP, HTTP_X_FORWARDED_FOR และ REMOTE_ADDR<br />
     <br />
     <br />
-    <b>Can I bypass my ISP's proxy?</b><a name='prox4'></a><br />
+    <b>ทำไมฉันถึงถูกระบุว่าเชื่อมต่อไม่ได้ (Not connectable) ทั้งที่ฉันไม่ได้อยู่หลัง NAT/ไฟร์วอลล์?</b><a name='prox3'></a><br />
     <br />
-    If your ISP only allows HTTP traffic through port 80 or blocks the usual proxy ports then you would need to use something
-    like <a href='redir.php?url=http://www.socks.permeo.com'>socks</a> and that is outside the scope of this FAQ.<br />
+    Tracker ของ {$TBDEV['site_name']} นี้ค่อนข้างฉลาดในการค้นหา IP จริงของคุณ แต่มันต้องการให้พร็อกซี่ส่ง HTTP header HTTP_X_FORWARDED_FOR มา หากพร็อกซี่ของ ISP ของคุณไม่ส่ง header นี้ สิ่งที่เกิดขึ้นคือ Tracker จะตีความว่า IP address ของพร็อกซี่เป็น IP address ของไคลเอนต์ ดังนั้นเมื่อคุณล็อกอินและ Tracker พยายามเชื่อมต่อกับไคลเอนต์ของคุณเพื่อตรวจสอบว่าคุณอยู่หลัง NAT/ไฟร์วอลล์หรือไม่ มันจะพยายามเชื่อมต่อกับพร็อกซี่บนพอร์ตที่ไคลเอนต์ของคุณรายงานว่ากำลังใช้สำหรับการเชื่อมต่อขาเข้า โดยธรรมชาติแล้วพร็อกซี่จะไม่กำลังฟัง (Listen) อยู่บนพอร์ตนั้น การเชื่อมต่อจะล้มเหลว และ Tracker จะคิดว่าคุณอยู่หลัง NAT/ไฟร์วอลล์<br />
     <br />
-    The site accepts connections on port 81 besides the usual 80, and using them may be enough to fool some proxies. So the first
-    thing to try should be connecting to {$TBDEV['baseurl']}:81. Note that even if this works your bt client will still try
-    to connect to port 80 unless you edit the announce url in the .torrent file.<br />
     <br />
-    Otherwise you may try the following:<br />
+    <b>ฉันสามารถบายพาสพร็อกซี่ของ ISP ได้ไหม?</b><a name='prox4'></a><br />
+    <br />
+    หาก ISP ของคุณอนุญาตให้มีการรับส่งข้อมูล HTTP ผ่านพอร์ต 80 เท่านั้น หรือบล็อกพอร์ตพร็อกซี่ปกติ คุณจะต้องใช้สิ่งที่เช่น <a href='redir.php?url=http://www.socks.permeo.com'>Socks</a> และนั่นอยู่นอกเหนือขอบเขตของ FAQ นี้<br />
+    <br />
+    เว็บไซต์ยอมรับการเชื่อมต่อบนพอร์ต 81 นอกเหนือจากพอร์ต 80 ปกติ และการใช้พอร์ต 81 อาจเพียงพอที่จะหลอกพร็อกซี่บางตัวได้ ดังนั้น สิ่งแรกที่ควรลองคือการเชื่อมต่อไปยัง {$TBDEV['baseurl']}:81 โปรดทราบว่าแม้ว่าจะได้ผล ไคลเอนต์ BT ของคุณจะยังคงพยายามเชื่อมต่อกับพอร์ต 80 อยู่ เว้นแต่คุณจะแก้ไข URL ประกาศ (Announce URL) ในไฟล์ .torrent<br />
+    <br />
+    หากไม่ได้ผล คุณอาจลองทำดังต่อไปนี้:<br />
     <ul>
-        <li>Choose any public <b>non-anonymous</b> proxy that does <b>not</b> use port 80
-      (e.g. from <a href='redir.php?url=http://tools.rosinstrument.com/proxy' class='altlink'>this</a>,
-      <a href='redir.php?url=http://www.proxy4free.com/index.html' class='altlink'>this</a> or
-      <a href='redir.php?url=http://www.samair.ru/proxy' class='altlink'>this</a> list).</li>
+        <li>เลือกพร็อกซี่<b>แบบไม่นิรนาม (Non-anonymous)</b> สาธารณะใดๆ ก็ได้ที่<b>ไม่</b>ใช้พอร์ต 80 (เช่น จากรายการ <a href='redir.php?url=http://tools.rosinstrument.com/proxy' class='altlink'>นี้</a>, <a href='redir.php?url=http://www.proxy4free.com/index.html' class='altlink'>นี้</a> หรือ <a href='redir.php?url=http://www.samair.ru/proxy' class='altlink'>นี้</a>)</li>
 
-        <li>Configure your computer to use that proxy. For Windows XP, do <i>Start</i>, <i>Control Panel</i>, <i>Internet Options</i>,
-      <i>Connections</i>, <i>LAN Settings</i>, <i>Use a Proxy server</i>, <i>Advanced</i> and type in the IP and port of your chosen
-      proxy. Or from Internet Explorer use <i>Tools</i>, <i>Internet Options</i>, ...<br /></li>
+        <li>กำหนดค่าคอมพิวเตอร์ของคุณเพื่อใช้พร็อกซี่นั้น สำหรับ Windows XP, ทำโดย <i>Start</i>, <i>Control Panel</i>, <i>Internet Options</i>, <i>Connections</i>, <i>LAN Settings</i>, <i>Use a Proxy server</i>, <i>Advanced</i> และพิมพ์ IP และพอร์ตของพร็อกซี่ที่คุณเลือก หรือจาก Internet Explorer ใช้ <i>Tools</i>, <i>Internet Options</i>, ...<br /></li>
 
-        <li>(Facultative) Visit <a href='redir.php?url=http://proxyjudge.org' class='altlink'>ProxyJudge</a>. If you see an HTTP_X_FORWARDED_FOR in
-      the list followed by your IP then everything should be ok, otherwise choose another proxy and try again.<br /></li>
+        <li>(ไม่บังคับ) ไปที่ <a href='redir.php?url=http://proxyjudge.org' class='altlink'>ProxyJudge</a> หากคุณเห็น HTTP_X_FORWARDED_FOR ในรายการ ตามด้วย IP ของคุณ แสดงว่าทุกอย่างควรจะปกติดี ไม่เช่นนั้นให้เลือกพร็อกซี่อื่นและลองอีกครั้ง<br /></li>
 
-        <li>Visit {$TBDEV['site_name']}. Hopefully the tracker will now pickup your real IP (check your profile to make sure).</li>
+        <li>ไปที่ {$TBDEV['site_name']} หวังว่า Tracker จะตรวจจับ IP จริงของคุณได้ตอนนี้ (ตรวจสอบโปรไฟล์ของคุณเพื่อให้แน่ใจ)</li>
     </ul>
     <br />
-    Notice that now you will be doing all your browsing through a public proxy, which are typically quite slow.
-    Communications between peers do not use port 80 so their speed will not be affected by this, and should be better than when
-    you were &quot;unconnectable&quot;.<br />
+    โปรดทราบว่าตอนนี้คุณจะทำการท่องเว็บทั้งหมดผ่านพร็อกซี่สาธารณะ ซึ่งโดยทั่วไปค่อนข้างช้า การสื่อสารระหว่าง Peer ไม่ใช้พอร์ต 80 ดังนั้นความเร็วของพวกเขาจะไม่ได้รับผลกระทบจากสิ่งนี้ และควรจะดีกว่าเมื่อตอนที่คุณเป็น &quot;unconnectable&quot;<br />
     <br />
     <br />
-    <b>How do I make my bittorrent client use a proxy?</b><a name='prox5'></a><br />
+    <b>ฉันจะทำให้ไคลเอนต์ BitTorrent ใช้พร็อกซี่ได้อย่างไร?</b><a name='prox5'></a><br />
     <br />
-    Just configure Windows XP as above. When you configure a proxy for Internet Explorer you're actually configuring a proxy for
-    all HTTP traffic (thank Microsoft and their &quot;IE as part of the OS policy&quot; ). On the other hand if you use another
-    browser (Opera/Mozilla/Firefox) and configure a proxy there you'll be configuring a proxy just for that browser. We don't
-    know of any BT client that allows a proxy to be specified explicitly.<br />
+    เพียงกำหนดค่า Windows XP ตามด้านบน เมื่อคุณกำหนดค่าพร็อกซี่สำหรับ Internet Explorer คุณกำลังกำหนดค่าพร็อกซี่สำหรับการรับส่งข้อมูล HTTP ทั้งหมดจริงๆ (ขอบคุณ Microsoft และนโยบาย &quot;IE as part of the OS&quot; ของพวกเขา) ในทางกลับกัน หากคุณใช้เบราว์เซอร์อื่น (Opera/Mozilla/Firefox) และกำหนดค่าพร็อกซี่ที่นั่น คุณจะกำหนดค่าพร็อกซี่สำหรับเบราว์เซอร์นั้นเท่านั้น เราไม่รู้จักไคลเอนต์ BT ใดที่อนุญาตให้ระบุพร็อกซี่ได้โดยตรง<br />
     <br />
     <br />
-    <b>Why can't I signup from behind a proxy?</b><a name='prox6'></a><br />
-    It is our policy not to allow new accounts to be opened from behind a proxy.<br />
+    <b>ทำไมฉันถึงสมัครสมาชิกจากหลังพร็อกซี่ไม่ได้?</b><a name='prox6'></a><br />
+    นโยบายของเราคือไม่อนุญาตให้เปิดบัญชีใหม่จากหลังพร็อกซี่<br />
     <br />
     <br />
-    <b>Does this apply to other torrent sites?</b><a name='prox7'></a><br />
+    <b>สิ่งนี้ใช้กับเว็บไซต์ทอร์เรนต์อื่นๆ หรือไม่?</b><a name='prox7'></a><br />
     <br />
-    This section was written for {$TBDEV['site_name']}, a closed, port 80-81 tracker. Other trackers may be open or closed, and many listen
-    on e.g. ports 6868 or 6969. The above does <b>not</b> necessarily apply to other trackers.<br />",
-'faq_blocked_title' => "Why can't I connect? Is the site blocking me?",
+    ส่วนนี้เขียนขึ้นสำหรับ {$TBDEV['site_name']} ซึ่งเป็น Tracker แบบปิด (Closed) ที่ใช้พอร์ต 80-81 Tracker อื่นๆ อาจเป็นแบบเปิดหรือปิด และหลายแห่งใช้พอร์ตเช่น 6868 หรือ 6969 เนื้อหาข้างต้น<b>ไม่</b>จำเป็นต้องใช้กับ Tracker อื่นๆ<br />",
+'faq_blocked_title' => "ทำไมฉันเชื่อมต่อไม่ได้? เว็บไซต์กำลังบล็อกฉันอยู่หรือไม่?",
 'faq_blocked_body' => "<br />
-    Your failure to connect may be due to several reasons. <br />
+    การที่คุณเชื่อมต่อไม่ได้อาจเกิดจากหลายสาเหตุ <br />
 
     <br />
     <br />
-    <b>Maybe my address is blacklisted?</b><a name='conn2'></a><br />
+    <b>หรือว่า IP address ของฉันอยู่ในแบล็กลิสต์?</b><a name='conn2'></a><br />
     <br />
-    The site blocks addresses listed in the (former) <a class='altlink' href='redir.php?url=http://methlabs.org/'>PeerGuardian</a>
-    database, as well as addresses of banned users. This works at Apache/PHP level, it's just a script that
-    blocks <i>logins</i> from those addresses. It should not stop you from reaching the site. In particular
-    it does not block lower level protocols, you should be able to ping/traceroute the server even if your
-    address is blacklisted. If you cannot then the reason for the problem lies elsewhere.<br />
+    เว็บไซต์จะบล็อกที่อยู่ที่อยู่ในฐานข้อมูลของ (เดิม) <a class='altlink' href='redir.php?url=http://methlabs.org/'>PeerGuardian</a> รวมถึงที่อยู่ของผู้ใช้ที่ถูกแบน การทำงานนี้อยู่ในระดับ Apache/PHP มันเป็นเพียงสคริปต์ที่บล็อกการ<i>ล็อกอิน</i>จากที่อยู่เหล่านั้น มันไม่ควรหยุดคุณจากการเข้าถึงเว็บไซต์ โดยเฉพาะอย่างยิ่งมันไม่ได้บล็อกโปรโตคอลระดับล่าง คุณควรจะสามารถ ping/traceroute ไปยังเซิร์ฟเวอร์ได้ แม้ว่าที่อยู่ของคุณจะอยู่ในแบล็กลิสต์ก็ตาม หากคุณทำไม่ได้ แสดงว่าสาเหตุของปัญหาอยู่ที่อื่น<br />
     <br />
-    If somehow your address is indeed blocked in the PG database do not contact us about it, it is not our
-    policy to open <i>ad hoc</i> exceptions. You should clear your IP with the database maintainers instead.<br />
+    หากที่อยู่ของคุณอยู่ในฐานข้อมูล PG โดยบางวิธี อย่าติดต่อเราเกี่ยวกับเรื่องนี้ มันไม่ใช่นโยบายของเราในการยกเว้นเป็นรายกรณี (ad hoc) คุณควรเคลียร์ IP ของคุณกับผู้ดูแลฐานข้อมูลแทน<br />
     <br />
     <br />
-    <b>Your ISP blocks the site's address</b><a name='conn3'></a><br />
+    <b>ISP ของคุณบล็อกที่อยู่ของเว็บไซต์</b><a name='conn3'></a><br />
     <br />
-    (In first place, it's unlikely your ISP is doing so. DNS name resolution and/or network problems are the usual culprits.)
+    (ประการแรก ไม่น่าเป็นไปได้ที่ ISP ของคุณจะทำเช่นที่ ปัญหาการแก้ไขชื่อ DNS (DNS name resolution) และ/หรือ ปัญหาเครือข่ายเป็นตัวการปกติ)<br />
+    เราไม่สามารถทำอะไรได้
+    คุณควรติดต่อ ISP ของคุณ (หรือหา ISP ใหม่) โปรดทราบว่าคุณยังสามารถเยี่ยมชมเว็บไซต์ผ่านพร็อกซี่ได้ โดยทำตามคำแนะนำในส่วนที่เกี่ยวข้อง ในกรณีนี้ ไม่สำคัญว่าพร็อกซี่จะเป็นแบบนิรนามหรือไม่ หรือมันใช้พอร์ตใด<br />
     <br />
-    There's nothing we can do.
-    You should contact your ISP (or get a new one). Note that you can still visit the site via a proxy, follow the instructions
-    in the relevant section. In this case it doesn't matter if the proxy is anonymous or not, or which port it listens to.<br />
-    <br />
-    Notice that you will always be listed as an &quot;unconnectable&quot; client because the tracker will be unable to
-    check that you're capable of accepting incoming connections.<br />
+    โปรดทราบว่าคุณจะถูกระบุว่าเป็นไคลเอนต์ &quot;unconnectable&quot; เสมอ เพราะ Tracker จะไม่สามารถตรวจสอบได้ว่าคุณมีความสามารถในการยอมรับการเชื่อมต่อขาเข้า (Accept incoming connections)<br />
     <br />
     <br />",
-'faq_alt_port' => "Alternate port (81)",
+'faq_alt_port' => "พอร์ตทางเลือก (81)",
 'faq_alt_port_body' => "<br />
-    Some of our torrents use ports other than the usual HTTP port 80. This may cause problems for some users,
-    for instance those behind some firewall or proxy configurations.
+    ทอร์เรนต์บางส่วนของเราใช้พอร์ตอื่นนอกจากพอร์ต HTTP ปกติคือพอร์ต 80 ซึ่งอาจทำให้เกิดปัญหาสำหรับผู้ใช้บางคน เช่น ผู้ที่อยู่หลังการกำหนดค่าบางอย่างของไฟร์วอลล์หรือพร็อกซี่
 
-    You can easily solve this by editing the .torrent file yourself with any torrent editor, e.g.
+    คุณสามารถแก้ไขได้ง่ายๆ โดยการแก้ไขไฟล์ .torrent เองด้วยโปรแกรมแก้ไขทอร์เรนต์ใดๆ เช่น
     <a href='redir.php?url=http://sourceforge.net/projects/burst/' class='altlink'>MakeTorrent</a>,
-    and replacing the announce url {$TBDEV['baseurl']}:81 with {$TBDEV['site_name']}:80 or just {$TBDEV['site_name']}.<br />
+    และแทนที่ URL ประกาศ (Announce URL) {$TBDEV['baseurl']}:81 ด้วย {$TBDEV['site_name']}:80 หรือแค่ {$TBDEV['site_name']}<br />
     <br />
-    Editing the .torrent with Notepad is not recommended. It may look like a text file, but it is in fact
-    a bencoded file. If for some reason you must use a plain text editor, change the announce url to
-    {$TBDEV['site_name']}:80, not {$TBDEV['site_name']}. (If you're thinking about changing the number before the
-    announce url instead, you know too much to be reading this.)
+    ไม่แนะนำให้แก้ไขไฟล์ .torrent ด้วย Notepad มันอาจดูเหมือนไฟล์ข้อความ แต่จริงๆ แล้วมันคือ
+    ไฟล์ที่เข้ารหัส Bencode (Bencoded file) หากด้วยเหตุผลบางอย่างคุณต้องใช้โปรแกรมแก้ไขข้อความธรรมดา ให้เปลี่ยน URL ประกาศเป็น
+    {$TBDEV['site_name']}:80 ไม่ใช่ {$TBDEV['site_name']} (หากคุณกำลังคิดที่จะเปลี่ยนตัวเลขก่อน
+    URL ประกาศแทน แสดงว่าคุณรู้มากเกินไปที่จะมาอ่านส่วนนี้)
     </td></tr></table>",
-'faq_problem_title' => "What if I can't find the answer to my problem here?",
+'faq_problem_title' => "แล้วถ้าฉันไม่พบคำตอบสำหรับปัญหาของฉันที่นี่ล่ะ?",
 'faq_problem_body' => "<br />
-    Post in the <a class='altlink' href='forums.php'>Forums</a>, by all means. You'll find they
-    are usually a friendly and helpful place,
-    provided you follow a few basic guidelines:
+    โพสต์ใน <a class='altlink' href='forums.php'>ฟอรัม</a> ได้เลย โดยทุก means คุณจะพบว่าพวกเขา
+    โดยปกติแล้วเป็นสถานที่ที่เป็นมิตรและมีประโยชน์
+    โดยที่คุณปฏิบัติตามแนวทางพื้นฐานไม่กี่ข้อ:
     <ul>
-    <li>Make sure your problem is not really in this FAQ. There's no point in posting just to be sent
-    back here.</li>
-    <li>Before posting read the sticky topics (the ones at the top). Many times new information that
-    still hasn't been incorporated in the FAQ can be found there.</li>
-    <li>Help us in helping you. Do not just say 'it doesn't work!'. Provide details so that we don't
-    have to guess or waste time asking. What client do you use? What's your OS? What's your network setup? What's the exact
-    error message you get, if any? What are the torrents you are having problems with? The more
-    you tell the easiest it will be for us, and the more probable your post will get a reply.</li>
-    <li>And needless to say: be polite. Demanding help rarely works, asking for it usually does
-    the trick.</li>",
+    <li>ตรวจสอบให้แน่ใจว่าปัญหาของคุณไม่ได้มีคำตอบอยู่ใน FAQ นี้แล้ว ไม่มีประโยชน์อะไรที่จะโพสต์เพียงเพื่อถูกส่งกลับมาที่นี่</li>
+    <li>ก่อนโพสต์ อ่านหัวข้อที่ปักหมุด (Sticky topics) (หัวข้อที่อยู่ด้านบน) บ่อยครั้งที่ข้อมูลใหม่ที่
+    ยังไม่ถูกนำมารวมไว้ใน FAQ สามารถพบได้ที่นั่น</li>
+    <li>ช่วยเราช่วยคุณ อย่าเพียงแค่พูดว่า 'มันไม่ทำงาน!' ให้ระบุรายละเอียดเพื่อที่เราจะได้
+    ไม่ต้องเดาหรือเสียเวลาถาม คุณใช้ไคลเอนต์อะไร? ระบบปฏิบัติการของคุณคืออะไร? การตั้งค่าเครือข่ายของคุณเป็นอย่างไร? ข้อความแสดงข้อผิดพลาดที่คุณได้รับคืออะไร (ถ้ามี)? ทอร์เรนต์ใดที่คุณมีปัญหา? ยิ่งคุณ
+    บอกเรามากเท่าไหร่ มันก็จะยิ่งง่ายสำหรับเรา และมีแนวโน้มมากขึ้นที่โพสต์ของคุณจะได้รับการตอบกลับ</li>
+    <li>และไม่ต้องพูดก็รู้: สุภาพ การเรียกร้องความช่วยเหลือหายากได้ผล การขอความช่วยเหลือมักจะ
+    ทำได้ผล</li>",
 
 
 );

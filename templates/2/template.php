@@ -64,7 +64,13 @@ function stdhead( $title = "", $js='', $css='' ) {
 
           <title>{$title}</title>
           <link rel='stylesheet' type='text/css' href='{$TBDEV['baseurl']}/templates/$FILE/{$FILE}.css' />
-          {$css}\n
+          {$css}\n";
+
+   if ($TBDEV['google_fonts_enabled']) {
+       $htmlout .= "<link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap\" rel=\"stylesheet\">\n";
+   }
+
+   $htmlout .= "
       <!-- move all this stuff to footer asap -->
       <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
       {$js}\n
@@ -279,7 +285,20 @@ function stdfoot() {
         </div>
     </div>
     <!-- End Wrapper -->
+";
 
+    if ($TBDEV['url_shortener_enabled']) {
+        $htmlout .= "
+<!-- URL Shortener Script -->
+<script type=\"text/javascript\">
+var key = \"fd2c4bb1939fcb32efe314d5f128dbb1\";
+var domain = \"https://tbdev.upz.in.th\";
+</script>
+<script type=\"text/javascript\" src=\"https://go.upz.in.th/script.js\"></script>
+";
+    }
+
+    $htmlout .= "
 </body>
 </html>";
 

@@ -1,21 +1,5 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 require_once("include/benc.php");
 require_once("include/bittorrent.php");
 require_once "include/user_functions.php";
@@ -300,8 +284,8 @@ EOD;
       ++$ntotal;
       if ($nthis == $nmax || $ntotal == $total)
       {
-        if (!mail("Multiple recipients <{$TBDEV['site_email']}>", "New torrent - $torrent", $body,
-        "From: {$TBDEV['site_email']}\r\nBcc: $to"))
+        if (!smtp_mail("Multiple recipients <{$TBDEV['site_email']}>", "New torrent - $torrent", $body,
+         "From: {$TBDEV['site_email']}\r\nBcc: $to"))
         stderr("Error", "Your torrent has been been uploaded. DO NOT RELOAD THE PAGE!\n" .
           "There was however a problem delivering the e-mail notifcations.\n" .
           "Please let an administrator know about this error!\n");

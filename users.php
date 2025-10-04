@@ -1,21 +1,5 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 require_once "include/bittorrent.php";
 require_once "include/user_functions.php";
 
@@ -152,7 +136,7 @@ loggedinorreturn();
     $offset = ($page * $perpage) - $perpage;
 
     if($arr[0] > 0) {
-        $res = mysql_query("SELECT users.*, countries.name, countries.flagpic FROM users FORCE INDEX ( username ) LEFT JOIN countries ON country = countries.id WHERE $query ORDER BY username LIMIT $offset,$perpage") or sqlerr(__FILE__,__LINE__);
+        $res = mysql_query("SELECT users.*, provinces.name, provinces.flagpic FROM users FORCE INDEX ( username ) LEFT JOIN provinces ON country = provinces.id WHERE $query ORDER BY username LIMIT $offset,$perpage") or sqlerr(__FILE__,__LINE__);
     //$num = mysql_num_rows($res);
 
     $HTMLOUT  .= "<table border='1' cellspacing='0' cellpadding='5'>\n";

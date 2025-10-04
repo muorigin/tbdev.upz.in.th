@@ -84,7 +84,7 @@ $lang = array(
 #FORUM SEARCH
 'forum_search_access' => "<h1>การเข้าถึงไม่ถูกต้อง</h1>คุณไม่สามารถเข้าถึงไฟล์นี้โดยตรงได้",
 'forum_search_search' => "<h1>ค้นหาฟอรัม (<font color='red'>BETA</font>)</h1>\n",
-'forum_search_searched' => "<p><b>ค้นหาสำหรับ "%s"</b></p>\n",
+'forum_search_searched' => "<p><b>ค้นหาสำหรับ \"%s\"</b></p>\n",
 'forum_search_not_found' => "<p><b>ขออภัย ไม่พบอะไร!</b></p>",
 'forum_search_prev' => "<b><< ก่อนหน้า</b>",
 'forum_search_next' => "ถัดไป >>",

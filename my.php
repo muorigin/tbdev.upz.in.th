@@ -1,21 +1,5 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 require_once "include/bittorrent.php";
 require_once "include/html_functions.php";
 require_once "include/user_functions.php";
@@ -30,9 +14,9 @@ loggedinorreturn();
     $HTMLOUT = '';
 
     $HTMLOUT .= "
-                     <div class='cblock'>
-                         <div class='cblock-header'>Your Profile</div>
-                         <div class='cblock-lb'>";
+                      <div class='cblock'>
+                          <div class='cblock-header'>Your Profile</div>
+                          <div class='cblock-lb'>";
     if (isset($_GET["edited"]))
     {
       $HTMLOUT .= "          {$lang['my_updated']}!";
@@ -50,7 +34,7 @@ loggedinorreturn();
     //else
       //print("<h1>Welcome, <a href=userdetails.php?id=$CURUSER[id]>$CURUSER[username]</a>!</h1>\n");
     $user_header = "<span style='font-size: 20px;'><a href='userdetails.php?id={$CURUSER['id']}'>{$CURUSER['username']}</a></span>";
-    
+
     if(!empty($CURUSER['avatar']) && $CURUSER['av_w'] > 5 && $CURUSER['av_h'] > 5)
     {
       $avatar = "<img src='{$CURUSER['avatar']}' width='{$CURUSER['av_w']}' height='{$CURUSER['av_h']}' alt='' />";
@@ -116,12 +100,12 @@ loggedinorreturn();
       }
     }
 
-    $countries = "<option value='0'>---- {$lang['my_none']} ----</option>\n";
-    $ct_r = mysql_query("SELECT id,name FROM countries ORDER BY name") or sqlerr(__FILE__,__LINE__);
+    $provinces = "<option value='0'>---- {$lang['my_none']} ----</option>\n";
+    $ct_r = mysql_query("SELECT id,name FROM provinces ORDER BY name") or sqlerr(__FILE__,__LINE__);
     
     while ($ct_a = mysql_fetch_assoc($ct_r))
     {
-      $countries .= "<option value='{$ct_a['id']}'" . ($CURUSER["country"] == $ct_a['id'] ? " selected='selected'" : "") . ">{$ct_a['name']}</option>\n";
+      $provinces .= "<option value='{$ct_a['id']}'" . ($CURUSER["country"] == $ct_a['id'] ? " selected='selected'" : "") . ">{$ct_a['name']}</option>\n";
     }
         //-----------------------------------------
         // Work out the timezone selection
@@ -224,12 +208,18 @@ loggedinorreturn();
     </fieldset>
     <fieldset>
     <legend><strong>{$lang['my_stylesheet']}</strong></legend>
-    <select name='stylesheet'>$stylesheets</select></fieldset>
-    <fieldset><legend><strong>{$lang['my_language']}</strong></legend>Engrish</fieldset>
-    <fieldset><legend><strong>{$lang['my_country']}</strong></legend>
-    <select name='country'>\n$countries\n</select></fieldset>
+    <select name='stylesheet'>$stylesheets</select></fieldset>";
+    $languages = "<option value='0'>---- {$lang['my_none']} ----</option>\n";
+    $lang_r = mysql_query("SELECT id,name FROM languages ORDER BY name") or sqlerr(__FILE__,__LINE__);
 
-    <!-- Timezone stuff -->
+    while ($lang_a = mysql_fetch_assoc($lang_r))
+    {
+      $languages .= "<option value='{$lang_a['id']}'" . ($CURUSER["language"] == $lang_a['id'] ? " selected='selected'" : "") . ">{$lang_a['name']}</option>\n";
+    }
+
+    $HTMLOUT .= "<fieldset><legend><strong>{$lang['my_language']}</strong></legend><select name='language'>\n$languages\n</select></fieldset>";
+    $HTMLOUT .= "<fieldset><legend><strong>{$lang['my_province']}</strong></legend><select name='province'>\n$provinces\n</select></fieldset>";
+    $HTMLOUT .= "
     <fieldset><legend><strong>{$lang['my_tz']}</strong></legend>$time_select</fieldset>
     <fieldset><legend><strong>{$lang['my_checkdst']}</strong></legend>
     <label><input type='checkbox' name='checkdst' id='tz-checkdst' onclick='daylight_show()' value='1' $dst_correction />&nbsp;{$lang['my_auto_dst']}</label><br />

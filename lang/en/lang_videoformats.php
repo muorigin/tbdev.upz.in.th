@@ -103,7 +103,7 @@ $lang = array(
 'videoformats_asian_body' => "
     These are films put out by eastern bootleggers, and these are usually bought by some
     groups to put out as their own. Silvers are very cheap and easily available in a lot of
-    countries, and its easy to put out a release, which is why there are so many in the scene
+    provinces, and its easy to put out a release, which is why there are so many in the scene
     at the moment, mainly from smaller groups who don't last more than a few releases. PDVDs
     are the same thing pressed onto a DVD. They have removable subtitles, and the quality is
     usually better than the silvers. These are ripped like a normal DVD, but usually released

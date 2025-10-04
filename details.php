@@ -1,27 +1,12 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 ob_start("ob_gzhandler");
 
 require_once("include/bittorrent.php");
 require_once "include/user_functions.php";
 require_once "include/bbcode_functions.php";
 require_once "include/html_functions.php";
+require_once "include/url_shortener.php";
 
 
 function ratingpic($num) {
@@ -128,7 +113,10 @@ if (!$row || ($row["banned"] == "yes" && !$moderator))
 //			$s .= " $spacer<$editlink>[Edit torrent]</a>";
 //		tr("Name", $s, 1);
 
-        $HTMLOUT .= "<tr><td class='heading'>{$lang['details_download']}</td><td style='width:99%;' align='left'><a class='index' href='download.php?torrent=$id'>" . htmlsafechars($row["filename"]) . "</a></td></tr>";
+        $download_url = "{$TBDEV['baseurl']}/download.php?torrent=$id";
+        $short_url = shorten_url($download_url);
+        $href = $short_url ? $short_url : $download_url;
+        $HTMLOUT .= "<tr><td class='heading'>{$lang['details_download']}</td><td style='width:99%;' align='left'><a class='index' href='$href'>" . htmlsafechars($row["filename"]) . "</a></td></tr>";
 /*
 		function hex_esc($matches) {
 			return sprintf("%02x", ord($matches[0]));

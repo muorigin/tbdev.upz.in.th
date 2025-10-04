@@ -1,21 +1,5 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 require_once "include/bittorrent.php";
 require_once "include/user_functions.php";
 require_once "include/password_functions.php";
@@ -127,6 +111,7 @@ loggedinorreturn();
     // $ircpass = $_POST["ircpass"];
     $info = strlen($_POST["info"]) <= 1500 ? $_POST['info'] : stderr('User Error', ':p');
     $stylesheet = $_POST["stylesheet"];
+    $language = $_POST["language"];
     $country = $_POST["country"];
 
     if(isset($_POST["user_timezone"]) && preg_match('#^\-?\d{1,2}(?:\.\d{1,2})?$#', $_POST['user_timezone']))
@@ -148,7 +133,10 @@ loggedinorreturn();
 
     if (is_valid_id($stylesheet))
       $updateset[] = "stylesheet = '$stylesheet'";
-      
+
+    if (is_valid_id($language))
+      $updateset[] = "language = $language";
+
     if (is_valid_id($country))
       $updateset[] = "country = $country";
 
@@ -179,7 +167,7 @@ loggedinorreturn();
                         $lang['takeprofedit_email_body']);
       
       
-      mail($email, "{$TBDEV['site_name']} {$lang['takeprofedit_confirm']}", $body, "From: {$TBDEV['site_email']}");
+      smtp_mail($email, "{$TBDEV['site_name']} {$lang['takeprofedit_confirm']}", $body, "From: {$TBDEV['site_email']}");
 
       $urladd .= "&mailsent=1";
     }

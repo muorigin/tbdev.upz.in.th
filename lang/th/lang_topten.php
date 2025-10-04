@@ -9,7 +9,7 @@ $lang = array(
 
 #nav
 'nav_torrents'       => "ทอร์เรนต์",
-'nav_countries'      => "ประเทศ",
+'nav_provinces'      => "ประเทศ",
 'nav_peers'          => "เพียร์",
 
 

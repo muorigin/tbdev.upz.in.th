@@ -1,43 +1,18 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
   if( !defined('IN_TBDEV_REG') )
     header( "Location: {$TBDEV['baseurl']}/404.html" );
-
     ini_set('session.use_trans_sid', '0');
-
-    $lang = array_merge( load_language('global'), load_language('login') );
-    
+    $lang = array_merge( load_language('global'), load_language('login') );    
     $HTMLOUT = '';
     $js = '';
-
     if( $TBDEV['captcha'] )
     {
     // Begin the session
     session_start();
     if (isset($_SESSION['captcha_time']))
-    (TIME_NOW - $_SESSION['captcha_time'] < 5) ? exit("{$lang['login_spam']}") : NULL;
-    
+    (TIME_NOW - $_SESSION['captcha_time'] < 5) ? exit("{$lang['login_spam']}") : NULL;    
     $js = "<script type='text/javascript' src='captcha/captcha.js'></script>";
-
-    }
-    
-    
+    }    
     unset($returnto);
     if (!empty($_GET["returnto"])) {
       $returnto = $_GET["returnto"];
@@ -47,8 +22,6 @@
         $HTMLOUT .= "<div class='error'>{$lang['login_error']}</div>";
       }
     }
-
-
     $HTMLOUT .= "
                 <form method='post' action='{$TBDEV['baseurl']}/members.php?action=takelogin'>
                      <div class='cblock'>
@@ -83,22 +56,15 @@
                                       <td><input type='text' maxlength='6' name='captcha' id='captcha' onblur='check(); return false;'/></td>
                                    </tr>";
     }
-
     $HTMLOUT .= "                  <tr>
                                       <td colspan='2' align='center'><input type='submit' value='{$lang['login_login']}' class='btn' /></td>
                                    </tr>
                              </table>";
-
-
     if (isset($returnto))
       $HTMLOUT .= "<input type='hidden' name='returnto' value='" . htmlsafechars($returnto) . "' />\n";
-
     $HTMLOUT .= "        </div>
                      </div>";
-
     $HTMLOUT .= "</form>";
-
-
     print stdhead($lang['login_login_btn'], $js) . $HTMLOUT . stdfoot();
 
 ?>

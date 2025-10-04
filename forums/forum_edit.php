@@ -1,5 +1,12 @@
 <?php
-
+if( !defined('IN_TBDEV_REG') )
+    die( "Access denied!" );
+require_once("include/bittorrent.php");
+require_once("include/user_functions.php");
+require_once("include/bbcode_functions.php");
+dbconn();
+loggrdinorreturn();
+parked();
  // -------- Action: Edit Forum
         $forumid = (int)$_GET["forumid"];
         if ($CURUSER['class'] == MAX_CLASS || isMod($forumid)) {

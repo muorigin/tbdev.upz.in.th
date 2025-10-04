@@ -1,0 +1,88 @@
+# TBDev Torrent Tracker Robots.txt
+# Optimized for SEO with URL shortener integration
+
+User-agent: *
+Allow: /
+
+# Allow access to main content
+Allow: /browse.php
+Allow: /details.php
+Allow: /faq.php
+Allow: /rules.php
+Allow: /links.php
+Allow: /topten.php
+
+# Disallow admin and sensitive areas
+Disallow: /admin/
+Disallow: /admin.php
+Disallow: /bitbucket/
+Disallow: /cache/
+Disallow: /cgi-bin/
+Disallow: /include/
+Disallow: /lang/
+Disallow: /logs/
+Disallow: /members/
+Disallow: /pic/
+Disallow: /scripts/
+Disallow: /SQL/
+Disallow: /torrents/
+Disallow: /javairc/
+
+# Disallow login and user-specific pages
+Disallow: /login.php
+Disallow: /logout.php
+Disallow: /userdetails.php
+Disallow: /my.php
+Disallow: /messages.php
+Disallow: /friends.php
+Disallow: /users.php
+
+# Disallow file operations
+Disallow: /download.php
+Disallow: /upload.php
+Disallow: /takeupload.php
+Disallow: /filelist.php
+Disallow: /viewnfo.php
+
+# Disallow forums (optional - remove if you want forums indexed)
+Disallow: /forums.php
+Disallow: /forums/
+
+# Disallow API and webhook
+Disallow: /webhook.php
+Disallow: /api/
+
+# Allow sitemap
+Allow: /sitemap.xml
+
+# Crawl delay to be respectful
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://tbdev.upz.in.th/sitemap.xml

@@ -69,14 +69,22 @@ require_once "include/user_functions.php";
                              <div class='space-line'></div>
                          </div>
 			             <!-- row 5 -->
-                         <div class='table-row'>
-                             <div class='left-layer'><p class='text'><a href='reputation_ad.php'>{$lang['index_rep_system']}</a></p></div>
-                             <div class='left-layer'><p class='text'><a href='reputation_settings.php'>{$lang['index_rep_settings']}</a></p></div>
-                             <div class='left-layer'><p class='text'><a href='admin.php?action=news'>{$lang['index_news']}</a></p></div>
-                             <div class='left-layer'><p class='text'><a href='admin.php?action=rules'>{$lang['index_rules']}</a></p></div>
-                             <div class='left-layer'><p class='text'><a href='admin.php?action=cleanup_manager'>Cleanup Manager</a></p></div>
-                             <div class='space-line'></div>
-                         </div>
+			                       <div class='table-row'>
+			                           <div class='left-layer'><p class='text'><a href='reputation_ad.php'>{$lang['index_rep_system']}</a></p></div>
+			                           <div class='left-layer'><p class='text'><a href='reputation_settings.php'>{$lang['index_rep_settings']}</a></p></div>
+			                           <div class='left-layer'><p class='text'><a href='admin.php?action=news'>{$lang['index_news']}</a></p></div>
+			                           <div class='left-layer'><p class='text'><a href='admin.php?action=rules'>{$lang['index_rules']}</a></p></div>
+			                           <div class='left-layer'><p class='text'><a href='admin.php?action=cleanup_manager'>Cleanup Manager</a></p></div>
+			                           <div class='space-line'></div>
+			                       </div>
+			             <!-- row 6 -->
+			                       <div class='table-row'>
+			                           <div class='left-layer'><p class='text'><a href='admin.php?action=url_shortener_logs'>URL Shortener Logs</a></p></div>
+			                           <div class='left-layer'><p class='text'><a href='admin.php?action=forummanager'>{$lang['index_forummanage']}</a></p></div>
+			                           <div class='left-layer'><p class='text'><a href='admin.php?action=moforums'>{$lang['index_moforums']}</a></p></div>
+			                           <div class='left-layer'><p class='text'><a href='admin.php?action=msubforums'>{$lang['index_msubforums']}</a></p></div>
+			                           <div class='space-line'></div>
+			                       </div>
                     <!-- row 6 -->
                          <div class='table-row'>
                              <div class='left-layer'><p class='text'><a href='admin.php?action=forummanager'>{$lang['index_forummanage']}</a></p></div>

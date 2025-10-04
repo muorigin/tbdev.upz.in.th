@@ -1,21 +1,5 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 require_once "include/bittorrent.php";
 require_once "include/user_functions.php";
 
@@ -65,7 +49,7 @@ loggedinorreturn();
         "---------------------------------------------------------------------\n".
         "{$TBDEV['site_name']}{$lang['email_gateway']}\n";
 
-      $success = mail($to, $subject, $message, "{$lang['email_from']}{$TBDEV['site_email']}");
+      $success = smtp_mail($to, $subject, $message, "{$lang['email_from']}{$TBDEV['site_email']}");
 
       if ($success)
         stderr("{$lang['email_success']}", "{$lang['email_queued']}");

@@ -18,7 +18,7 @@ $lang = array(
       FAQ BitTorrent อีกอันที่ดี โดย Evil Timmy.</li>",
 'links_software_header' => "<h2>ซอฟต์แวร์ BitTorrent</h2>",
 'links_software_body' => "<li><a class='altlink' href='http://pingpong-abc.sourceforge.net/'>ABC</a> -
-      "ABC เป็นไคลเอนต์ที่ปรับปรุงสำหรับโซลูชันการแจกจ่ายไฟล์ peer-to-peer ของ Bittorrent."</li>
+      \"ABC เป็นไคลเอนต์ที่ปรับปรุงสำหรับโซลูชันการแจกจ่ายไฟล์ peer-to-peer ของ Bittorrent.\"</li>
     <li><a class='altlink' href='http://azureus.sourceforge.net/'>Azureus</a> -
       "Azureus เป็นไคลเอนต์ java bittorrent มันให้การใช้งานโปรโตคอล bittorrent ที่ค่อนข้างสมบูรณ์โดยใช้ภาษา java."</li>
     <li><a class='altlink' href='http://bnbt.go-dedicated.com/'>BNBT</a> -

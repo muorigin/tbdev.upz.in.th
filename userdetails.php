@@ -1,21 +1,5 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 require_once "include/bittorrent.php";
 require_once "include/user_functions.php";
 require_once "include/html_functions.php";
@@ -125,7 +109,7 @@ function maketable($res)
     //if ($user['donated'] > 0)
     //  $don = "<img src='{$TBDEV['pic_base_url']}starbig.gif' alt='' />";
     $country = '';
-    $res = mysql_query("SELECT name,flagpic FROM countries WHERE id=".$user['country']." LIMIT 1") or sqlerr();
+    $res = mysql_query("SELECT name,flagpic FROM provinces WHERE id=".$user['country']." LIMIT 1") or sqlerr();
     if (mysql_num_rows($res) == 1)
     {
       $arr = mysql_fetch_assoc($res);

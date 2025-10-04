@@ -1,21 +1,4 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
   if( !defined('IN_TBDEV_REG') )
     header( "Location: {$TBDEV['baseurl']}/404.html" );
     
@@ -66,7 +49,7 @@
     $body = sprintf($lang['email_request'], $email, $_SERVER["REMOTE_ADDR"], $TBDEV['baseurl'], $arr["id"], $hash).$TBDEV['site_name'];
 
 
-    @mail($arr["email"], "{$TBDEV['site_name']} {$lang['email_subjreset']}", $body, "From: {$TBDEV['site_email']}") or stderr("{$lang['stderr_errorhead']}", "{$lang['stderr_nomail']}");
+    @smtp_mail($arr["email"], "{$TBDEV['site_name']} {$lang['email_subjreset']}", $body, "From: {$TBDEV['site_email']}") or stderr("{$lang['stderr_errorhead']}", "{$lang['stderr_nomail']}");
 
     stderr($lang['stderr_successhead'], $lang['stderr_confmailsent']);
   }
@@ -100,7 +83,7 @@
 
     $body = sprintf($lang['email_newpass'], $arr["username"], $newpassword, $TBDEV['baseurl']).$TBDEV['site_name'];
 
-    @mail($email, "{$TBDEV['site_name']} {$lang['email_subject']}", $body, "From: {$TBDEV['site_email']}") or stderr($lang['stderr_errorhead'], $lang['stderr_nomail']);
+    @smtp_mail($email, "{$TBDEV['site_name']} {$lang['email_subject']}", $body, "From: {$TBDEV['site_email']}") or stderr($lang['stderr_errorhead'], $lang['stderr_nomail']);
     
     stderr($lang['stderr_successhead'], sprintf($lang['stderr_mailed'], $email));
   }

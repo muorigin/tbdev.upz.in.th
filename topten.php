@@ -1,21 +1,5 @@
 <?php
-/*
-+------------------------------------------------
-|   TBDev.net BitTorrent Tracker PHP
-|   =============================================
-|   by CoLdFuSiOn
-|   (c) 2003 - 2011 TBDev.Net
-|   http://www.tbdev.net
-|   =============================================
-|   svn: http://sourceforge.net/projects/tbdevnet/
-|   Licence Info: GPL
-+------------------------------------------------
-|   $Date$
-|   $Revision$
-|   $Author$
-|   $URL$
-+------------------------------------------------
-*/
+
 ob_start("ob_gzhandler");
 
   require_once "include/bittorrent.php";
@@ -156,7 +140,7 @@ function _torrenttable($res, $frame_caption)
       return $htmlout;
   }
 
-  function countriestable($res, $frame_caption, $what)
+  function provincestable($res, $frame_caption, $what)
   {
     global $CURUSER, $TBDEV, $lang;
 
@@ -246,7 +230,7 @@ function _torrenttable($res, $frame_caption)
       $HTMLOUT .= "<p style='text-align:center;'>"  .
         ($type == 1 && !$limit ? "<b>{$lang['common_users']}</b>" : "<a href='topten.php?type=1'>{$lang['common_users']}</a>") .	" | " .
         ($type == 2 && !$limit ? "<b>{$lang['nav_torrents']}</b>" : "<a href='topten.php?type=2'>{$lang['nav_torrents']}</a>") . " | " .
-        ($type == 3 && !$limit ? "<b>{$lang['nav_countries']}</b>" : "<a href='topten.php?type=3'>{$lang['nav_countries']}</a>") . " | " .
+        ($type == 3 && !$limit ? "<b>{$lang['nav_provinces']}</b>" : "<a href='topten.php?type=3'>{$lang['nav_provinces']}</a>") . " | " .
         ($type == 4 && !$limit ? "<b>{$lang['nav_peers']}</b>" : "<a href='topten.php?type=4'>{$lang['nav_peers']}</a>") . "</p>\n";
 
     $HTMLOUT .= "        </div>";
@@ -353,26 +337,26 @@ function _torrenttable($res, $frame_caption)
 
         if ($limit == 10 || $subtype == "us")
         {
-          $r = mysql_query("SELECT name, flagpic, COUNT(users.country) as num FROM countries LEFT JOIN users ON users.country = countries.id GROUP BY name ORDER BY num DESC LIMIT $limit") or sqlerr();
-          $HTMLOUT .= countriestable($r, sprintf($lang['country_mostact'], $limit) . ($limit == 10 && $pu ? " <div class='small' style='float:right; margin-right:5px;'>[<a href='topten.php?type=3&amp;lim=25&amp;subtype=us'>{$lang['common_top25']}</a>]</div>" : ""),$lang['common_users']);
+          $r = mysql_query("SELECT name, flagpic, COUNT(users.country) as num FROM provinces LEFT JOIN users ON users.country = provinces.id GROUP BY name ORDER BY num DESC LIMIT $limit") or sqlerr();
+          $HTMLOUT .= provincestable($r, sprintf($lang['country_mostact'], $limit) . ($limit == 10 && $pu ? " <div class='small' style='float:right; margin-right:5px;'>[<a href='topten.php?type=3&amp;lim=25&amp;subtype=us'>{$lang['common_top25']}</a>]</div>" : ""),$lang['common_users']);
         }
 
         if ($limit == 10 || $subtype == "ul")
         {
-          $r = mysql_query("SELECT c.name, c.flagpic, sum(u.uploaded) AS ul FROM users AS u LEFT JOIN countries AS c ON u.country = c.id WHERE u.enabled = 'yes' GROUP BY c.name ORDER BY ul DESC LIMIT $limit") or sqlerr();
-          $HTMLOUT .= countriestable($r, sprintf($lang['country_totalul'], $limit) . ($limit == 10 && $pu ? " <div class='small' style='float:right; margin-right:5px;'>[<a href='topten.php?type=3&amp;lim=25&amp;subtype=ul'>{$lang['common_top25']}</a>]</div>" : ""),$lang['common_ul']);
+          $r = mysql_query("SELECT c.name, c.flagpic, sum(u.uploaded) AS ul FROM users AS u LEFT JOIN provinces AS c ON u.country = c.id WHERE u.enabled = 'yes' GROUP BY c.name ORDER BY ul DESC LIMIT $limit") or sqlerr();
+          $HTMLOUT .= provincestable($r, sprintf($lang['country_totalul'], $limit) . ($limit == 10 && $pu ? " <div class='small' style='float:right; margin-right:5px;'>[<a href='topten.php?type=3&amp;lim=25&amp;subtype=ul'>{$lang['common_top25']}</a>]</div>" : ""),$lang['common_ul']);
         }
 
         if ($limit == 10 || $subtype == "avg")
         {
-          $r = mysql_query("SELECT c.name, c.flagpic, sum(u.uploaded)/count(u.id) AS ul_avg FROM users AS u LEFT JOIN countries AS c ON u.country = c.id WHERE u.enabled = 'yes' GROUP BY c.name HAVING sum(u.uploaded) > 1099511627776 AND count(u.id) >= 100 ORDER BY ul_avg DESC LIMIT $limit") or sqlerr();
-          $HTMLOUT .= countriestable($r, sprintf($lang['country_avperuser'], $limit) . ($limit == 10 && $pu ? " <div class='small' style='float:right; margin-right:5px;'>[<a href='topten.php?type=3&amp;lim=25&amp;subtype=avg'>{$lang['common_top25']}</a>]</div>" : ""),$lang['country_avg']);
+          $r = mysql_query("SELECT c.name, c.flagpic, sum(u.uploaded)/count(u.id) AS ul_avg FROM users AS u LEFT JOIN provinces AS c ON u.country = c.id WHERE u.enabled = 'yes' GROUP BY c.name HAVING sum(u.uploaded) > 1099511627776 AND count(u.id) >= 100 ORDER BY ul_avg DESC LIMIT $limit") or sqlerr();
+          $HTMLOUT .= provincestable($r, sprintf($lang['country_avperuser'], $limit) . ($limit == 10 && $pu ? " <div class='small' style='float:right; margin-right:5px;'>[<a href='topten.php?type=3&amp;lim=25&amp;subtype=avg'>{$lang['common_top25']}</a>]</div>" : ""),$lang['country_avg']);
         }
 
         if ($limit == 10 || $subtype == "r")
         {
-          $r = mysql_query("SELECT c.name, c.flagpic, sum(u.uploaded)/sum(u.downloaded) AS r FROM users AS u LEFT JOIN countries AS c ON u.country = c.id WHERE u.enabled = 'yes' GROUP BY c.name HAVING sum(u.uploaded) > 1099511627776 AND sum(u.downloaded) > 1099511627776 AND count(u.id) >= 100 ORDER BY r DESC LIMIT $limit") or sqlerr();
-          $HTMLOUT .= countriestable($r, sprintf($lang['country_ratio'], $limit) . ($limit == 10 && $pu ? " <div class='small' style='float:right; margin-right:5px;'>[<a href='topten.php?type=3&amp;lim=25&amp;subtype=r'>{$lang['common_top25']}</a>]</div>" : ""),$lang['common_ratio']);
+          $r = mysql_query("SELECT c.name, c.flagpic, sum(u.uploaded)/sum(u.downloaded) AS r FROM users AS u LEFT JOIN provinces AS c ON u.country = c.id WHERE u.enabled = 'yes' GROUP BY c.name HAVING sum(u.uploaded) > 1099511627776 AND sum(u.downloaded) > 1099511627776 AND count(u.id) >= 100 ORDER BY r DESC LIMIT $limit") or sqlerr();
+          $HTMLOUT .= provincestable($r, sprintf($lang['country_ratio'], $limit) . ($limit == 10 && $pu ? " <div class='small' style='float:right; margin-right:5px;'>[<a href='topten.php?type=3&amp;lim=25&amp;subtype=r'>{$lang['common_top25']}</a>]</div>" : ""),$lang['common_ratio']);
         }
       }
       elseif ($type == 4)

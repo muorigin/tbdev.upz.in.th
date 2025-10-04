@@ -1,14 +1,10 @@
-function showhide(id){
-  if (document.getElementById)
-  {
+function showhide(id) {
+  if (document.getElementById) {
     obj = document.getElementById(id);
-    
-    if (obj.style.display == "none")
-    {
+
+    if (obj.style.display == "none") {
       obj.style.display = "";
-    } 
-    else 
-    {
+    } else {
       obj.style.display = "none";
     }
   }
